@@ -2,7 +2,7 @@
 
 ## DESCRIPTION
 
-It is a small web application for academic use that shows work with Google APIs.
+This web application aims to show My Skills
 
 ## Serve App
 
