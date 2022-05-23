@@ -22,13 +22,11 @@
             defer
         ></script>
         <link rel="stylesheet" href="assets/styles/custom-bootstrap.css" />
-        
 
         <link rel="stylesheet" href="assets/styles/app.css" />
-        
     </head>
     <body>
-        <nav class="navbar navbar-expand-md container-fluid bg-secondary">
+        <nav class="navbar navbar-expand-md container-fluid">
             <div class="container-fluid">
                 <a class="navbar-brand text-light" href="#">EIP</a>
                 <button
@@ -40,7 +38,11 @@
                     aria-expanded="false"
                     aria-label="Toggle navigation"
                 >
-                    <i class="bi bi-menu-button-wide text-light"></i>
+                    <i
+                        class="bi bi-menu-button-wide text-light"
+                        id="button-open-navbar"
+                    ></i>
+                    <!-- <i class="bi bi-menu-button-wide-fill text-light" id="button-close-navbar"></i> -->
                 </button>
                 <div
                     class="collapse navbar-collapse"
@@ -50,7 +52,9 @@
                         class="navbar-nav me-auto mb-2 mb-lg-0 container-fluid justify-content-end"
                     >
                         <li class="nav-item d-flex align-items-center p-2">
-                            <i class="nav-icon bi bi-file-earmark-person text-light"></i>
+                            <i
+                                class="nav-icon bi bi-file-earmark-person text-light"
+                            ></i>
                             <a
                                 class="nav-link active text-light"
                                 aria-current="page"
@@ -82,51 +86,77 @@
         </nav>
 
         <main
-            class="container-fluid bg-dark text-white d-flex p-0 align-items-center justify-content-center text-light"
+            class="container-fluid d-flex p-0 align-items-center justify-content-center text-light"
         >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quam
-            minima assumenda, ad architecto impedit? Eaque pariatur, blanditiis
-            veniam molestias quae facilis nihil nesciunt ducimus temporibus
-            ratione culpa voluptate facere? Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Adipisci, quae omnis aliquid numquam
-            soluta illum! Culpa facilis officiis officia? Illum beatae id esse
-            corrupti provident vero blanditiis cupiditate harum veritatis. Lorem
-            ipsum dolor sit, amet consectetur adipisicing elit. Quasi aliquid
-            earum nostrum laboriosam delectus, beatae excepturi pariatur? Iste
-            blanditiis pariatur maiores architecto dolorem, vero quod sapiente
-            sequi nemo inventore amet. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Hic, quod cupiditate. Consequuntur, dolor aliquid!
-            Blanditiis ex doloribus eius laborum possimus. Quaerat asperiores
-            nemo ipsam ex temporibus vero reiciendis mollitia dolore! Lorem
-            ipsum dolor sit, amet consectetur adipisicing elit. Adipisci harum,
-            autem amet quidem qui optio quasi aliquam sint itaque, veritatis
-            voluptas necessitatibus, vel error ipsum nostrum iste excepturi
-            perspiciatis cupiditate. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Reprehenderit odit soluta velit ratione deleniti
-            accusantium iste praesentium, laudantium voluptatibus eum esse unde
-            vero suscipit ducimus omnis possimus temporibus aliquam vitae! Lorem
-            ipsum dolor sit, amet consectetur adipisicing elit. Nisi consectetur
-            illo ipsam excepturi! Id laborum nulla adipisci labore quo similique
-            quisquam blanditiis numquam beatae. Voluptas eligendi commodi
-            dolorem explicabo doloremque. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Nisi rerum numquam quidem laboriosam delectus
-            animi? Explicabo, modi ipsam consectetur quis dolor inventore
-            nesciunt cum iure. Dolores beatae quod saepe sed? Lorem ipsum dolor
-            sit amet consectetur adipisicing elit. Rerum omnis doloremque
-            officiis aliquam animi iure impedit illo corporis corrupti
-            perspiciatis atque, nobis soluta voluptate esse repudiandae!
-            Doloremque perferendis facilis nobis! Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Blanditiis unde doloremque repellendus
-            animi eaque quisquam illo eum autem dicta sequi ullam quasi quia
-            harum tenetur veniam tempore, dolore consequuntur esse! Lorem ipsum
-            dolor sit amet consectetur, adipisicing elit. Molestias veniam,
-            atque pariatur eveniet quae ipsam, placeat itaque repellendus
-            commodi, impedit labore! Nihil ad inventore reiciendis, aperiam
-            rerum asperiores dolor doloremque. Lorem ipsum, dolor sit amet
-            consectetur adipisicing elit. Eveniet quaerat quis doloremque vel
-            earum voluptas quas blanditiis odio suscipit eos, quam inventore,
-            eligendi facilis harum, numquam voluptatum repellendus
-            necessitatibus beatae.
+            <div
+                id="carouselExampleIndicators"
+                class="carousel slide carousel-fade"
+                data-bs-ride="true"
+            >
+                <div class="carousel-indicators">
+                    <button
+                        type="button"
+                        data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide-to="0"
+                        class="active"
+                        aria-current="true"
+                        aria-label="Slide 1"
+                    ></button>
+                    <button
+                        type="button"
+                        data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide-to="1"
+                        aria-label="Slide 2"
+                    ></button>
+                    <button
+                        type="button"
+                        data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide-to="2"
+                        aria-label="Slide 3"
+                    ></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <!-- <img src="assets/images/img1.jpg" class="d-block w-100" alt="..."> -->
+                        <img
+                            src="assets/images/img1.jpg"
+                            class="d-block w-100"
+                            alt=""
+                        />
+                    </div>
+                    <div class="carousel-item">
+                        <img
+                            src="assets/images/img2.jpg"
+                            class="d-block w-100"
+                            alt="..."
+                        />
+                    </div>
+                </div>
+                <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev"
+                >
+                    <span
+                        class="carousel-control-prev-icon"
+                        aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next"
+                >
+                    <span
+                        class="carousel-control-next-icon"
+                        aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
         </main>
     </body>
 </html>
