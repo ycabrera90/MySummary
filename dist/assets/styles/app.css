@@ -2,7 +2,31 @@
 /* Bootstrap icons */
 @import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css');
 
-/* LLWAYS APPLIED STYLES */
+:root {
+    --item-1-header-color: rgb(225, 225, 235);
+    --item-1-header-font-size-sm: 33px;
+    --item-1-header-font-size-lg: 65px;
+
+    --user-photo-size-sm: 200px;
+    --user-photo-size-lg: 250px;
+
+    --item1-hello-text-ont-size-sm: 45px;
+    --item1-hello-text-ont-size-lg: 95px;
+
+    --item1-name-text-font-size-sm: 15px;
+    --item1-name-text-margin-top-sm: 20px;
+
+    --item1-name-text-font-size-lg: 3vw;
+    --item1-name-text-margin-top-lg: 20px;
+
+    --item1-category-text-font-size-lg: 48px;
+    --item1-category-text-font-size-sm: 22px;
+
+    --item1-presentation-text-font-size-sm: 30px;
+    --item1-presentation-text-font-size-lg:48px;
+}
+
+/* ALWAYS APPLIED STYLES */
 nav {
     height: 55px;
     background-color: #07132b3d;
@@ -24,16 +48,13 @@ main {
 
 .carousel-item-content {
     position: absolute;
-    top: 20vh;
+    top: 12vh;
     bottom: 0px;
     left: 0px;
     right: 0px;
 }
 
-#item-1-header {
-    font-size: 7vw;
-    color: rgb(225, 225, 235);
-}
+/*  */
 
 .item1-header-acronym {
     color: rgb(15, 92, 78);
@@ -41,13 +62,9 @@ main {
     font-weight: bold;
 }
 
-#user-photo {
-    border: 4px solid white;
-    min-width: 40vh;
-    max-width: 40vh;
-    max-width: 40vh;
-    max-height: 40vh;
-}
+/*  */
+
+
 
 /* STYLES APPLIED ONLY TO SMALL SCREENS */
 @media (max-width: 768px) {
@@ -62,8 +79,74 @@ main {
     .nav-link {
         margin-left: 2vw;
     }
+
+    #item-1-header {
+        font-size: var(--item-1-header-font-size-sm);
+        color: var(--item-1-header-color);
+    }
+
+    #user-photo {
+        border: 4px solid white;
+        min-width: var(--user-photo-size-sm);
+        max-width: var(--user-photo-size-sm);
+        min-height: var(--user-photo-size-sm);
+        max-height: var(--user-photo-size-sm);
+        margin-right: 26vw !important;
+    }
+
+    #item1-hello-text {
+        font-size: var(--item1-hello-text-ont-size-sm);
+        text-align: center;
+    }
+
+    #item1-name-text {
+        font-size: var(--item1-name-text-font-size-sm);
+        margin-top: var(--item1-name-text-margin-top-sm);
+        text-align: center;
+    }
+
+    #item1-category-text {
+        font-size: var(--item1-category-text-font-size-sm);
+        margin-left: 4px;
+        text-align: center;
+    }
+    #item1-presentation-text {
+        font-size: var(--item1-presentation-text-font-size-sm);
+    }
 }
 
 /* STYLES APPLIED ONLY TO LARGE SCREENS */
-@media (max-width: 768px) {
+@media (min-width: 768px) {
+    #item-1-header {
+        font-size: var(--item-1-header-font-size-lg);
+        color: var(--item-1-header-color);
+    }
+
+    #user-photo {
+        border: 4px solid white;
+        min-width: var(--user-photo-size-lg);
+        max-width: var(--user-photo-size-lg);
+        min-height: var(--user-photo-size-lg);
+        max-height: var(--user-photo-size-lg);
+    }
+    #item1-hello-text {
+        font-size: var(--item1-hello-text-ont-size-lg);
+    }
+    #item1-name-text {
+        font-size: var(--item1-name-text-font-size-lg);
+        margin-left: 1vw;
+        margin-top: var(--item1-name-text-margin-top-lg);
+    }
+
+    #item1-category-text {
+        font-size: var(--item1-category-text-font-size-lg);
+        margin-left: 4px;
+    }
+
+    #item1-presentation-text {
+        font-size: var(--item1-presentation-text-font-size-sm);
+        margin-top: 27px;
+    }
+
+    
 }
