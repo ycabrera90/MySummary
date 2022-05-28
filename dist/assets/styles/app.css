@@ -3,7 +3,7 @@
 @import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css');
 
 :root {
-    --item-1-header-font-family: cursive;
+    --item-1-header-font-family: font-file-82132;
     --item-1-header-color: #dedcf4;
     --item-1-header-font-size-sm: 33px;
     --item-1-header-font-size-lg: 65px;
@@ -27,6 +27,16 @@
 
     --item1-presentation-text-font-size-sm: 30px;
     --item1-presentation-text-font-size-lg: 48px;
+
+    --item-2-header-font-family: font-file-82132;
+    --item-2-header-color: #dedcf4;
+    --item-2-header-font-size-sm: 45px;
+    --item-2-header-font-size-lg: 65px;
+
+    --item2-text-font-size-sm: 21px;
+    --item2-text-font-size-lg: 129%;
+
+    --item2-icon-size: 50px;
 }
 
 /* ALWAYS APPLIED STYLES */
@@ -57,8 +67,6 @@ main {
     right: 0px;
     text-shadow: 1px 2px 7px #6a0608;
 }
-
-/*  */
 
 .item1-header-acronym {
     color: #0593a5a1;
@@ -125,6 +133,49 @@ main {
     #item1-presentation-text {
         font-size: var(--item1-presentation-text-font-size-sm);
     }
+
+    .item2-header {
+        font-family: var(--item-2-header-font-family);
+        font-size: var(--item-2-header-font-size-sm);
+        color: var(--item-2-header-color);
+        text-align: center;
+    }
+
+    #item2-header-lg {
+        display: none;
+    }
+
+    #item2-text {
+        font-size: var(--item2-text-font-size-sm);
+        text-align: center;
+        padding-right: 23px;
+        padding-left: 23px;
+    }
+
+    #item2-text-container-sm {
+        display: none;
+    }
+
+    #item2-skills-container-lg {
+        margin-top: 105px;
+        display: none;
+    }
+
+    .item2-icon {
+        max-width: var(--item2-icon-size);
+        max-height: var(--item2-icon-size);
+        min-width: var(--item2-icon-size);
+        min-height: var(--item2-icon-size);
+    }
+
+    .progress {
+        margin-top: 16px;
+    }
+
+    #my-skill-container {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
 /* STYLES APPLIED ONLY TO LARGE SCREENS */
@@ -165,5 +216,45 @@ main {
     #item1-presentation-text {
         font-size: var(--item1-presentation-text-font-size-lg);
         margin-top: 27px;
+    }
+
+    .item2-header {
+        font-family: var(--item-2-header-font-family);
+        font-size: var(--item-2-header-font-size-lg);
+        color: var(--item-2-header-color);
+    }
+
+    #item2-header-sm {
+        display: none;
+    }
+
+    #item2-text {
+        font-size: var(--item2-text-font-size-lg);
+        padding-left: 23px;
+        padding-left: 23px;
+    }
+
+    .item2-icon {
+        max-width: var(--item2-icon-size);
+        max-height: var(--item2-icon-size);
+        min-width: var(--item2-icon-size);
+        min-height: var(--item2-icon-size);
+    }
+
+    .progress {
+        margin-top: 16px;
+    }
+
+    #item1-skills-container {
+        margin-top: 105px;
+    }
+
+    #item2-skills-container-sm {
+        margin-top: 105px;
+        display: block;
+    }
+    #item2-skills-container-lg {
+        margin-top: 105px;
+        display: block;
     }
 }
