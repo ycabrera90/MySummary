@@ -1,3 +1,116 @@
-@import url('caroussel-item1-aboutMe-lg.css');
-@import url('caroussel-item1-aboutMe-sm.css');
+/* Vars */
+:root {
+    --item1-header-acronym-color: #0593a5a1;
+    --item1-header-acronym-text-shadow: 1px 2px 7px black;
 
+    --item-1-header-font-family: font-file-82132;
+    --item-1-header-color: #dedcf4;
+    --item-1-header-font-size-sm: 33px;
+    --item-1-header-font-size-lg: 65px;
+
+    --user-photo-size-sm: 200px;
+    --user-photo-size-lg: 250px;
+
+    --item-1-hello-text-font-family: monospace;
+    --item1-hello-text-font-size-sm: 45px;
+    --item1-hello-text-font-size-lg: 95px;
+
+    --item1-name-text-font-family: monospace;
+    --item1-name-text-font-size-sm: 15px;
+    --item1-name-text-margin-top-sm: 20px;
+    --item1-name-text-font-size-lg: 33px;
+    --item1-name-text-margin-top-lg: 20px;
+
+    --item1-category-text-font-family: monospace;
+    --item1-category-text-font-size-lg: 40px;
+    --item1-category-text-font-size-sm: 22px;
+
+    --item1-presentation-text-font-size-sm: 30px;
+    --item1-presentation-text-font-size-lg: 48px;
+}
+
+/* GENERAL STYLES */
+.item1-header-acronym {
+    color: var(--item1-header-acronym-color);
+    font-style: italic;
+    font-weight: bold;
+    font-family: revert;
+    font-size: larger;
+    text-shadow: var(--item1-header-acronym-text-shadow);
+}
+
+/* STYLES APPLIED ONLY TO SMALL SCREENS */
+@media (max-width: 768px) {
+    #item-1-header {
+        font-family: var(--item-1-header-font-family);
+        font-size: var(--item-1-header-font-size-sm);
+        color: var(--item-1-header-color);
+    }
+    #user-photo-container {
+        justify-content: center;
+    }
+    #user-photo {
+        border: 4px solid white;
+        min-width: var(--user-photo-size-sm);
+        max-width: var(--user-photo-size-sm);
+        min-height: var(--user-photo-size-sm);
+        max-height: var(--user-photo-size-sm);
+    }
+    #item1-hello-text {
+        font-family: var(--item-1-hello-text-font-family);
+        font-size: var(--item1-hello-text-font-size-sm);
+        text-align: center;
+    }
+    #item1-name-text {
+        font-family: var(--item1-name-text-font-family);
+        font-size: var(--item1-name-text-font-size-sm);
+        margin-top: var(--item1-name-text-margin-top-sm);
+        text-align: center;
+    }
+    #item1-category-text {
+        font-family: var(--item1-category-text-font-family);
+        font-size: var(--item1-category-text-font-size-sm);
+        margin-left: 4px;
+        text-align: center;
+    }
+    #item1-presentation-text {
+        font-size: var(--item1-presentation-text-font-size-sm);
+    }
+}
+
+/* STYLES APPLIED ONLY TO LARGE SCREENS */
+@media (min-width: 768px) {
+    #item-1-header {
+        font-size: var(--item-1-header-font-size-lg);
+        color: var(--item-1-header-color);
+    }
+    #user-photo-container {
+        justify-content: end;
+    }
+    #user-photo {
+        border: 4px solid white;
+        min-width: var(--user-photo-size-lg);
+        max-width: var(--user-photo-size-lg);
+        min-height: var(--user-photo-size-lg);
+        max-height: var(--user-photo-size-lg);
+    }
+    #item1-hello-text {
+        font-family: var(--item-1-hello-text-font-family);
+        font-size: var(--item1-hello-text-font-size-lg);
+    }
+    #item1-name-text {
+        font-family: var(--item1-name-text-font-family);
+        font-size: var(--item1-name-text-font-size-lg);
+        margin-left: 6px;
+        margin-top: var(--item1-name-text-margin-top-lg);
+    }
+    #item1-category-text {
+        font-family: var(--item1-category-text-font-family);
+        font-size: var(--item1-category-text-font-size-lg);
+        margin-left: 4px;
+    }
+    #item1-presentation-text {
+        font-size: var(--item1-presentation-text-font-size-lg);
+        margin-top: 27px;
+    }
+}

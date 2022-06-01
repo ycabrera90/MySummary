@@ -1,37 +1,15 @@
-/* DEPENDECIES */
 /* Bootstrap icons */
 @import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css');
 
+/* Nav Bar */
+@import url('navBar.css');
 
+/* Carousel-Item1 */
 @import url('caroussel-item1-aboutMe.css');
 
-
-
 :root {
-    --item-1-header-font-family: font-file-82132;
-    --item-1-header-color: #dedcf4;
-    --item-1-header-font-size-sm: 33px;
-    --item-1-header-font-size-lg: 65px;
-
-    --user-photo-size-sm: 200px;
-    --user-photo-size-lg: 250px;
-
-    --item-1-hello-text-font-family: monospace;
-    --item1-hello-text-font-size-sm: 45px;
-    --item1-hello-text-font-size-lg: 95px;
-
-    --item1-name-text-font-family: monospace;
-    --item1-name-text-font-size-sm: 15px;
-    --item1-name-text-margin-top-sm: 20px;
-    --item1-name-text-font-size-lg: 33px;
-    --item1-name-text-margin-top-lg: 20px;
-
-    --item1-category-text-font-family: monospace;
-    --item1-category-text-font-size-lg: 40px;
-    --item1-category-text-font-size-sm: 22px;
-
-    --item1-presentation-text-font-size-sm: 30px;
-    --item1-presentation-text-font-size-lg: 48px;
+    --placeholder-color: rgba(213, 213, 231, 0.849);
+    --carousel-item-content-text-shadow: 1px 2px 7px #6a0608;
 
     --item-2-header-font-family: font-file-82132;
     --item-2-header-color: #dedcf4;
@@ -44,10 +22,9 @@
     --item2-icon-size: 50px;
 }
 
-/* ALWAYS APPLIED STYLES */
-nav {
-    height: 55px;
-    background-color: #07132b3d;
+/* GENERAL STYLES */
+::placeholder {
+    color: var(--placeholder-color);
 }
 
 main {
@@ -58,10 +35,8 @@ main {
 }
 
 .carousel-item-backgroud {
-    min-width: 100vw;
-    min-height: 100vh;
-    max-width: 100vw;
-    max-height: 100vh;
+    width: 100vh;
+    height: 100vh;
 }
 
 .carousel-item-content {
@@ -70,162 +45,76 @@ main {
     bottom: 0px;
     left: 0px;
     right: 0px;
-    text-shadow: 1px 2px 7px #6a0608;
+    text-shadow: var(--carousel-item-content-text-shadow);
 }
 
-::placeholder {
-    color: rgba(213, 213, 231, 0.849);
-}
-
-.item1-header-acronym {
-    color: #0593a5a1;
-    font-style: italic;
-    font-weight: bold;
-    font-family: revert;
-    font-size: larger;
-    text-shadow: 1px 2px 7px black;
-}
-
-#carousel-control-prev-button {
-    height:0px;
-    position: absolute;
-    top:96vh
-}
-
+#carousel-control-prev-button,
 #carousel-control-next-button {
-    height:0px;
+    height: 0px;
     position: absolute;
-    top:96vh
+    top: 96vh;
 }
-
 
 /* STYLES APPLIED ONLY TO SMALL SCREENS */
 @media (max-width: 768px) {
-    #navbarSupportedContent {
-        position: absolute;
-        top: 57px;
-        left: 2px;
-        min-width: 30vw !important;
-        background-color: #07132b3d;
-    }
-
-    .nav-link {
-        margin-left: 2vw;
-    }
-
-    #item-1-header {
-        font-family: var(--item-1-header-font-family);
-        font-size: var(--item-1-header-font-size-sm);
-        color: var(--item-1-header-color);
-    }
-
-    #user-photo-container {
-        justify-content: center;
-    }
-
-    #user-photo {
-        border: 4px solid white;
-        min-width: var(--user-photo-size-sm);
-        max-width: var(--user-photo-size-sm);
-        min-height: var(--user-photo-size-sm);
-        max-height: var(--user-photo-size-sm);
-    }
-
-    #item1-hello-text {
-        font-family: var(--item-1-hello-text-font-family);
-        font-size: var(--item1-hello-text-font-size-sm);
-        text-align: center;
-    }
-
-    #item1-name-text {
-        font-family: var(--item1-name-text-font-family);
-        font-size: var(--item1-name-text-font-size-sm);
-        margin-top: var(--item1-name-text-margin-top-sm);
-        text-align: center;
-    }
-
-    #item1-category-text {
-        font-family: var(--item1-category-text-font-family);
-        font-size: var(--item1-category-text-font-size-sm);
-        margin-left: 4px;
-        text-align: center;
-    }
-    #item1-presentation-text {
-        font-size: var(--item1-presentation-text-font-size-sm);
-    }
-
     .item-header {
         font-family: var(--item-2-header-font-family);
         font-size: var(--item-2-header-font-size-sm);
         color: var(--item-2-header-color);
         text-align: center;
     }
-
     #item2-header-lg {
         display: none;
     }
-
     #item2-text {
         font-size: var(--item2-text-font-size-sm);
         text-align: center;
         padding-right: 23px;
         padding-left: 23px;
     }
-
     #item2-text-container-sm {
         display: none;
     }
-
     #item2-skills-container-lg {
         margin-top: 105px;
         display: none;
     }
-
     .item2-icon {
         max-width: var(--item2-icon-size);
         max-height: var(--item2-icon-size);
         min-width: var(--item2-icon-size);
         min-height: var(--item2-icon-size);
     }
-
     .progress {
         margin-top: 16px;
     }
-
     #my-skill-container {
         margin-left: 0;
         margin-right: 0;
     }
-
     .item2-skills {
         margin-top: 10px;
     }
-
     #my-location {
         height: 85vh;
     }
-
     #item3-text {
         font-size: var(--item2-text-font-size-sm);
         text-align: center;
     }
-
     .user-input {
         margin-top: 10px;
         width: 100%;
         background-color: #8d8d8d00;
         color: #eadede;
     }
-
     #my-location {
         display: none;
     }
-
     #item3-Container {
         padding-right: 5vw;
         padding-left: 5vw;
     }
-
     #item3-header-lg {
         display: none;
     }
@@ -238,43 +127,7 @@ main {
 
 /* STYLES APPLIED ONLY TO LARGE SCREENS */
 @media (min-width: 768px) {
-    #item-1-header {
-        font-size: var(--item-1-header-font-size-lg);
-        color: var(--item-1-header-color);
-    }
-
-    #user-photo-container {
-        justify-content: end;
-    }
-
-    #user-photo {
-        border: 4px solid white;
-        min-width: var(--user-photo-size-lg);
-        max-width: var(--user-photo-size-lg);
-        min-height: var(--user-photo-size-lg);
-        max-height: var(--user-photo-size-lg);
-    }
-    #item1-hello-text {
-        font-family: var(--item-1-hello-text-font-family);
-        font-size: var(--item1-hello-text-font-size-lg);
-    }
-    #item1-name-text {
-        font-family: var(--item1-name-text-font-family);
-        font-size: var(--item1-name-text-font-size-lg);
-        margin-left: 6px;
-        margin-top: var(--item1-name-text-margin-top-lg);
-    }
-
-    #item1-category-text {
-        font-family: var(--item1-category-text-font-family);
-        font-size: var(--item1-category-text-font-size-lg);
-        margin-left: 4px;
-    }
-
-    #item1-presentation-text {
-        font-size: var(--item1-presentation-text-font-size-lg);
-        margin-top: 27px;
-    }
+    
 
     .item-header {
         font-family: var(--item-2-header-font-family);
@@ -359,6 +212,4 @@ main {
     #item3-header-text-lg {
         margin-top: 3vh;
     }
-
-    
 }

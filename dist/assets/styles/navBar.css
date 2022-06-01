@@ -1,1 +1,20 @@
-@import url('navBar-sm.css');
+/* Dependencies */
+
+
+/* Styles for large screens */
+@import url(navBar-lg.css);
+
+/* Styles for small screens */
+@import url(navBar-sm.css);
+
+/* Vars */
+:root {
+    --nav-background-color: #07132b3d;
+    --nav-height: 55px;
+}
+
+/* Styles for all screen sizes */
+nav {
+    height: var(--nav-height);
+    background-color: var(--nav-background-color);
+}
