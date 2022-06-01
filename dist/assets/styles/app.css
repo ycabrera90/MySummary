@@ -35,17 +35,20 @@ main {
 }
 
 .carousel-item-backgroud {
-    width: 100vh;
+    width: 100vw;
     height: 100vh;
+    
 }
 
 .carousel-item-content {
     position: absolute;
-    top: 12vh;
+    top: 68px;
     bottom: 0px;
     left: 0px;
     right: 0px;
     text-shadow: var(--carousel-item-content-text-shadow);
+    overflow: auto;
+    
 }
 
 #carousel-control-prev-button,
