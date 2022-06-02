@@ -12,15 +12,28 @@ class LoadedPlace {
 class NavBar {
     constructor() {
         this.navBar = document.getElementById('nav-bar');
-        this.navBarButton = this.navBar.querySelector('.navbar-toggler')
-        this.backDrop = this.navBar.querySelector('.backdrop')
-        this.navBarButton.addEventListener('click', this.toggleButton.bind(this));
+        this.navBarButton = this.navBar.querySelector('.navbar-toggler');
+        this.backDrop = this.navBar.querySelector('.backdrop');
+
+        this.navBarButton.addEventListener(
+            'click',
+            this.toggleButton.bind(this)
+        );
+
+        this.backDrop.addEventListener('click', this.collapseBar.bind(this));
     }
 
     toggleButton() {
         const icon = this.navBar.querySelector('.navbar-toggler i');
-        icon.classList.toggle('bi-menu-button-wide-fill')
-        icon.classList.toggle('bi-menu-button-wide')
+        icon.classList.toggle('bi-menu-button-wide-fill');
+        icon.classList.toggle('bi-menu-button-wide');
+        this.backDrop.classList.toggle('show');
+    }
+
+    collapseBar() {
+        const collapseBar = this.navBar.querySelector('.navbar-collapse');
+        collapseBar.classList.toggle('show');
+        this.backDrop.classList.toggle('show');
     }
 }
 
