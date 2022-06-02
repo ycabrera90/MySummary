@@ -1,4 +1,4 @@
-import { Map } from '/src/UI/Map.js';
+import { Map } from './UI/Map';
 
 console.log('esto es una prueba');
 
@@ -23,17 +23,21 @@ class NavBar {
         this.backDrop.addEventListener('click', this.collapseBar.bind(this));
     }
 
+    toggleBackdrop() {
+        this.backDrop.classList.toggle('show');
+    }
+
     toggleButton() {
         const icon = this.navBar.querySelector('.navbar-toggler i');
         icon.classList.toggle('bi-menu-button-wide-fill');
         icon.classList.toggle('bi-menu-button-wide');
-        this.backDrop.classList.toggle('show');
+        this.toggleBackdrop();
     }
 
     collapseBar() {
         const collapseBar = this.navBar.querySelector('.navbar-collapse');
         collapseBar.classList.toggle('show');
-        this.backDrop.classList.toggle('show');
+        this.toggleBackdrop();
     }
 }
 
