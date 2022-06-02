@@ -12,8 +12,9 @@ class LoadedPlace {
 class NavBar {
     constructor() {
         this.navBar = document.getElementById('nav-bar');
+        this.navBarButton = this.navBar.querySelector('.navbar-toggler')
         this.backDrop = this.navBar.querySelector('.backdrop')
-        this.navBar.addEventListener('click', this.toggleButton.bind(this));
+        this.navBarButton.addEventListener('click', this.toggleButton.bind(this));
     }
 
     toggleButton() {
