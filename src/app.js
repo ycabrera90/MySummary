@@ -9,8 +9,26 @@ class LoadedPlace {
     }
 }
 
+class NavBar {
+    constructor() {
+        this.navBar = document.getElementById('nav-bar');
+        this.backDrop = this.navBar.querySelector('.backdrop')
+        this.navBar.addEventListener('click', this.toggleButton.bind(this));
+    }
 
+    toggleButton() {
+        const icon = this.navBar.querySelector('.navbar-toggler i');
+        icon.classList.toggle('bi-menu-button-wide-fill')
+        icon.classList.toggle('bi-menu-button-wide')
+    }
+}
 
+class App {
+    static init() {
+        new LoadedPlace({ lat: -34.88761217420463, lng: -56.17486101765247 });
 
+        new NavBar();
+    }
+}
 
-new LoadedPlace({ lat: -34.88761217420463, lng: -56.17486101765247 });
+App.init();
