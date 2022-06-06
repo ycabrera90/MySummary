@@ -7,17 +7,23 @@ export class Map {
             return;
         }
 
-        const mapElement = document.getElementById('my-location-sm');
+        const listMapElement = document.querySelectorAll('.my-location');
+        console.log(listMapElement)
         const mapConfig = {
             center: { lat: coord.lat, lng: coord.lng },
             zoom: 6,
         };
-
-        const map = new google.maps.Map(mapElement, mapConfig);
+        
+        const map1 = new google.maps.Map(listMapElement[0], mapConfig);
+        const map2 = new google.maps.Map(listMapElement[1], mapConfig);
 
         new google.maps.Marker({
             position: { lat: coord.lat, lng: coord.lng },
-            map: map,
+            map: map1,
+        });
+        new google.maps.Marker({
+            position: { lat: coord.lat, lng: coord.lng },
+            map: map2,
         });
     }
 }

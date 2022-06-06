@@ -1,5 +1,7 @@
 import { Map } from './UI/Map';
 
+const GITHUB_URL = 'https://github.com/ycabrera90';
+
 class LoadedPlace {
     constructor(coordinates) {
         const map = new Map();
@@ -12,6 +14,7 @@ class NavBar {
         this.navBar = document.getElementById('nav-bar');
         this.navBarButton = this.navBar.querySelector('.navbar-toggler');
         this.backDrop = this.navBar.querySelector('.backdrop');
+        this.githubButton = this.navBar.querySelector('.github-button');
 
         this.navBarButton.addEventListener('click', () => {
             this.toggleButton();
@@ -22,6 +25,10 @@ class NavBar {
             this.toggleButton();
             this.toggleBackdrop();
             this.collapseBar();
+        });
+
+        this.githubButton.addEventListener('click', () => {
+            window.location.href = GITHUB_URL;
         });
     }
 
