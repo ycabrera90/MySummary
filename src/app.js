@@ -1,4 +1,5 @@
 import { Map } from './UI/Map';
+import { validateEmail } from './Utility/inputsValidators';
 
 const GITHUB_URL = 'https://github.com/ycabrera90';
 
@@ -48,12 +49,75 @@ class NavBar {
     }
 }
 
+class ContacMeForm {
+    constructor() {
+        this.contacMe = document.getElementById('Item3-ContactMe-lg');
+
+        this.name = this.contacMe.querySelector('#user-input-name');
+        this.email = this.contacMe.querySelector('#user-input-email');
+        this.subject = this.contacMe.querySelector('#user-input-subject');
+        this.messaje = this.contacMe.querySelector('#user-input-message');
+        this.buttonSendMessage = this.contacMe.querySelector('button');
+
+        this.buttonSendMessage.addEventListener('click', this.sendMessaje.bind(this));
+    }
+
+    sendMessaje() {
+        const name = this.name.value.trim();
+        const email = this.email.value.trim().toLowerCase();
+        const subject = this.subject.value.trim();
+        const messaje = this.messaje.value.trim();
+
+        if (name) {
+            console.log(name)
+        }
+        else {
+            alert('please insert a name');
+        }
+
+        if (validateEmail(email)) {
+
+            console.log(email);
+        }
+        else {
+            alert('please insert a valid mail');
+        }
+
+        if (subject) {
+            console.log(subject)
+        }
+        else {
+            alert('please insert a subject');
+        }
+        if (messaje) {
+            console.log(subject)
+        }
+        else {
+            alert('please insert a messaje');
+        }
+
+        
+
+
+
+
+    }
+}
+
+
+
 class App {
     static init() {
-        new LoadedPlace({ lat: -34.88761217420463, lng: -56.17486101765247 });
+        new ContacMeForm();
+        // new LoadedPlace({ lat: -34.88761217420463, lng: -56.17486101765247 });
 
-        new NavBar();
+        // new NavBar();
+
+
+
+
     }
 }
 
 App.init();
+
