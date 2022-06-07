@@ -1,7 +1,11 @@
 import { Map } from './UI/Map';
 import { validateEmail } from './Utility/inputsValidators';
+import { HttpReq } from './Utility/HTTP';
 
 const GITHUB_URL = 'https://github.com/ycabrera90';
+const PROTOCOL = 'http'
+const SERVER_URL = 'localhost';
+const PORT = 3000;
 
 class LoadedPlace {
     constructor(coordinates) {
@@ -56,47 +60,57 @@ class ContacMeForm {
         this.name = this.contacMe.querySelector('#user-input-name');
         this.email = this.contacMe.querySelector('#user-input-email');
         this.subject = this.contacMe.querySelector('#user-input-subject');
-        this.messaje = this.contacMe.querySelector('#user-input-message');
+        this.messagge = this.contacMe.querySelector('#user-input-message');
         this.buttonSendMessage = this.contacMe.querySelector('button');
 
-        this.buttonSendMessage.addEventListener('click', this.sendMessaje.bind(this));
+        this.buttonSendMessage.addEventListener('click', this.sendMessagge.bind(this));
     }
 
-    sendMessaje() {
-        const name = this.name.value.trim();
-        const email = this.email.value.trim().toLowerCase();
-        const subject = this.subject.value.trim();
-        const messaje = this.messaje.value.trim();
+    sendMessagge() {
+        const userContact = {
+            name: this.name.value.trim(),
+            email: this.email.value.trim().toLowerCase(),
+            subject: this.subject.value.trim(),
+            messagge: this.messagge.value.trim()
+        };
 
-        if (name) {
-            console.log(name)
-        }
-        else {
+        if (!userContact.name) {
             alert('please insert a name');
+            return;
         }
 
-        if (validateEmail(email)) {
 
-            console.log(email);
+        if (!validateEmail(userContact.email)) {
+
+            console.log(userContact.email);
         }
         else {
             alert('please insert a valid mail');
         }
 
-        if (subject) {
-            console.log(subject)
+        if (userContact.subject) {
+            console.log(userContact.subject)
         }
         else {
             alert('please insert a subject');
         }
-        if (messaje) {
-            console.log(subject)
+        if (userContact.messagge) {
+            console.log(userContact.ubject)
         }
         else {
-            alert('please insert a messaje');
+            alert('please insert a messagge');
         }
 
-        
+        const server = new HttpReq(PROTOCOL, SERVER_URL, PORT);
+
+        server.sendHttpRequest('POST', 'add-location', userContact).then(resp => {
+            console.log(resp);
+        }).catch(error => {
+            console.log(error);
+        });
+
+
+
 
 
 
@@ -120,4 +134,12 @@ class App {
 }
 
 App.init();
+
+
+
+
+
+
+
+
 
