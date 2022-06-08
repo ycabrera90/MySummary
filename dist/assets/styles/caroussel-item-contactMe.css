@@ -1,0 +1,15 @@
+/* Vars */
+
+
+/* GENERAL STYLES */
+.border-color-red {
+    border-color: red;
+}
+
+/* STYLES APPLIED ONLY TO SMALL SCREENS */
+@media (max-width: 768px) {
+}
+
+/* STYLES APPLIED ONLY TO LARGE SCREENS */
+@media (min-width: 768px) {
+}

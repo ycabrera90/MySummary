@@ -4,8 +4,15 @@
 /* Nav Bar */
 @import url('navBar.css');
 
-/* Carousel-Item1 */
+/* Carousel-Item-aboutMe */
 @import url('caroussel-item1-aboutMe.css');
+
+/* Carousel-Item-contacMe */
+@import url('caroussel-item-contactMe.css');
+
+
+
+
 
 :root {
     --placeholder-color: rgba(213, 213, 231, 0.849);

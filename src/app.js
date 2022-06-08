@@ -69,52 +69,57 @@ class ContacMeForm {
     sendMessagge() {
         const userContact = {
             name: this.name.value.trim(),
-            email: this.email.value.trim().toLowerCase(),
             subject: this.subject.value.trim(),
+            email: this.email.value.trim().toLowerCase(),
             messagge: this.messagge.value.trim()
         };
 
         if (!userContact.name) {
-            alert('please insert a name');
+            // alert('please insert a name');
+            this.name.classList.add('border-color-red');
             return;
         }
-
-
+        else {
+            this.name.classList.remove('border-color-red');
+        }
         if (!validateEmail(userContact.email)) {
+            // alert('please insert a valid mail');
+            this.email.classList.add('border-color-red');
 
-            console.log(userContact.email);
+            return;
         }
         else {
-            alert('please insert a valid mail');
+            this.email.classList.remove('border-color-red');
+
+        }
+        if (!userContact.subject) {
+            // alert('please insert a subject');
+            this.subject.classList.add('border-color-red');
+            return;
+        }
+        else {
+            this.subject.classList.remove('border-color-red');
         }
 
-        if (userContact.subject) {
-            console.log(userContact.subject)
+        if (!userContact.messagge) {
+            // alert('please insert a messagge');
+            this.messagge.classList.add('border-color-red');
+
+            return;
         }
         else {
-            alert('please insert a subject');
-        }
-        if (userContact.messagge) {
-            console.log(userContact.ubject)
-        }
-        else {
-            alert('please insert a messagge');
+            this.messagge.classList.remove('border-color-red');
+
         }
 
         const server = new HttpReq(PROTOCOL, SERVER_URL, PORT);
 
-        server.sendHttpRequest('POST', 'add-location', userContact).then(resp => {
+        server.sendHttpRequest('POST', 'contact-me-mail', userContact).then(resp => {
             console.log(resp);
         }).catch(error => {
             console.log(error);
+            console.log('sorryyyyy');
         });
-
-
-
-
-
-
-
     }
 }
 
@@ -126,10 +131,6 @@ class App {
         // new LoadedPlace({ lat: -34.88761217420463, lng: -56.17486101765247 });
 
         // new NavBar();
-
-
-
-
     }
 }
 
