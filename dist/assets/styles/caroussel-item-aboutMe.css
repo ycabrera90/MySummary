@@ -12,25 +12,18 @@
 }
 
 /* GENERAL STYLES */
+#caroussel-item-aboutMe .progress {
+    margin-top: 16px;
+}
 
 /* STYLES APPLIED ONLY TO SMALL SCREENS */
 @media (max-width: 768px) {
-    /* #item2-header-lg {
-        display: none;
-    } */
-    #caroussel-item-aboutMe .progress {
-        margin-top: 16px;
-    }
-
     #caroussel-item-aboutMe .text {
         font-size: var(--item2-text-font-size-sm);
         text-align: center;
         padding-right: 23px;
         padding-left: 23px;
     }
-    /* #item2-text-container-sm {
-        display: none;
-    } */
     #caroussel-item-aboutMe .skills-container {
         margin-top: 105px;
         display: none;

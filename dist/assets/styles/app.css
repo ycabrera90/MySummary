@@ -16,7 +16,8 @@
 /* Carousel-Item-contacMe */
 @import url('caroussel-item-contactMe.css');
 
-
+/* Carousel-Item-myLocation */
+@import url('caroussel-item-myLocation.css');
 
 /* Vars */
 :root {
@@ -51,11 +52,8 @@ main {
     overflow: auto;
 }
 
-#carousel-control-prev-button,
-#carousel-control-next-button {
-    height: 0px;
-    position: absolute;
-    top: 96vh;
+.border-color-red {
+    border-color: red;
 }
 
 /* STYLES APPLIED ONLY TO SMALL SCREENS */
@@ -66,8 +64,6 @@ main {
         color: var(--item-2-header-color);
         text-align: center;
     }
-    
-    
 }
 
 /* STYLES APPLIED ONLY TO LARGE SCREENS */
@@ -76,14 +72,5 @@ main {
         font-family: var(--item-2-header-font-family);
         font-size: var(--item-2-header-font-size-lg);
         color: var(--item-2-header-color);
-    }
-    .progress {
-        margin-top: 16px;
-    }
-    #item1-skills-container {
-        margin-top: 105px;
-    }
-    #my-location {
-        height: 85vh;
     }
 }

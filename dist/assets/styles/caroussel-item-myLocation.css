@@ -1,0 +1,20 @@
+/* Vars */
+
+/* GENERAL STYLES */
+
+/* STYLES APPLIED ONLY TO SMALL SCREENS */
+@media (max-width: 768px) {
+    #caroussel-item-myLocation .location-container {
+        height: 68vh;
+    }
+}
+
+/* STYLES APPLIED ONLY TO LARGE SCREENS */
+@media (min-width: 768px) {
+    #caroussel-item-myLocation .item-header {
+        display: none;
+    }
+    #caroussel-item-myLocation .location-container {
+        display: none;
+    }
+}
