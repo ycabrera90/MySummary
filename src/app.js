@@ -7,6 +7,7 @@ const PROTOCOL = 'http'
 const SERVER_URL = 'localhost';
 const PORT = 3000;
 
+
 class LoadedPlace {
     constructor(coordinates) {
         const map = new Map();
@@ -128,9 +129,10 @@ class ContacMeForm {
 class App {
     static init() {
         new ContacMeForm();
-        // new LoadedPlace({ lat: -34.88761217420463, lng: -56.17486101765247 });
 
-        // new NavBar();
+        new LoadedPlace({ lat: -34.88761217420463, lng: -56.17486101765247 });
+
+        new NavBar();
     }
 }
 
