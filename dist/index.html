@@ -30,15 +30,14 @@
         <div class="backdrop"></div>
         <div class="container-fluid">
             <a class="navbar-brand text-light" href="#">
-                <img src="assets/images/LogoEIP.png" alt="EIP" id="LogoEIP" />
+                <img src="assets/images/LogoEIP.png" alt="EIP" class="LogoEIP" />
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
-                <i class="bi bi-menu-button-wide text-light" id="button-open-navbar"></i>
-                <!-- <i class="bi bi-menu-button-wide-fill text-light" id="button-close-navbar"></i> -->
+                <i class="bi bi-menu-button-wide text-light button-open-navbar"></i>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse navbar-content" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 container-fluid justify-content-end">
                     <li class="nav-item d-flex align-items-center p-2">
                         <i class="nav-icon bi bi-file-earmark-person text-light"></i>
@@ -77,12 +76,12 @@
             </div>
 
             <div class="carousel-inner">
-                <!-- <div class="carousel-item active" data-bs-interval="8000" id="Item1-Home">
+                <div class="carousel-item active" data-bs-interval="8000" id="caroussel-item-home">
                     <img src="assets/images/img1.jpg" class="carousel-item-backgroud" alt="" />
                     <div class="container carousel-item-content">
                         <div class="row">
                             <div class="col-12 d-flex justify-content-center">
-                                <p id="item-1-header">
+                                <p class="header">
                                     <span class="item1-header-acronym">E</span>verything
                                     <span class="item1-header-acronym">i</span>s
                                     <span class="item1-header-acronym">p</span>ossible
@@ -90,30 +89,26 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-12 col-md-5 d-flex" id="user-photo-container">
-                                <img src="assets/images/img3.jpg" alt="..." id="user-photo"
-                                    class="rounded-circle m-4" />
+                            <div class="col-12 col-md-5 d-flex user-photo-container">
+                                <img src="assets/images/img3.jpg" alt="..." class="rounded-circle m-4 user-photo" />
                             </div>
                             <div class="col-12 col-md-7">
-                                <h2 id="item1-hello-text">Hello!!!</h2>
-                                <p id="item1-name-text">I'm Yosniel</p>
-                                <p id="item1-category-text">
-                                    Software Ingeneer
-                                </p>
+                                <h2 class="hello-text">Hello!!!</h2>
+                                <p class="name-text">I'm Yosniel</p>
+                                <p class="category-text">Software Ingeneer</p>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-12 d-flex justify-content-center">
-                                <p id="item1-presentation-text">
+                                <p class="presentation-text">
                                     Full Stack Developer
                                 </p>
                             </div>
                         </div>
                     </div>
-                </div> -->
-                <!-- <div class="carousel-item" data-bs-interval="8000" id="Item2-AboutMe-lg">
+                </div>
+                <div class="carousel-item" data-bs-interval="8000" id="caroussel-item-aboutMe">
                     <img src="assets/images/img1.jpg" class="carousel-item-backgroud" alt="" />
-
                     <div class="container carousel-item-content">
                         <div class="row">
                             <div class="col-12 col-md-6">
@@ -121,7 +116,7 @@
                                     <p class="item-header">About me</p>
                                 </div>
                                 <div class="row">
-                                    <p id="item2-text">
+                                    <p class="text">
                                         I'm telecommunication and electronic
                                         engineer with serious passion for
                                         everything retaled to software.
@@ -137,78 +132,76 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-12 col-md-6" id="item2-skills-container-lg">
-                                <div class="row item2-skills">
+                            <div class="col-12 col-md-6 skills-container">
+                                <div class="row skill-bar">
                                     <div class="col-2 item2-icon-container">
-                                        <img src="assets/images/icon-html.png" class="item2-icon" alt="" />
+                                        <img src="assets/images/icon-html.png" class="skill-icon" alt="" />
                                     </div>
-                                    <div class="col-10 intem2-progress">
+                                    <div class="col-10 ">
                                         <div class="progress">
                                             <div class="progress-bar" role="progressbar" aria-valuenow="25"
                                                 aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row item2-skills">
+                                <div class="row skill-bar">
                                     <div class="col-2 item2-icon-container">
-                                        <img src="assets/images/icon-css.png" class="item2-icon" alt="" />
+                                        <img src="assets/images/icon-css.png" class="skill-icon" alt="" />
                                     </div>
-                                    <div class="col-10 intem2-progress">
+                                    <div class="col-10 ">
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="25"
+                                                aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-2 item2-icon-container">
+                                        <img src="assets/images/icon-js.png" class="skill-icon" alt="" />
+                                    </div>
+                                    <div class="col-10 ">
                                         <div class="progress">
                                             <div class="progress-bar" role="progressbar" aria-valuenow="25"
                                                 aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row item2-skills">
+                                <div class="row skill-bar">
                                     <div class="col-2 item2-icon-container">
-                                        <img src="assets/images/icon-js.png" class="item2-icon" alt="" />
+                                        <img src="assets/images/icon-react.png" class="skill-icon" alt="" />
                                     </div>
-                                    <div class="col-10 intem2-progress">
+                                    <div class="col-10 ">
                                         <div class="progress">
                                             <div class="progress-bar" role="progressbar" aria-valuenow="25"
                                                 aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row item2-skills">
+                                <div class="row skill-bar">
                                     <div class="col-2 item2-icon-container">
-                                        <img src="assets/images/icon-react.png" class="item2-icon" alt="" />
+                                        <img src="assets/images/icon-node.png" class="skill-icon" alt="" />
                                     </div>
-                                    <div class="col-10 intem2-progress">
+                                    <div class="col-10 ">
                                         <div class="progress">
                                             <div class="progress-bar" role="progressbar" aria-valuenow="25"
                                                 aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row item2-skills">
+                                <div class="row skill-bar">
                                     <div class="col-2 item2-icon-container">
-                                        <img src="assets/images/icon-node.png" class="item2-icon" alt="" />
+                                        <img src="assets/images/icon-python.png" class="skill-icon" alt="" />
                                     </div>
-                                    <div class="col-10 intem2-progress">
+                                    <div class="col-10 ">
                                         <div class="progress">
                                             <div class="progress-bar" role="progressbar" aria-valuenow="25"
                                                 aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row item2-skills">
+                                <div class="row skill-bar">
                                     <div class="col-2 item2-icon-container">
-                                        <img src="assets/images/icon-python.png" class="item2-icon" alt="" />
+                                        <img src="assets/images/icon-perl.png" class="skill-icon" alt="" />
                                     </div>
-                                    <div class="col-10 intem2-progress">
-                                        <div class="progress">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="25"
-                                                aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row item2-skills">
-                                    <div class="col-2 item2-icon-container">
-                                        <img src="assets/images/icon-perl.png" class="item2-icon" alt="" />
-                                    </div>
-                                    <div class="col-10 intem2-progress">
+                                    <div class="col-10 ">
                                         <div class="progress">
                                             <div class="progress-bar" role="progressbar" aria-valuenow="25"
                                                 aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
@@ -218,125 +211,95 @@
                             </div>
                         </div>
                     </div>
-                </div> -->
-                <!-- <div class="carousel-item" data-bs-interval="8000" id="Item2-AboutMe-sm">
+                </div>
+                <div class="carousel-item" data-bs-interval="8000" id="caroussel-item-mySkills">
                     <img src="assets/images/img1.jpg" class="carousel-item-backgroud" alt="" />
-
                     <div class="container carousel-item-content">
-                        <div class="row" id="my-skill-container">
-                            <div class="col-12 col-md-6">
-                                <div class="row">
-                                    <p class="item-header" id="item2-header-lg">
-                                        About me
-                                    </p>
+                        <div class="row skills-container">
+                            <p class="item-header">My Skills</p>
+                            <div class="row skill-bar">
+                                <div class="col-2 item2-icon-container">
+                                    <img src="assets/images/icon-html.png" class="skill-icon" alt="" />
                                 </div>
-                                <div class="row">
-                                    <p class="item-header" id="item2-header-sm">
-                                        My Skills
-                                    </p>
-                                </div>
-                                <div class="row" id="item2-text-container-sm">
-                                    <p id="item2-text">
-                                        I'm telecommunication and electronic
-                                        engineer with serious passion for
-                                        everything retaled to software.
-                                        <br /><br />
-                                        For several years in worked as
-                                        Project Manager of Engineering,
-                                        developing applications on the
-                                        server side, designing circuits and
-                                        programming firmwares. <br /><br />
-                                        In parallel to this I have been
-                                        studying to become Full Stack
-                                        Developer.
-                                    </p>
+                                <div class="col-10 ">
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="25"
+                                            aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-12 col-md-6" id="item2-skills-container-sm">
-                                <div class="row item2-skills">
-                                    <div class="col-2 item2-icon-container">
-                                        <img src="assets/images/icon-html.png" class="item2-icon" alt="" />
-                                    </div>
-                                    <div class="col-10 intem2-progress">
-                                        <div class="progress">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="25"
-                                                aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
-                                        </div>
+                            <div class="row skill-bar">
+                                <div class="col-2 item2-icon-container">
+                                    <img src="assets/images/icon-css.png" class="skill-icon" alt="" />
+                                </div>
+                                <div class="col-10 ">
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="25"
+                                            aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
                                     </div>
                                 </div>
-                                <div class="row item2-skills">
-                                    <div class="col-2 item2-icon-container">
-                                        <img src="assets/images/icon-css.png" class="item2-icon" alt="" />
-                                    </div>
-                                    <div class="col-10 intem2-progress">
-                                        <div class="progress">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="25"
-                                                aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
-                                        </div>
+                            </div>
+                            <div class="row skill-bar">
+                                <div class="col-2 item2-icon-container">
+                                    <img src="assets/images/icon-js.png" class="skill-icon" alt="" />
+                                </div>
+                                <div class="col-10 ">
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="25"
+                                            aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
                                     </div>
                                 </div>
-                                <div class="row item2-skills">
-                                    <div class="col-2 item2-icon-container">
-                                        <img src="assets/images/icon-js.png" class="item2-icon" alt="" />
-                                    </div>
-                                    <div class="col-10 intem2-progress">
-                                        <div class="progress">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="25"
-                                                aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
-                                        </div>
+                            </div>
+                            <div class="row skill-bar">
+                                <div class="col-2 item2-icon-container">
+                                    <img src="assets/images/icon-react.png" class="skill-icon" alt="" />
+                                </div>
+                                <div class="col-10 ">
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="25"
+                                            aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
                                     </div>
                                 </div>
-                                <div class="row item2-skills">
-                                    <div class="col-2 item2-icon-container">
-                                        <img src="assets/images/icon-react.png" class="item2-icon" alt="" />
-                                    </div>
-                                    <div class="col-10 intem2-progress">
-                                        <div class="progress">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="25"
-                                                aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
-                                        </div>
+                            </div>
+                            <div class="row skill-bar">
+                                <div class="col-2 item2-icon-container">
+                                    <img src="assets/images/icon-node.png" class="skill-icon" alt="" />
+                                </div>
+                                <div class="col-10 ">
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="25"
+                                            aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
                                     </div>
                                 </div>
-                                <div class="row item2-skills">
-                                    <div class="col-2 item2-icon-container">
-                                        <img src="assets/images/icon-node.png" class="item2-icon" alt="" />
-                                    </div>
-                                    <div class="col-10 intem2-progress">
-                                        <div class="progress">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="25"
-                                                aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
-                                        </div>
+                            </div>
+                            <div class="row skill-bar">
+                                <div class="col-2 item2-icon-container">
+                                    <img src="assets/images/icon-python.png" class="skill-icon" alt="" />
+                                </div>
+                                <div class="col-10 ">
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="25"
+                                            aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
                                     </div>
                                 </div>
-                                <div class="row item2-skills">
-                                    <div class="col-2 item2-icon-container">
-                                        <img src="assets/images/icon-python.png" class="item2-icon" alt="" />
-                                    </div>
-                                    <div class="col-10 intem2-progress">
-                                        <div class="progress">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="25"
-                                                aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
-                                        </div>
-                                    </div>
+                            </div>
+                            <div class="row skill-bar">
+                                <div class="col-2 item2-icon-container">
+                                    <img src="assets/images/icon-perl.png" class="skill-icon" alt="" />
                                 </div>
-                                <div class="row item2-skills">
-                                    <div class="col-2 item2-icon-container">
-                                        <img src="assets/images/icon-perl.png" class="item2-icon" alt="" />
-                                    </div>
-                                    <div class="col-10 intem2-progress">
-                                        <div class="progress">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="25"
-                                                aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
-                                        </div>
+                                <div class="col-10 ">
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="25"
+                                            aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div> -->
-                <div class="carousel-item active" data-bs-interval="8000" id="Item3-ContactMe-lg">
+                </div>
+                <!-- <div class="carousel-item" data-bs-interval="8000" id="caroussel-item-contactMe">
                     <img src="assets/images/img1.jpg" class="carousel-item-backgroud" alt="" />
-                    <div class="container carousel-item-content" id="item3-Container">
+                    <div class="container carousel-item-content">
                         <div class="row">
                             <div class="col-12 col-md-6">
                                 <h1 class="item-header" id="item3-header">
@@ -380,59 +343,20 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="carousel-item" data-bs-interval="8000" id="Item3-ContactMe-sm">
+                </div> -->
+                <!-- <div class="carousel-item" data-bs-interval="8000" id="Item3-ContactMe-sm">
                     <img src="assets/images/img1.jpg" class="carousel-item-backgroud" alt="" />
-                    <div class="container carousel-item-content" id="item3-Container">
+                    <div class="container carousel-item-content">
                         <div class="row">
-                            <div class="col-12 col-md-6" id="item3-header-lg">
-                                <h1 class="item-header" id="item3-header-text-lg">
-                                    Contact Me
-                                </h1>
-
-                                <p id="item3-text">
-                                    I am interested in growing
-                                    professionally for a software company
-                                </p>
-                                <div class="row">
-                                    <div class="col-12 col-md-6">
-                                        <input type="text" id="user-input-name" placeholder="Name" class="user-input" />
-                                    </div>
-                                    <div class="col-12 col-md-6">
-                                        <input type="email" nae="email" id="user-input-email" placeholder="Email"
-                                            class="user-input" />
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12">
-                                        <input type="text" id="user-input-subject" placeholder="Subject"
-                                            class="user-input" />
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12">
-                                        <textarea id="user-input-message" placeholder="Messaje" rows="5"
-                                            class="user-input"></textarea>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12 d-flex justify-content-end">
-                                        <button id="user-input-button-send">
-                                            Send messaje!
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="col-12" id="item3-header-sm">
                                 <h1 class="item-header">My location</h1>
                             </div>
-
                             <div class="col-12 col-md-6 bg-danger my-location" id="my-location-sm">
                                 Here wil be my location using a google Maps
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
 
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"

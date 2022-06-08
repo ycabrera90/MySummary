@@ -4,29 +4,24 @@
 /* Nav Bar */
 @import url('navBar.css');
 
-/* Carousel-Item-aboutMe */
-@import url('caroussel-item1-aboutMe.css');
+/* Carousel-Item-Home */
+@import url('caroussel-item-home.css');
+
+/* Carousel-Item-AboutMe */
+@import url('caroussel-item-aboutMe.css');
+
+/* Carousel-Item-AboutMe */
+@import url('caroussel-item-mySkills.css');
 
 /* Carousel-Item-contacMe */
 @import url('caroussel-item-contactMe.css');
 
 
 
-
-
+/* Vars */
 :root {
     --placeholder-color: rgba(213, 213, 231, 0.849);
     --carousel-item-content-text-shadow: 1px 2px 7px #6a0608;
-
-    --item-2-header-font-family: font-file-82132;
-    --item-2-header-color: #dedcf4;
-    --item-2-header-font-size-sm: 45px;
-    --item-2-header-font-size-lg: 65px;
-
-    --item2-text-font-size-sm: 21px;
-    --item2-text-font-size-lg: 129%;
-
-    --item2-icon-size: 50px;
 }
 
 /* GENERAL STYLES */
@@ -44,7 +39,6 @@ main {
 .carousel-item-backgroud {
     width: 100vw;
     height: 100vh;
-    
 }
 
 .carousel-item-content {
@@ -55,7 +49,6 @@ main {
     right: 0px;
     text-shadow: var(--carousel-item-content-text-shadow);
     overflow: auto;
-    
 }
 
 #carousel-control-prev-button,
@@ -73,153 +66,24 @@ main {
         color: var(--item-2-header-color);
         text-align: center;
     }
-    #item2-header-lg {
-        display: none;
-    }
-    #item2-text {
-        font-size: var(--item2-text-font-size-sm);
-        text-align: center;
-        padding-right: 23px;
-        padding-left: 23px;
-    }
-    #item2-text-container-sm {
-        display: none;
-    }
-    #item2-skills-container-lg {
-        margin-top: 105px;
-        display: none;
-    }
-    .item2-icon {
-        max-width: var(--item2-icon-size);
-        max-height: var(--item2-icon-size);
-        min-width: var(--item2-icon-size);
-        min-height: var(--item2-icon-size);
-    }
-    .progress {
-        margin-top: 16px;
-    }
-    #my-skill-container {
-        margin-left: 0;
-        margin-right: 0;
-    }
-    .item2-skills {
-        margin-top: 10px;
-    }
-    #my-location {
-        height: 85vh;
-    }
-    #item3-text {
-        font-size: var(--item2-text-font-size-sm);
-        text-align: center;
-    }
-    .user-input {
-        margin-top: 10px;
-        width: 100%;
-        background-color: #8d8d8d00;
-        color: #eadede;
-    }
-    #my-location {
-        display: none;
-    }
-    #item3-Container {
-        padding-right: 5vw;
-        padding-left: 5vw;
-    }
-    #item3-header-lg {
-        display: none;
-    }
-    #my-location-sm {
-        height: 70vh;
-
-        width: 100%;
-    }
+    
+    
 }
 
 /* STYLES APPLIED ONLY TO LARGE SCREENS */
 @media (min-width: 768px) {
-    
-
     .item-header {
         font-family: var(--item-2-header-font-family);
         font-size: var(--item-2-header-font-size-lg);
         color: var(--item-2-header-color);
     }
-
-    #item2-header-sm {
-        display: none;
-    }
-
-    #item2-text {
-        font-size: var(--item2-text-font-size-lg);
-        padding-left: 23px;
-        padding-left: 23px;
-    }
-
-    .item2-icon {
-        max-width: var(--item2-icon-size);
-        max-height: var(--item2-icon-size);
-        min-width: var(--item2-icon-size);
-        min-height: var(--item2-icon-size);
-    }
-
     .progress {
         margin-top: 16px;
     }
-
     #item1-skills-container {
         margin-top: 105px;
     }
-
-    #item2-skills-container-sm {
-        margin-top: 105px;
-        display: block;
-    }
-    #item2-skills-container-lg {
-        margin-top: 105px;
-        display: block;
-    }
-
-    .item2-skills {
-        margin-top: 10px;
-    }
-
     #my-location {
         height: 85vh;
-    }
-
-    .user-input {
-        margin-top: 10px;
-        width: 100%;
-        background-color: #8d8d8d00;
-        color: #eadede;
-    }
-
-    #item3-header {
-        margin-top: 3vh;
-    }
-
-    #item3-text {
-        font-size: var(--item2-text-font-size-sm);
-        text-align: left;
-    }
-
-    #user-input-subject {
-        width: 100%;
-    }
-    #user-input-button-send {
-        background-color: #233446;
-        color: rgba(255, 255, 255, 0.801);
-    }
-
-    #item3-header-sm {
-        display: none;
-    }
-
-    #my-location-sm {
-        height: 85vh;
-    }
-
-    #item3-header-text-lg {
-        margin-top: 3vh;
     }
 }

@@ -8,7 +8,6 @@ export class Map {
         }
 
         const listMapElement = document.querySelectorAll('.my-location');
-        console.log(listMapElement)
         const mapConfig = {
             center: { lat: coord.lat, lng: coord.lng },
             zoom: 6,

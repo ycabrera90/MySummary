@@ -1,5 +1,8 @@
 /* Vars */
-
+:root {
+    --text-font-size-sm: 21px;
+    --text-font-size-lg: 129%;
+}
 
 /* GENERAL STYLES */
 .border-color-red {
@@ -8,8 +11,69 @@
 
 /* STYLES APPLIED ONLY TO SMALL SCREENS */
 @media (max-width: 768px) {
+    #item3-text {
+        font-size: var(--text-font-size-sm);
+        text-align: center;
+    }
+    #caroussel-item-contactMe .carousel-item-content {
+        padding-right: 5vw;
+        padding-left: 5vw;
+    }
+    #item3-header-lg {
+        display: none;
+    }
+    #my-location {
+        height: 85vh;
+    }
+
+    .user-input {
+        margin-top: 10px;
+        width: 100%;
+        background-color: #8d8d8d00;
+        color: #eadede;
+    }
+
+    #my-location {
+        display: none;
+    }
+
+    #my-location-sm {
+        height: 70vh;
+        width: 100%;
+    }
 }
 
 /* STYLES APPLIED ONLY TO LARGE SCREENS */
 @media (min-width: 768px) {
+    #item3-text {
+        font-size: var(--text-font-size-lg);
+        text-align: left;
+    }
+    #item3-header {
+        margin-top: 3vh;
+    }
+
+    #item3-header-sm {
+        display: none;
+    }
+
+    #item3-header-text-lg {
+        margin-top: 3vh;
+    }
+
+    #user-input-subject {
+        width: 100%;
+    }
+
+    #user-input-button-send {
+        background-color: #233446;
+        color: rgba(255, 255, 255, 0.801);
+    }
+
+    .user-input {
+        margin-top: 10px;
+        width: 100%;
+        background-color: #8d8d8d00;
+        color: #eadede;
+    }
 }

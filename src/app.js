@@ -7,7 +7,6 @@ const PROTOCOL = 'http'
 const SERVER_URL = 'localhost';
 const PORT = 3000;
 
-
 class LoadedPlace {
     constructor(coordinates) {
         const map = new Map();
@@ -56,7 +55,7 @@ class NavBar {
 
 class ContacMeForm {
     constructor() {
-        this.contacMe = document.getElementById('Item3-ContactMe-lg');
+        this.contacMe = document.getElementById('caroussel-item-contactMe');
 
         this.name = this.contacMe.querySelector('#user-input-name');
         this.email = this.contacMe.querySelector('#user-input-email');

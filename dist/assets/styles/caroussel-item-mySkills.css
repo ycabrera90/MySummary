@@ -1,0 +1,45 @@
+/* Vars */
+:root {
+    --item2-text-font-size-sm: 21px;
+    --item2-icon-size: 50px;
+}
+
+/* GENERAL STYLES */
+
+/* STYLES APPLIED ONLY TO SMALL SCREENS */
+@media (max-width: 768px) {
+    
+    #caroussel-item-mySkills .progress {
+        margin-top: 16px;
+    }
+
+    #caroussel-item-mySkills .skills-container {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+    }
+
+    #caroussel-item-mySkills .text {
+        font-size: var(--item2-text-font-size-sm);
+        text-align: center;
+        padding-right: 23px;
+        padding-left: 23px;
+    }
+        
+    #caroussel-item-mySkills .skill-icon {
+        max-width: var(--item2-icon-size);
+        max-height: var(--item2-icon-size);
+        min-width: var(--item2-icon-size);
+        min-height: var(--item2-icon-size);
+    }
+    #caroussel-item-mySkills .skill-bar {
+        margin-top: 10px;
+    }
+}
+
+/* STYLES APPLIED ONLY TO LARGE SCREENS */
+@media (min-width: 768px) {
+    #caroussel-item-mySkills .carousel-item-content {
+        display: none;
+    }    
+}
