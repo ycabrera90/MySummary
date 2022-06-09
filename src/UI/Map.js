@@ -1,5 +1,5 @@
 export class Map {
-    constructor() {}
+    constructor() { }
 
     render(coord) {
         if (!google) {
@@ -7,12 +7,13 @@ export class Map {
             return;
         }
 
-        const listMapElement = document.querySelectorAll('.my-location');
+        const listMapElement = document.querySelectorAll('.location-container');
+
         const mapConfig = {
             center: { lat: coord.lat, lng: coord.lng },
             zoom: 6,
         };
-        
+
         const map1 = new google.maps.Map(listMapElement[0], mapConfig);
         const map2 = new google.maps.Map(listMapElement[1], mapConfig);
 

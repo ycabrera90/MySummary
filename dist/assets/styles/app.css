@@ -56,6 +56,10 @@ main {
     border-color: red;
 }
 
+.display-none {
+    display: none;
+}
+
 /* STYLES APPLIED ONLY TO SMALL SCREENS */
 @media (max-width: 768px) {
     .item-header {
