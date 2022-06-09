@@ -140,7 +140,12 @@ class Caroussel {
         this.showHideCarousselItems = this.caroussel.querySelectorAll('#caroussel-item-mySkills, #caroussel-item-myLocation');
         this.mainCarousselItem = this.caroussel.querySelector('#caroussel-item-home');
 
+        // If when a user open this page the screen size y greater than 768 px, it deploy only the necesary caroussel slides
+        if (window.innerWidth > 768) {
+            this.renderLarge();
+        }
 
+        // check is there were a windows size change
         window.addEventListener('resize', () => {
             if (window.innerWidth <= 768) {
                 this.renderSmall();
@@ -217,13 +222,14 @@ class Caroussel {
 
 class App {
     static init() {
+        new NavBar();
+
         new ContacMeForm();
 
         new Caroussel();
 
         new LoadedPlace({ lat: -34.88761217420463, lng: -56.17486101765247 });
 
-        new NavBar();
     }
 }
 
