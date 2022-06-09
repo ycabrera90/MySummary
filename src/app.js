@@ -1,7 +1,6 @@
 import { Map } from './UI/Map';
 import { validateEmail } from './Utility/inputsValidators';
 import { HttpReq } from './Utility/HTTP';
-import { Button } from 'bootstrap';
 
 const GITHUB_URL = 'https://github.com/ycabrera90';
 const PROTOCOL = 'https'
@@ -216,10 +215,6 @@ class Caroussel {
         this.mainIndicatior.classList.add('active');
     }
 }
-
-
-
-
 class App {
     static init() {
         new NavBar();
