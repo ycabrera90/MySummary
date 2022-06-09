@@ -22,7 +22,11 @@ class NavBar {
         this.navBar = document.getElementById('nav-bar');
         this.navBarButton = this.navBar.querySelector('.navbar-toggler');
         this.backDrop = this.navBar.querySelector('.backdrop');
+        this.homeButton = this.navBar.querySelector('.home-button');
+        this.aboutButton = this.navBar.querySelector('.about-button');
+        this.contactButton = this.navBar.querySelector('.contact-button');
         this.githubButton = this.navBar.querySelector('.github-button');
+
 
         this.navBarButton.addEventListener('click', () => {
             this.toggleButton();
@@ -38,6 +42,12 @@ class NavBar {
         this.githubButton.addEventListener('click', () => {
             window.location.href = GITHUB_URL;
         });
+
+        this.homeButton.addEventListener('click', this.goToHome);
+
+        this.aboutButton.addEventListener('click', this.goToAbout);
+
+        this.contactButton.addEventListener('click', this.goToContact);
     }
 
     toggleBackdrop() {
@@ -54,6 +64,26 @@ class NavBar {
         const collapseBar = this.navBar.querySelector('.navbar-collapse');
         collapseBar.classList.toggle('show');
     }
+
+    goToHome() {
+        document.getElementById('carouselExampleIndicators').querySelector('.first-indicator').click();
+    }
+
+    goToAbout() {
+        document.getElementById('carouselExampleIndicators').querySelector('.second-indicator').click();
+    }
+
+    goToContact() {
+        if (window.innerWidth > 768) {
+            document.getElementById('carouselExampleIndicators').querySelector('.third-indicator').click();
+        }
+        else {
+            document.getElementById('carouselExampleIndicators').querySelector('.fourth-indicator').click();
+            
+        }
+    }
+
+
 }
 
 class ContacMeForm {
@@ -133,7 +163,7 @@ class Caroussel {
 
         this.allIndicators = this.caroussel.querySelectorAll('.carousel-indicators button');
         this.showHideIndicators = this.caroussel.querySelectorAll(".showHide-indicator");
-        this.mainIndicatior = this.caroussel.querySelector('.home-indicator');
+        this.mainIndicatior = this.caroussel.querySelector('.first-indicator');
 
         this.allCarousselItems = this.caroussel.querySelectorAll('.carousel-item');
         this.showHideCarousselItems = this.caroussel.querySelectorAll('#caroussel-item-mySkills, #caroussel-item-myLocation');

@@ -56,4 +56,10 @@ nav .container-fluid {
 }
 /* Styles for large screens */
 @media (min-width: 768px) {
+    #nav-bar .skills-button {
+        display: none !important;
+    }
+    #nav-bar .location-button {
+        display: none !important;
+    }
 }
