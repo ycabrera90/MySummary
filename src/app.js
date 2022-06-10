@@ -20,70 +20,96 @@ class LoadedPlace {
 class NavBar {
     constructor() {
         this.navBar = document.getElementById('nav-bar');
+
         this.navBarButton = this.navBar.querySelector('.navbar-toggler');
+        this.icon = this.navBar.querySelector('.navbar-toggler i');
+        this.menu = this.navBar.querySelector('.navbar-collapse');
         this.backDrop = this.navBar.querySelector('.backdrop');
+
         this.homeButton = this.navBar.querySelector('.home-button');
         this.aboutButton = this.navBar.querySelector('.about-button');
+        this.skillsButton = this.navBar.querySelector('.skills-button');
         this.contactButton = this.navBar.querySelector('.contact-button');
         this.githubButton = this.navBar.querySelector('.github-button');
+        this.locationButton = this.navBar.querySelector('.location-button');
 
 
-        this.navBarButton.addEventListener('click', () => {
-            this.toggleButton();
-            this.toggleBackdrop();
-        });
+        this.navBarButton.addEventListener('click', this.tooggleBar.bind(this));
+        this.backDrop.addEventListener('click', this.collapseBar.bind(this));
 
-        this.backDrop.addEventListener('click', () => {
-            this.toggleButton();
-            this.toggleBackdrop();
-            this.collapseBar();
-        });
-
-        this.githubButton.addEventListener('click', () => {
-            window.location.href = GITHUB_URL;
-        });
-
-        this.homeButton.addEventListener('click', this.goToHome);
-
-        this.aboutButton.addEventListener('click', this.goToAbout);
-
-        this.contactButton.addEventListener('click', this.goToContact);
+        this.homeButton.addEventListener('click', this.goToHome.bind(this));
+        this.aboutButton.addEventListener('click', this.goToAbout.bind(this));
+        this.skillsButton.addEventListener('click', this.goToSkills.bind(this));
+        this.contactButton.addEventListener('click', this.goToContact.bind(this));
+        this.githubButton.addEventListener('click', this.goToGitHub.bind(this));
+        this.locationButton.addEventListener('click', this.goToLocation.bind(this));
     }
 
-    toggleBackdrop() {
-        this.backDrop.classList.toggle('show');
-    }
+    expandBar() {
+        if (this.icon.classList.contains('bi-menu-button-wide')) {
+            this.icon.classList.remove('bi-menu-button-wide');
+            this.icon.classList.add('bi-menu-button-wide-fill');
+        }
 
-    toggleButton() {
-        const icon = this.navBar.querySelector('.navbar-toggler i');
-        icon.classList.toggle('bi-menu-button-wide-fill');
-        icon.classList.toggle('bi-menu-button-wide');
-    }
+        if (!this.backDrop.classList.contains('show')) {
+            this.backDrop.classList.add('show');
+        }
 
+        if (!this.menu.classList.contains('show')) {
+            this.menu.classList.add('show');
+        }
+    }
     collapseBar() {
-        const collapseBar = this.navBar.querySelector('.navbar-collapse');
-        collapseBar.classList.toggle('show');
+        if (this.icon.classList.contains('bi-menu-button-wide-fill')) {
+            this.icon.classList.remove('bi-menu-button-wide-fill')
+            this.icon.classList.add('bi-menu-button-wide');
+        }
+
+        if (this.backDrop.classList.contains('show')) {
+            this.backDrop.classList.remove('show');
+        }
+
+        if (this.menu.classList.contains('show')) {
+            this.menu.classList.remove('show');
+        }
+    }
+    tooggleBar() {
+        if (this.icon.classList.contains('bi-menu-button-wide-fill')) {
+            this.collapseBar();
+        } else {
+            this.expandBar();
+        }
     }
 
     goToHome() {
         document.getElementById('carouselExampleIndicators').querySelector('.first-indicator').click();
+        this.collapseBar();
     }
-
     goToAbout() {
         document.getElementById('carouselExampleIndicators').querySelector('.second-indicator').click();
+        this.collapseBar();
     }
-
+    goToSkills() {
+        document.getElementById('carouselExampleIndicators').querySelector('.third-indicator').click();
+        this.collapseBar();
+    }
     goToContact() {
         if (window.innerWidth > 768) {
             document.getElementById('carouselExampleIndicators').querySelector('.third-indicator').click();
         }
         else {
             document.getElementById('carouselExampleIndicators').querySelector('.fourth-indicator').click();
-            
         }
+        this.collapseBar();
     }
-
-
+    goToLocation() {
+        document.getElementById('carouselExampleIndicators').querySelector('.fifth-indicator').click();
+        this.collapseBar();
+    }
+    goToGitHub() {
+        window.location.href = GITHUB_URL;
+        this.collapseBar();
+    }
 }
 
 class ContacMeForm {
@@ -245,6 +271,61 @@ class Caroussel {
         this.mainIndicatior.classList.add('active');
     }
 }
+
+class Skills {
+    constructor() {
+        this.caroussel = document.getElementById('carouselExampleIndicators');
+
+        this.skillHtml = this.caroussel.querySelectorAll('.skills-container .html .progress-bar');
+        this.skillCss = this.caroussel.querySelectorAll('.skills-container .css .progress-bar');
+        this.skillJs = this.caroussel.querySelectorAll('.skills-container .js .progress-bar');
+        this.skillReact = this.caroussel.querySelectorAll('.skills-container .react .progress-bar');
+        this.skillNode = this.caroussel.querySelectorAll('.skills-container .node .progress-bar');
+        this.skillPython = this.caroussel.querySelectorAll('.skills-container .python .progress-bar');
+        this.skillPerl = this.caroussel.querySelectorAll('.skills-container .perl .progress-bar');
+    }
+
+
+    setHtmlTo(progress) {
+        for (const skill of this.skillHtml) {
+            skill.style.width = `${progress}%`;
+        }
+    }
+    setCssTo(progress) {
+        for (const skill of this.skillCss) {
+            skill.style.width = `${progress}%`;
+        }
+    }
+    setJsTo(progress) {
+        for (const skill of this.skillJs) {
+            skill.style.width = `${progress}%`;
+        }
+    }
+    setReactTo(progress) {
+        for (const skill of this.skillReact) {
+            skill.style.width = `${progress}%`;
+        }
+    }
+    setNodeTo(progress) {
+        for (const skill of this.skillNode) {
+            skill.style.width = `${progress}%`;
+        }
+    }
+    setPythonTo(progress) {
+        for (const skill of this.skillPython) {
+            skill.style.width = `${progress}%`;
+        }
+    }
+    setPerlTo(progress) {
+        for (const skill of this.skillPerl) {
+            skill.style.width = `${progress}%`;
+        }
+    }
+
+
+
+}
+
 class App {
     static init() {
         new NavBar();
@@ -255,6 +336,14 @@ class App {
 
         new LoadedPlace({ lat: -34.88761217420463, lng: -56.17486101765247 });
 
+        const skills = new Skills();
+        skills.setHtmlTo(25);
+        skills.setCssTo(15);
+        skills.setJsTo(85);
+        skills.setReactTo(15);
+        skills.setNodeTo(45);
+        skills.setPythonTo(95);
+        skills.setPerlTo(85);
     }
 }
 
