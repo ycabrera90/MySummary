@@ -1,3 +1,5 @@
+const GITHUB_URL = 'https://github.com/ycabrera90';
+
 export class NavBar {
     constructor() {
         this.navBar = document.getElementById('nav-bar');

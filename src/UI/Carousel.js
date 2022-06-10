@@ -4,11 +4,21 @@ import { Skills } from './Skills';
 
 
 
+
+
 export class Carousel {
     constructor() {
+        this.slice = 'caroussel-item-home';
+
         this.constactmeForm = new ContacMeForm();
         this.locationMap = new Map();
         this.skills = new Skills();
+
+        this.onHome = () => { };       // method that execute a callback function when the user is on Home slide
+        this.onAboutMe = () => { };    // method that execute a callback function when the user is on AboutMe slide
+        this.onMySkills = () => { };   // method that execute a callback function when the user is on MySkills slide
+        this.onContactMe = () => { };  // method that execute a callback function when the user is on ContactMe slide
+        this.onMyLocation = () => { }; // method that execute a callback function when the user is on MyLocation slide
 
         this.caroussel = document.getElementById('carouselExampleIndicators');
 
@@ -19,6 +29,19 @@ export class Carousel {
         this.allCarousselItems = this.caroussel.querySelectorAll('.carousel-item');
         this.showHideCarousselItems = this.caroussel.querySelectorAll('#caroussel-item-mySkills, #caroussel-item-myLocation');
         this.mainCarousselItem = this.caroussel.querySelector('#caroussel-item-home');
+
+        this.itemHome = this.mainCarousselItem;
+        this.itemAboutMe = this.caroussel.querySelector('#caroussel-item-aboutMe');
+        this.itemMySkills = this.caroussel.querySelector('#caroussel-item-mySkills');
+        this.itemContacMe = this.caroussel.querySelector('#caroussel-item-contactMe');
+        this.itemMyLocation = this.caroussel.querySelector('#caroussel-item-myLocation');
+
+        // 
+        this.itemHome.addEventListener('mouseover', this.onHomeFunctionHandler.bind(this));
+        this.itemAboutMe.addEventListener('mouseover', this.onAboutMeFunctionHandler.bind(this));
+        this.itemMySkills.addEventListener('mouseover', this.onMySkillsFunctionHandler.bind(this));
+        this.itemContacMe.addEventListener('mouseover', this.onContactMeFunctionHandler.bind(this));
+        this.itemMyLocation.addEventListener('mouseover', this.onMyLocationFunctionHandler.bind(this));
 
         // If when a user open this page the screen size y greater than 768 px, it deploy only the necesary caroussel slides
         if (window.innerWidth > 768) {
@@ -100,4 +123,37 @@ export class Carousel {
         console.log('entre a lostiempos')
         this.caroussel.querySelector(`#${itemId}`).setAttribute("data-bs-interval", `${msTime}`);
     }
+
+    onHomeFunctionHandler() {
+        if (!(this.slice === 'caroussel-item-home')) {
+            this.slice = 'caroussel-item-home';
+            this.onHome();
+        }
+    }
+    onAboutMeFunctionHandler() {
+        if (!(this.slice === 'caroussel-item-aboutMe')) {
+            this.slice = 'caroussel-item-aboutMe';
+            this.onAboutMe();
+        }
+    }
+    onMySkillsFunctionHandler() {
+        if (!(this.slice === 'caroussel-item-mySkills')) {
+            this.slice = 'caroussel-item-mySkills';
+            this.onMySkills();
+        }
+    }
+    onContactMeFunctionHandler() {
+        if (!(this.slice === 'caroussel-item-contactMe')) {
+            this.slice = 'caroussel-item-contactMe';
+            this.onContactMe();
+        }
+    }
+    onMyLocationFunctionHandler() {
+        if (!(this.slice === 'caroussel-item-myLocation')) {
+            this.slice = 'caroussel-item-myLocation';
+            this.onMyLocation();
+        }
+    }
+
+
 }
