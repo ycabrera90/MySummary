@@ -6,20 +6,9 @@ import { Skills } from './Skills';
 
 export class Carousel {
     constructor() {
-        new ContacMeForm();
-
-        new Map().render({ lat: -34.88761217420463, lng: -56.17486101765247 });
-
+        this.constactmeForm = new ContacMeForm();
+        this.locationMap = new Map();
         this.skills = new Skills();
-        // this.skills.setHtmlTo(25);
-        // this.skills.setCssTo(15);
-        // this.skills.setJsTo(85);
-        // this.skills.setReactTo(15);
-        // this.skills.setNodeTo(45);
-        // this.skills.setPythonTo(95);
-        // this.skills.setPerlTo(85);
-
-
 
         this.caroussel = document.getElementById('carouselExampleIndicators');
 
@@ -108,6 +97,7 @@ export class Carousel {
     }
 
     setItemTime(itemId, msTime) {
+        console.log('entre a lostiempos')
         this.caroussel.querySelector(`#${itemId}`).setAttribute("data-bs-interval", `${msTime}`);
     }
 }

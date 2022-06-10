@@ -12,6 +12,10 @@ const PORT = "";
 
 export class ContacMeForm {
     constructor() {
+        const server = new HttpReq(PROTOCOL, SERVER_URL, PORT);
+
+        this.onContactMeForm;
+
         this.contacMe = document.getElementById('caroussel-item-contactMe');
         this.name = this.contacMe.querySelector('.user-input.name');
         this.email = this.contacMe.querySelector('.user-input.email');
@@ -19,10 +23,14 @@ export class ContacMeForm {
         this.messagge = this.contacMe.querySelector('.user-input.messagge');
         this.buttonSendMessage = this.contacMe.querySelector('.button-send');
 
+        // condition to say tha the client is filling th form
+        this.name.addEventListener('click', this.overFunctionHandler.bind(this));
+        this.email.addEventListener('click', this.overFunctionHandler.bind(this));
+        this.subject.addEventListener('click', this.overFunctionHandler.bind(this));
+        this.messagge.addEventListener('click', this.overFunctionHandler.bind(this));
+
         this.buttonSendMessage.addEventListener('click', this.sendMessagge.bind(this));
 
-
-        const server = new HttpReq(PROTOCOL, SERVER_URL, PORT);
     }
 
     sendMessagge() {
@@ -81,4 +89,10 @@ export class ContacMeForm {
             console.log('sorryyyyy');
         });
     }
+
+    overFunctionHandler() {
+        this.onContactMeForm();
+    }
+
+
 }
