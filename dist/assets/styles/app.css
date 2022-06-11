@@ -30,6 +30,14 @@
     color: var(--placeholder-color);
 }
 
+.border-color-red {
+    border-color: red;
+}
+
+.display-none {
+    display: none;
+}
+
 main {
     position: absolute;
     top: 0px;
@@ -37,7 +45,8 @@ main {
     z-index: -1;
 }
 
-.carousel-item-backgroud {
+.carousel-backgroud {
+    position: absolute;
     width: 100vw;
     height: 100vh;
 }
@@ -52,11 +61,18 @@ main {
     overflow: auto;
 }
 
-.border-color-red {
-    border-color: red;
+.carousel-item-backgroud {
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
 }
 
-.display-none {
+.carousel-control-prev,
+.carousel-control-next {
+    display: none;
+}
+
+.carousel-indicators {
     display: none;
 }
 

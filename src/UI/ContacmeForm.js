@@ -41,7 +41,6 @@ export class ContacMeForm {
             messagge: this.messagge.value.trim()
         };
 
-        console.log(userContact);
 
         if (!userContact.name) {
             // alert('please insert a name');
@@ -86,7 +85,6 @@ export class ContacMeForm {
             console.log(resp);
         }).catch(error => {
             console.log(error);
-            console.log('sorryyyyy');
         });
     }
 

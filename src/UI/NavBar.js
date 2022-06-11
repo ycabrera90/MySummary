@@ -1,3 +1,5 @@
+import { Button } from "bootstrap";
+
 const GITHUB_URL = 'https://github.com/ycabrera90';
 
 export class NavBar {
@@ -9,6 +11,7 @@ export class NavBar {
         this.menu = this.navBar.querySelector('.navbar-collapse');
         this.backDrop = this.navBar.querySelector('.backdrop');
 
+        this.allButtons = this.navBar.querySelectorAll('.navbar-collapse li');
         this.homeButton = this.navBar.querySelector('.home-button');
         this.aboutButton = this.navBar.querySelector('.about-button');
         this.skillsButton = this.navBar.querySelector('.skills-button');
@@ -26,7 +29,106 @@ export class NavBar {
         this.contactButton.addEventListener('click', this.goToContact.bind(this));
         this.githubButton.addEventListener('click', this.goToGitHub.bind(this));
         this.locationButton.addEventListener('click', this.goToLocation.bind(this));
+
+        this.highlightButtonHome();
     }
+
+    highlightButtonHome() {
+        const classLst = ['border', 'border-light', 'border-1', 'rounded'];
+
+        // clear the highlight off all buttons
+        for (const button of this.allButtons) {
+            for (const cl of classLst) {
+                if (button.classList.contains(cl)) {
+                    button.classList.remove(cl);
+                }
+            }
+        }
+
+        // add the highlight to selected button
+        for (const cl of classLst) {
+            if (!this.homeButton.classList.contains(cl)) {
+                this.homeButton.classList.add(cl);
+            }
+        }
+    }
+    highlightButtonAbout() {
+        const classLst = ['border', 'border-light', 'border-1', 'rounded'];
+
+        // clear the highlight off all buttons
+        for (const button of this.allButtons) {
+            for (const cl of classLst) {
+                if (button.classList.contains(cl)) {
+                    button.classList.remove(cl);
+                }
+            }
+        }
+
+        // add the highlight to selected button
+        for (const cl of classLst) {
+            if (!this.aboutButton.classList.contains(cl)) {
+                this.aboutButton.classList.add(cl);
+            }
+        }
+    }
+    highlightButtonSkills() {
+        const classLst = ['border', 'border-light', 'border-1', 'rounded'];
+
+        // clear the highlight off all buttons
+        for (const button of this.allButtons) {
+            for (const cl of classLst) {
+                if (button.classList.contains(cl)) {
+                    button.classList.remove(cl);
+                }
+            }
+        }
+
+        // add the highlight to selected button
+        for (const cl of classLst) {
+            if (!this.skillsButton.classList.contains(cl)) {
+                this.skillsButton.classList.add(cl);
+            }
+        }
+    }
+    highlightButtonContact() {
+        const classLst = ['border', 'border-light', 'border-1', 'rounded'];
+
+        // clear the highlight off all buttons
+        for (const button of this.allButtons) {
+            for (const cl of classLst) {
+                if (button.classList.contains(cl)) {
+                    button.classList.remove(cl);
+                }
+            }
+        }
+
+        // add the highlight to selected button
+        for (const cl of classLst) {
+            if (!this.contactButton.classList.contains(cl)) {
+                this.contactButton.classList.add(cl);
+            }
+        }
+    }
+    highlightButtonLocation() {
+        const classLst = ['border', 'border-light', 'border-1', 'rounded'];
+
+        // clear the highlight off all buttons
+        for (const button of this.allButtons) {
+            for (const cl of classLst) {
+                if (button.classList.contains(cl)) {
+                    button.classList.remove(cl);
+                }
+            }
+        }
+
+        // add the highlight to selected button
+        for (const cl of classLst) {
+            if (!this.locationButton.classList.contains(cl)) {
+                this.locationButton.classList.add(cl);
+            }
+        }
+    }
+
 
     expandBar() {
         if (this.icon.classList.contains('bi-menu-button-wide')) {
@@ -65,18 +167,22 @@ export class NavBar {
     }
 
     goToHome() {
+        this.highlightButtonHome();
         document.getElementById('carouselExampleIndicators').querySelector('.first-indicator').click();
         this.collapseBar();
     }
     goToAbout() {
+        this.highlightButtonAbout();
         document.getElementById('carouselExampleIndicators').querySelector('.second-indicator').click();
         this.collapseBar();
     }
     goToSkills() {
+        this.highlightButtonSkills();
         document.getElementById('carouselExampleIndicators').querySelector('.third-indicator').click();
         this.collapseBar();
     }
     goToContact() {
+        this.highlightButtonContact();
         if (window.innerWidth > 768) {
             document.getElementById('carouselExampleIndicators').querySelector('.third-indicator').click();
         }
@@ -86,6 +192,7 @@ export class NavBar {
         this.collapseBar();
     }
     goToLocation() {
+        this.highlightButtonLocation();
         document.getElementById('carouselExampleIndicators').querySelector('.fifth-indicator').click();
         this.collapseBar();
     }

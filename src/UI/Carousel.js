@@ -1,6 +1,7 @@
 import { ContacMeForm } from "./ContacmeForm";
 import { Map } from './Map';
 import { Skills } from './Skills';
+import { Touch } from "../Utility/Touch.js";
 
 
 
@@ -9,10 +10,7 @@ import { Skills } from './Skills';
 export class Carousel {
     constructor() {
         this.slice = 'caroussel-item-home';
-
-        this.constactmeForm = new ContacMeForm();
-        this.locationMap = new Map();
-        this.skills = new Skills();
+        this.updateSlice();
 
         this.onHome = () => { };       // method that execute a callback function when the user is on Home slide
         this.onAboutMe = () => { };    // method that execute a callback function when the user is on AboutMe slide
@@ -22,8 +20,12 @@ export class Carousel {
 
         this.caroussel = document.getElementById('carouselExampleIndicators');
 
+        this.constactmeForm = new ContacMeForm();
+        this.locationMap = new Map();
+        this.skills = new Skills();
+        this.touch = new Touch(this.caroussel);     // add touch event to carousel
+
         this.allIndicators = this.caroussel.querySelectorAll('.carousel-indicators button');
-        this.showHideIndicators = this.caroussel.querySelectorAll(".showHide-indicator");
         this.mainIndicatior = this.caroussel.querySelector('.first-indicator');
 
         this.allCarousselItems = this.caroussel.querySelectorAll('.carousel-item');
@@ -35,13 +37,6 @@ export class Carousel {
         this.itemMySkills = this.caroussel.querySelector('#caroussel-item-mySkills');
         this.itemContacMe = this.caroussel.querySelector('#caroussel-item-contactMe');
         this.itemMyLocation = this.caroussel.querySelector('#caroussel-item-myLocation');
-
-        // 
-        this.itemHome.addEventListener('mouseover', this.onHomeFunctionHandler.bind(this));
-        this.itemAboutMe.addEventListener('mouseover', this.onAboutMeFunctionHandler.bind(this));
-        this.itemMySkills.addEventListener('mouseover', this.onMySkillsFunctionHandler.bind(this));
-        this.itemContacMe.addEventListener('mouseover', this.onContactMeFunctionHandler.bind(this));
-        this.itemMyLocation.addEventListener('mouseover', this.onMyLocationFunctionHandler.bind(this));
 
         // If when a user open this page the screen size y greater than 768 px, it deploy only the necesary caroussel slides
         if (window.innerWidth > 768) {
@@ -56,6 +51,39 @@ export class Carousel {
                 this.renderLarge();
             }
         })
+
+        // Touch events
+        // detect slide right
+        this.touch.slideRight = () => {
+            this.goToPrevSlide();
+        }
+        // detect slide left
+        this.touch.slideLeft = () => {
+            this.goToNextSlide();
+        }
+    }
+    updateSlice() {
+        setInterval(() => {
+            // check which slide is active and save it id
+            for (const item of this.allCarousselItems) {
+                if (item.classList.contains('active')) {
+                    this.slice = item.id;
+                }
+            }
+
+            // run the function handler in base to active slide
+            if (this.slice === 'caroussel-item-home') {
+                this.onHomeFunctionHandler(this);
+            } else if (this.slice === 'caroussel-item-aboutMe') {
+                this.onAboutMeFunctionHandler(this);
+            } else if (this.slice === 'caroussel-item-mySkills') {
+                this.onMySkillsFunctionHandler(this);
+            } else if (this.slice === 'caroussel-item-contactMe') {
+                this.onContactMeFunctionHandler(this);
+            } else if (this.slice === 'caroussel-item-myLocation') {
+                this.onMyLocationFunctionHandler(this);
+            }
+        }, 500)
     }
 
     renderSmall() {
@@ -67,12 +95,7 @@ export class Carousel {
                 reset = true;
             };
         }
-        for (const showHideIndicator of this.showHideIndicators) {
-            if (showHideIndicator.classList.contains('display-none')) {
-                showHideIndicator.classList.remove('display-none');
-                reset = true;
-            };
-        }
+
         if (reset) {
             this.resetCaroussel();
         }
@@ -87,12 +110,7 @@ export class Carousel {
                 reset = true;
             };
         }
-        for (const showHideIndicator of this.showHideIndicators) {
-            if (!showHideIndicator.classList.contains('display-none')) {
-                showHideIndicator.classList.add('display-none');
-                reset = true;
-            };
-        }
+
         if (reset) {
             this.resetCaroussel();
         }
@@ -120,39 +138,30 @@ export class Carousel {
     }
 
     setItemTime(itemId, msTime) {
-        console.log('entre a lostiempos')
         this.caroussel.querySelector(`#${itemId}`).setAttribute("data-bs-interval", `${msTime}`);
     }
 
+    goToNextSlide() {
+        this.caroussel.querySelector('.carousel-control-next').click();
+    }
+    goToPrevSlide() {
+        this.caroussel.querySelector('.carousel-control-prev').click();
+    }
+
     onHomeFunctionHandler() {
-        if (!(this.slice === 'caroussel-item-home')) {
-            this.slice = 'caroussel-item-home';
-            this.onHome();
-        }
+        this.onHome();
     }
     onAboutMeFunctionHandler() {
-        if (!(this.slice === 'caroussel-item-aboutMe')) {
-            this.slice = 'caroussel-item-aboutMe';
-            this.onAboutMe();
-        }
+        this.onAboutMe();
     }
     onMySkillsFunctionHandler() {
-        if (!(this.slice === 'caroussel-item-mySkills')) {
-            this.slice = 'caroussel-item-mySkills';
-            this.onMySkills();
-        }
+        this.onMySkills();
     }
     onContactMeFunctionHandler() {
-        if (!(this.slice === 'caroussel-item-contactMe')) {
-            this.slice = 'caroussel-item-contactMe';
-            this.onContactMe();
-        }
+        this.onContactMe();
     }
     onMyLocationFunctionHandler() {
-        if (!(this.slice === 'caroussel-item-myLocation')) {
-            this.slice = 'caroussel-item-myLocation';
-            this.onMyLocation();
-        }
+        this.onMyLocation();
     }
 
 
