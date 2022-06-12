@@ -167,22 +167,22 @@ export class NavBar {
     }
 
     goToHome() {
-        this.highlightButtonHome();
+        // this.highlightButtonHome();
         document.getElementById('carouselExampleIndicators').querySelector('.first-indicator').click();
         this.collapseBar();
     }
     goToAbout() {
-        this.highlightButtonAbout();
+        // this.highlightButtonAbout();
         document.getElementById('carouselExampleIndicators').querySelector('.second-indicator').click();
         this.collapseBar();
     }
     goToSkills() {
-        this.highlightButtonSkills();
+        // this.highlightButtonSkills();
         document.getElementById('carouselExampleIndicators').querySelector('.third-indicator').click();
         this.collapseBar();
     }
     goToContact() {
-        this.highlightButtonContact();
+        // this.highlightButtonContact();
         if (window.innerWidth > 768) {
             document.getElementById('carouselExampleIndicators').querySelector('.third-indicator').click();
         }
@@ -192,7 +192,7 @@ export class NavBar {
         this.collapseBar();
     }
     goToLocation() {
-        this.highlightButtonLocation();
+        // this.highlightButtonLocation();
         document.getElementById('carouselExampleIndicators').querySelector('.fifth-indicator').click();
         this.collapseBar();
     }

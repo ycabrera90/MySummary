@@ -1,0 +1,221 @@
+[33mcommit 72e33d26865039b60b767a1440363f2e54099fc4[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: yosniel <yosniel.ch@gmail.com>
+Date:   Sun Jun 12 20:12:36 2022 -0300
+
+    bad commit
+
+[33mcommit a8e6a7ef9e9e8e664d389a05be06f65b50d5209f[m
+Author: yosniel <yosniel.ch@gmail.com>
+Date:   Sun Jun 12 20:10:35 2022 -0300
+
+    the modal for error in sending message was designed
+
+[33mcommit c578ab2e0f7f1bb8e8df556348ae17be3b8207cc[m
+Author: yosniel <yosniel.ch@gmail.com>
+Date:   Sat Jun 11 00:05:38 2022 -0300
+
+    the slide right and left of carousel items were coded
+
+[33mcommit 560535947b0f6c6849a8043ae62f98abed112058[m
+Author: yosniel <yosniel.ch@gmail.com>
+Date:   Fri Jun 10 15:31:48 2022 -0300
+
+    the time restoration of the contact form was coded when the user is on another slide
+
+[33mcommit 3228f6c85d14411bf3df23cbd410c61f2ac0ec18[m
+Author: yosniel <yosniel.ch@gmail.com>
+Date:   Fri Jun 10 12:12:09 2022 -0300
+
+    condition to say tha the client is filling th form was coded
+
+[33mcommit 46e0bc66c7a45273a6dcfc94495f190d7839420e[m
+Author: yosniel <yosniel.ch@gmail.com>
+Date:   Fri Jun 10 11:24:03 2022 -0300
+
+    the js classes were separated into diferents files
+
+[33mcommit 029206871c73a36c4439c21f65e562d41a6debfb[m
+Author: yosniel <yosniel.ch@gmail.com>
+Date:   Thu Jun 9 23:30:44 2022 -0300
+
+    the skills was coded
+
+[33mcommit a730059b83c33911dfbe54e31e1e28168572f143[m
+Author: yosniel <yosniel.ch@gmail.com>
+Date:   Thu Jun 9 17:44:30 2022 -0300
+
+    the skill and location button was created on navbar for small screens
+
+[33mcommit 474fc5da0dcc2d728db848ad2981ea44c1cad89f[m
+Author: yosniel <yosniel.ch@gmail.com>
+Date:   Thu Jun 9 16:32:54 2022 -0300
+
+    A bug was fixed in navbar
+
+[33mcommit c1b979b62481db8e7b6f6d6ffccad4ffac0abe85[m
+Author: yosniel <yosniel.ch@gmail.com>
+Date:   Thu Jun 9 16:16:15 2022 -0300
+
+    A condition was coded to start the page in large screens
+
+[33mcommit de8ff8dee5173610d7afa1a6a07f0b4387910d1c[m
+Author: yosniel <yosniel.ch@gmail.com>
+Date:   Thu Jun 9 13:49:57 2022 -0300
+
+    Some bugs were fixed by showing the caroussel in small and large screens.
+
+[33mcommit ad327eb371924c22eb540db8f50ef00b33d2547c[m
+Author: yosniel <yosniel.ch@gmail.com>
+Date:   Thu Jun 9 10:54:00 2022 -0300
+
+    the functions were implemented to show only the necessary caroussel content
+
+[33mcommit 20c06129b1e2dc0be3b857fc974ce746ed67b7a8[m
+Author: yosniel <yosniel.ch@gmail.com>
+Date:   Wed Jun 8 16:19:19 2022 -0300
+
+    All CSS styles were adjusted
+
+[33mcommit f12ee87792213fa56e4a2a2b4604b1b96f06e1b9[m
+Author: yosniel <yosniel.ch@gmail.com>
+Date:   Wed Jun 8 14:22:19 2022 -0300
+
+    Some adjustment was made in css styles
+
+[33mcommit 584d1d84e5dd40361865ddca2d3064df98c751b6[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: yosniel <yosniel.ch@gmail.com>
+Date:   Wed Jun 8 09:28:30 2022 -0300
+
+    the project for work with all slides was restored
+
+[33mcommit 6aaa4fe1c80f3c0e9f835691ff52bd8d746c3e2e[m
+Author: yosniel <yosniel.ch@gmail.com>
+Date:   Tue Jun 7 23:17:58 2022 -0300
+
+    the red border in inputs was designed for prevent user errors
+
+[33mcommit 3c0cd380b37c2e37c807a25234313e9dd874e833[m
+Author: yosniel <yosniel.ch@gmail.com>
+Date:   Mon Jun 6 23:27:40 2022 -0300
+
+    The send the form contactme was coded
+
+[33mcommit 46d1819069ebac51a463f1bd9fc499120d61772f[m
+Author: yosniel <yosniel.ch@gmail.com>
+Date:   Mon Jun 6 13:43:26 2022 -0300
+
+    the user inputs validations was coded at client side
+
+[33mcommit c75e741e4c9e5c0caa986c7d59acd3103a0b8bf4[m
+Author: yosniel <yosniel.ch@gmail.com>
+Date:   Sun Jun 5 22:00:57 2022 -0300
+
+    some bug was fixed for deploy app
+
+[33mcommit 8e6b9be07d9ad879096f286c9efd22965fe50889[m
+Author: yosniel <yosniel.ch@gmail.com>
+Date:   Sat Jun 4 22:17:42 2022 -0300
+
+    the logo EIP was added to navbar
+
+[33mcommit f13e3c25a40045a11aaaf8c3794e179bc1c17b51[m
+Author: yosniel <yosniel.ch@gmail.com>
+Date:   Fri Jun 3 22:23:13 2022 -0300
+
+    some dummy files was deleted
+
+[33mcommit b86749fcaae74a65456eabe345b8af23c59f2156[m
+Author: yosniel <yosniel.ch@gmail.com>
+Date:   Fri Jun 3 22:19:02 2022 -0300
+
+    A bug in the button of navbar was fixed
+
+[33mcommit 40622845f9f27bc21b144aeb0c92a83adc7ad313[m
+Author: yosniel <yosniel.ch@gmail.com>
+Date:   Thu Jun 2 06:59:25 2022 -0300
+
+    some changes was made for deploy de project
+
+[33mcommit 462bd34cfeb886faaa4eab611185c5360a1e7b65[m
+Author: yosniel <yosniel.ch@gmail.com>
+Date:   Wed Jun 1 23:23:39 2022 -0300
+
+    the backdrop for navBar was coded
+
+[33mcommit e8cf722260ded45a82ec09e61a10ae970c98fca9[m
+Author: yosniel <yosniel.ch@gmail.com>
+Date:   Wed Jun 1 22:56:30 2022 -0300
+
+    A bug in the navBar button was fixed
+
+[33mcommit e1697fbe175faa5f0ef5274334c7f5f07c426e7a[m
+Author: yosniel <yosniel.ch@gmail.com>
+Date:   Wed Jun 1 22:49:34 2022 -0300
+
+    An animation to the NavBar button was added
+
+[33mcommit 0572da3a700e0ca846f6b10c28874f0ab2b32bad[m
+Author: yosniel <yosniel.ch@gmail.com>
+Date:   Wed Jun 1 21:49:25 2022 -0300
+
+    the googleMaps was added to seccion My Location
+
+[33mcommit ed019b63409fa30d9caaf6044dec8cb1215b6a9a[m
+Author: yosniel <yosniel.ch@gmail.com>
+Date:   Tue May 31 23:29:36 2022 -0300
+
+    the overflow property was seted in all carousel items
+
+[33mcommit 187546fa4c57409c5fac3a30f2677561254fb9bd[m
+Author: yosniel <yosniel.ch@gmail.com>
+Date:   Tue May 31 22:02:14 2022 -0300
+
+    the styles of item1 were placed in another file
+
+[33mcommit 376dd482178ae97f2463bd66ed60fbd794eaa9b7[m
+Author: yosniel <yosniel.ch@gmail.com>
+Date:   Sat May 28 15:03:03 2022 -0300
+
+    the contact me was designed
+
+[33mcommit c39d5f3e8320619f0e04d59928157887f5317a4c[m
+Author: yosniel <yosniel.ch@gmail.com>
+Date:   Sat May 28 00:28:56 2022 -0300
+
+    the skills were design
+
+[33mcommit 34b8fa4aa5d91143436b3c946c9542b9c29456b1[m
+Author: yosniel <yosniel.ch@gmail.com>
+Date:   Thu May 26 21:59:53 2022 -0300
+
+    some styles was adjusted
+
+[33mcommit 1e90c76a2c089e0b4a08951b5c352fd189ad8137[m
+Author: yosniel <yosniel.ch@gmail.com>
+Date:   Tue May 24 23:41:32 2022 -0300
+
+    was seted all styles for sm screens
+
+[33mcommit cc4d11d5f2a00bfa0f6f28e4c2fd7f6b6e0064b7[m
+Author: yosniel <yosniel.ch@gmail.com>
+Date:   Mon May 23 23:18:07 2022 -0300
+
+    the first item of carousel was designed
+
+[33mcommit 8f253fe09a6835db2fd959f3aaa651432c4b3b9f[m
+Author: yosniel <yosniel.ch@gmail.com>
+Date:   Sun May 22 22:51:55 2022 -0300
+
+    the carousel was added to the project
+
+[33mcommit 297baf87391a41d3e14a3c113299ce5168aba359[m
+Author: yosniel <yosniel.ch@gmail.com>
+Date:   Sun May 22 18:14:44 2022 -0300
+
+    some bugs was fixed for build in production this project
+
+[33mcommit ca8226ce130dbb670a473edd19422c8e51307a39[m
+Author: yosniel <yosniel.ch@gmail.com>
+Date:   Sun May 22 16:21:50 2022 -0300
+
+    navbar was designed

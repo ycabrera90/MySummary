@@ -34,13 +34,13 @@ class App {
         }
 
         // set my skills
-        carousel.skills.setHtmlTo(25);
-        carousel.skills.setCssTo(15);
-        carousel.skills.setJsTo(85);
+        carousel.skills.setHtmlTo(30);
+        carousel.skills.setCssTo(30);
+        carousel.skills.setJsTo(95);
         carousel.skills.setReactTo(15);
-        carousel.skills.setNodeTo(45);
-        carousel.skills.setPythonTo(95);
-        carousel.skills.setPerlTo(85);
+        carousel.skills.setNodeTo(50);
+        carousel.skills.setPythonTo(85);
+        carousel.skills.setPerlTo(80);
 
         // I put my location on google map
         carousel.locationMap.render({ lat: -34.88761217420463, lng: -56.17486101765247 });
