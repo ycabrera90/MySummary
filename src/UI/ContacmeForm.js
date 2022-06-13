@@ -16,6 +16,14 @@ export class ContacMeForm {
 
         this.fillingContactMeForm;
 
+        this.modalReadyButton = document.getElementById('modal-ready-button');
+        this.modalFaultButton = document.getElementById('modal-fault-button');
+        this.modalSendAnotherButton = document.querySelector('#modal-ready .btn-primary');
+        this.modalTryAgainButton = document.querySelector('#modal-fault .btn-primary');
+        console.log(this.modalSendAnotherButton);
+        console.log(this.modalTryAgainButton);
+
+
         this.contacMe = document.getElementById('caroussel-item-contactMe');
         this.name = this.contacMe.querySelector('.user-input.name');
         this.email = this.contacMe.querySelector('.user-input.email');
@@ -30,6 +38,18 @@ export class ContacMeForm {
         this.messagge.addEventListener('click', this.fillingContactMeFormFunctionHandler.bind(this));
 
         this.buttonSendMessage.addEventListener('click', this.sendMessagge.bind(this));
+
+        // working whit modals
+        this.modalSendAnotherButton.addEventListener('click', () => {
+            this.modalReadyButton.click();
+            this.messagge.value = '';
+        });
+        this.modalTryAgainButton.addEventListener('click', () => {
+            this.modalFaultButton.click();
+        });
+
+
+
 
     }
 
@@ -83,8 +103,15 @@ export class ContacMeForm {
 
         server.sendHttpRequest('POST', '/contact-me-mail', userContact).then(resp => {
             console.log(resp);
+            if (resp.status) {
+                this.modalReadyButton.click();
+            }
+            else {
+                this.modalFaultButton.click();
+            }
+
         }).catch(error => {
-            console.log(error);
+            this.modalFaultButton.click();
         });
     }
 

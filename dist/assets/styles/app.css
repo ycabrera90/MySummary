@@ -76,6 +76,11 @@ main {
     display: none;
 }
 
+#modal-ready-button,
+#modal-fault-button {
+    display: none;
+}
+
 /* STYLES APPLIED ONLY TO SMALL SCREENS */
 @media (max-width: 768px) {
     .item-header {

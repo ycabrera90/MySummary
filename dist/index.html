@@ -26,6 +26,51 @@
 </head>
 
 <body>
+    <!-- modals -->
+    <button type="button" id="modal-ready-button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-ready">
+        Launch demo modal
+    </button>
+    <button type="button" id="modal-fault-button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-fault">
+        Launch demo modal
+    </button>
+    <div class="modal fade" id="modal-ready" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Enjoy !!! 😎</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Your message has been sent successfully <br>
+                    You will receive answer as soon as possible
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bye</button>
+                    <button type="button" class="btn btn-primary">Send Another</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modal-fault" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Sorry !!! 😥</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Your message could not be sent correctly at this time. <br>
+                    Try again later.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bye</button>
+                    <button type="button" class="btn btn-primary">Try Again</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <nav class="navbar navbar-expand-md container-fluid" id="nav-bar">
         <div class="backdrop"></div>
         <div class="container-fluid">
