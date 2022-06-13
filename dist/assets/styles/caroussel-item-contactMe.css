@@ -17,7 +17,6 @@
     color: #eadede;
 }
 
-
 /* STYLES APPLIED ONLY TO SMALL SCREENS */
 @media (max-width: 768px) {
     #caroussel-item-contactMe .item-text {
@@ -44,5 +43,8 @@
     #caroussel-item-contactMe .button-send {
         background-color: #233446;
         color: rgba(255, 255, 255, 0.801);
+    }
+    #caroussel-item-contactMe .location-container {
+        left: 33px;
     }
 }

@@ -47,10 +47,6 @@ export class ContacMeForm {
         this.modalTryAgainButton.addEventListener('click', () => {
             this.modalFaultButton.click();
         });
-
-
-
-
     }
 
     sendMessagge() {
