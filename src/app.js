@@ -13,23 +13,23 @@ class App {
 
         // I restar the time for the contact for when we are on others slides
         carousel.onHome = () => {
-            carousel.setItemTime('caroussel-item-contactMe', 4000);
+            carousel.setItemTime('caroussel-item-contactMe', 8000);
             navBar.highlightButtonHome();
         }
         carousel.onAboutMe = () => {
-            carousel.setItemTime('caroussel-item-contactMe', 4000);
+            carousel.setItemTime('caroussel-item-contactMe', 8000);
             navBar.highlightButtonAbout();
 
         }
         carousel.onMySkills = () => {
-            carousel.setItemTime('caroussel-item-contactMe', 4000);
+            carousel.setItemTime('caroussel-item-contactMe', 8000);
             navBar.highlightButtonSkills();
         }
         carousel.onContactMe = () => {
             navBar.highlightButtonContact();
         }
         carousel.onMyLocation = () => {
-            carousel.setItemTime('caroussel-item-contactMe', 4000);
+            carousel.setItemTime('caroussel-item-contactMe', 8000);
             navBar.highlightButtonLocation();
         }
 
