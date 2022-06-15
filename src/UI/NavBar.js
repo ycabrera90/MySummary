@@ -1,6 +1,7 @@
 import { Button } from "bootstrap";
 
 const GITHUB_URL = 'https://github.com/ycabrera90';
+const LINKEDIN_URL = 'https://www.linkedin.com/in/ingenier%C3%ADacubana';
 
 export class NavBar {
     constructor() {
@@ -17,6 +18,7 @@ export class NavBar {
         this.skillsButton = this.navBar.querySelector('.skills-button');
         this.contactButton = this.navBar.querySelector('.contact-button');
         this.githubButton = this.navBar.querySelector('.github-button');
+        this.linkedinButton = this.navBar.querySelector('.linkedin-button');
         this.locationButton = this.navBar.querySelector('.location-button');
 
 
@@ -28,6 +30,7 @@ export class NavBar {
         this.skillsButton.addEventListener('click', this.goToSkills.bind(this));
         this.contactButton.addEventListener('click', this.goToContact.bind(this));
         this.githubButton.addEventListener('click', this.goToGitHub.bind(this));
+        this.linkedinButton.addEventListener('click', this.goToLinkedin.bind(this));
         this.locationButton.addEventListener('click', this.goToLocation.bind(this));
 
         this.highlightButtonHome();
@@ -198,6 +201,10 @@ export class NavBar {
     }
     goToGitHub() {
         window.location.href = GITHUB_URL;
+        this.collapseBar();
+    }
+    goToLinkedin() {
+        window.location.href = LINKEDIN_URL;
         this.collapseBar();
     }
 }
