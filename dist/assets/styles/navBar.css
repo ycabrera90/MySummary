@@ -31,7 +31,7 @@ nav .container-fluid {
     #nav-bar .navbar-content {
         position: absolute;
         top: 57px;
-        left: 2px;
+        left: 3px;
         min-width: 30vw !important;
         background-color: #07132b3d;
     }
