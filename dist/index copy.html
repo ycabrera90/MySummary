@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Full Stack Developer</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"
+        defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"
+        defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBT2B9SZCsfcnWxxpFHWxKeeNzeT0DfJU4" defer></script>
+
+
+    <!-- Source Scripts -->
+    <!-- <script src="assets/scripts/app.js" type="module" defer></script> -->
+    <script src="assets/scripts/app.5f0b1b233bd5dabdf1af.js" type="module" defer></script>
+
+    <!-- Source Styles -->
+    <link rel="stylesheet" href="assets/styles/custom-bootstrap.css" />
+    <link rel="stylesheet" href="assets/styles/app.css" type="text/css" />
+</head>
+
+<body>
+    <!-- modals -->
+    <button type="button" id="modal-ready-button" class="btn btn-primary" data-bs-toggle="modal"
+        data-bs-target="#modal-ready">
+        Launch demo modal
+    </button>
+    <button type="button" id="modal-fault-button" class="btn btn-primary" data-bs-toggle="modal"
+        data-bs-target="#modal-fault">
+        Launch demo modal
+    </button>
+    <div class="modal fade" id="modal-ready" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Enjoy !!! 😎</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Your message has been sent successfully <br>
+                    You will receive answer as soon as possible
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bye</button>
+                    <button type="button" class="btn btn-primary">Send Another</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modal-fault" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Sorry !!! 😥</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Your message could not be sent correctly at this time. <br>
+                    Try again later.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bye</button>
+                    <button type="button" class="btn btn-primary">Try Again</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <i class="toggle-button bi bi-menu-button-wide"></i>
+        <a href="index.html" class="main-header__brand">
+            <!-- <img src="assets/images/LogoEIP.png" alt="everything is possible"> -->
+        </a>
+
+        <nav class="main-nav">
+            <ul class="main-nav__items">
+                <li class="main-nav__item">
+                    <a class="item__container" href="#">
+                        <i class="item__icon bi bi bi-house-fill"></i>
+                        <p class="item__text">HOME</p> 
+                    </a>
+                </li>
+                <li class="main-nav__item">
+                    <a class="item__container" href="#">
+                        <i class="item__icon bi bi-file-earmark-person"></i>
+                        <p class="item__text">ABOUT</p> 
+                    </a>
+                </li>
+                <li class="main-nav__item">
+                    <a class="item__container" href="#">
+                        <i class="item__icon bi bi-handbag-fill"></i>
+                        <p class="item__text">SKILLS</p> 
+                    </a>
+                </li>
+                <li class="main-nav__item">
+                    <a class="item__container" href="#">
+                        <i class="item__icon bi bi-person-rolodex"></i>
+                        <p class="item__text">CONTACT</p> 
+                    </a>
+                </li>
+                <li class="main-nav__item">
+                    <a class="item__container" href="#">
+                        <i class="item__icon bi bi bi-geo-alt-fill"></i>
+                        <p class="item__text">LOCATION</p> 
+                    </a>
+                </li>
+                <li class="main-nav__item">
+                    <a class="item__container" href="#">
+                        <i class="item__icon bi bi-github"></i>
+                        <p class="item__text">GITHUB</p> 
+                    </a>
+                </li>
+                <li class="main-nav__item">
+                    <a class="item__container" href="#">
+                        <i class="item__icon bi bi-linkedin"></i>
+                        <p class="item__text">LINKEDIN</p> 
+                    </a>
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                
+            </ul>
+        </nav>
+    </header>
+
+    <!-- <nav class="navbar navbar-expand-md container-fluid" id="nav-bar">
+        <div class="backdrop"></div>
+        <div class="container-fluid">
+            <a class="navbar-brand text-light" href="#">
+                <img src="assets/images/LogoEIP.png" alt="EIP" class="LogoEIP" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="bi bi-menu-button-wide text-light button-open-navbar"></i>
+            </button>
+            <div class="collapse navbar-collapse navbar-content" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 container-fluid justify-content-end">
+                    <li class="nav-item d-flex align-items-center p-2 home-button">
+                        <i class="nav-icon bi bi bi-house-fill text-light"></i>
+                        <a class="nav-link active text-light" href="#">HOME</a>
+                    </li>
+                    <li class="nav-item d-flex align-items-center p-2 about-button">
+                        <i class="nav-icon bi bi-file-earmark-person text-light"></i>
+                        <a class="nav-link active text-light" aria-current="page" href="#">ABOUT</a>
+                    </li>
+                    <li class="nav-item d-flex align-items-center p-2 skills-button">
+                        <i class="nav-icon bi bi-handbag-fill text-light"></i>
+                        <a class="nav-link active text-light" aria-current="page" href="#">SKILLS</a>
+                    </li>
+                    <li class="nav-item d-flex align-items-center p-2 contact-button">
+                        <i class="bi bi-person-rolodex text-light"></i>
+                        <a class="nav-link active text-light" href="#">CONTACT</a>
+                    </li>
+                    <li class="nav-item d-flex align-items-center p-2 location-button">
+                        <i class="bi bi bi-geo-alt-fill text-light"></i>
+                        <a class="nav-link active text-light" href="#">LOCATION</a>
+                    </li>
+                    <li class="nav-item d-flex align-items-center p-2 github-button">
+                        <i class="bi bi-github text-light"></i>
+                        <a class="nav-link active text-light" href="#">GITHUB</a>
+                    </li>
+                    <li class="nav-item d-flex align-items-center p-2 linkedin-button">
+                        <i class="bi bi-linkedin text-light"></i>
+                        <a class="nav-link active text-light" href="#">LINKEDIN</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav> -->
+
+    <main class="container-fluid d-flex p-0 align-items-center justify-content-center text-light">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+
+            <img src="assets/images/img1.jpg" class="carousel-backgroud" alt="" />
+
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                    class="first-indicator active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2" class="second-indicator"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3" class="third-indicator"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                    aria-label="Slide 4" class="fourth-indicator showHide-indicator"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                    aria-label="Slide 5" class="fifth-indicator showHide-indicator"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="8000" id="caroussel-item-home">
+                    <img src="" class="carousel-item-backgroud" alt="" />
+                    <div class="container carousel-item-content">
+                        <div class="row">
+                            <div class="col-12 d-flex justify-content-center">
+                                <p class="header">
+                                    <span class="item1-header-acronym">E</span>verything
+                                    <span class="item1-header-acronym">i</span>s
+                                    <span class="item1-header-acronym">p</span>ossible
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-5 d-flex user-photo-container">
+                                <img src="assets/images/img3.jpg" alt="..." class="rounded-circle m-4 user-photo" />
+                            </div>
+                            <div class="col-12 col-md-7">
+                                <h2 class="hello-text">Hello!!!</h2>
+                                <p class="name-text">I'm Yosniel</p>
+                                <p class="category-text">Software Engineer</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 d-flex justify-content-center">
+                                <p class="presentation-text">
+                                    Full Stack Developer
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="carousel-item" data-bs-interval="8000" id="caroussel-item-aboutMe">
+                    <img src="" class="carousel-item-backgroud" alt="" />
+                    <div class="container carousel-item-content">
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="row">
+                                    <h1 class="item-header">About me</h1>
+                                </div>
+                                <div class="row">
+                                    <p class="text">
+                                        I'm a Telecommunications and Electronics
+                                        Engineer with a serious passion for
+                                        everything retaled to software.
+                                        <br /><br />
+                                        For several years I've worked as a
+                                        Project Manager of Engineering,
+                                        developing applications on the
+                                        server side, designing circuits, and
+                                        programming firmwares. <br /><br />
+                                        In parallel to this, I have been
+                                        studying to become a Full Stack
+                                        Developer.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 skills-container">
+                                <div class="row skill-bar html">
+                                    <div class="col-2 item2-icon-container">
+                                        <img src="assets/images/icon-html.png" class="skill-icon" alt="" />
+                                    </div>
+                                    <div class="col-10 ">
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                                role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                                                aria-valuemax="100" style="width: 75%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row skill-bar css">
+                                    <div class="col-2 item2-icon-container">
+                                        <img src="assets/images/icon-css.png" class="skill-icon" alt="" />
+                                    </div>
+                                    <div class="col-10 ">
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                                role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                                                aria-valuemax="100" style="width: 75%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row skill-bar js">
+                                    <div class="col-2 item2-icon-container">
+                                        <img src="assets/images/icon-js.png" class="skill-icon" alt="" />
+                                    </div>
+                                    <div class="col-10 ">
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                                role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                                                aria-valuemax="100" style="width: 75%"></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="row skill-bar react">
+                                    <div class="col-2 item2-icon-container">
+                                        <img src="assets/images/icon-react.png" class="skill-icon" alt="" />
+                                    </div>
+                                    <div class="col-10 ">
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                                role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                                                aria-valuemax="100" style="width: 75%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row skill-bar node">
+                                    <div class="col-2 item2-icon-container">
+                                        <img src="assets/images/icon-node.png" class="skill-icon" alt="" />
+                                    </div>
+                                    <div class="col-10 ">
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                                role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                                                aria-valuemax="100" style="width: 75%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row skill-bar python">
+                                    <div class="col-2 item2-icon-container">
+                                        <img src="assets/images/icon-python.png" class="skill-icon" alt="" />
+                                    </div>
+                                    <div class="col-10 ">
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                                role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                                                aria-valuemax="100" style="width: 75%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row skill-bar perl">
+                                    <div class="col-2 item2-icon-container">
+                                        <img src="assets/images/icon-perl.png" class="skill-icon" alt="" />
+                                    </div>
+                                    <div class="col-10 ">
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                                role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                                                aria-valuemax="100" style="width: 75%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="8000" id="caroussel-item-mySkills">
+                    <img src="" class="carousel-item-backgroud" alt="" />
+                    <div class="container carousel-item-content">
+                        <div class="row">
+                            <h1 class="item-header">My Skills</h1>
+                        </div>
+                        <div class="col-12 col-md-6 skills-container">
+                            <div class="row skill-bar html">
+                                <div class="col-2 item2-icon-container">
+                                    <img src="assets/images/icon-html.png" class="skill-icon" alt="" />
+                                </div>
+                                <div class="col-10 ">
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                            role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
+                                            style="width: 75%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row skill-bar css">
+                                <div class="col-2 item2-icon-container">
+                                    <img src="assets/images/icon-css.png" class="skill-icon" alt="" />
+                                </div>
+                                <div class="col-10 ">
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                            role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
+                                            style="width: 75%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row skill-bar js">
+                                <div class="col-2 item2-icon-container">
+                                    <img src="assets/images/icon-js.png" class="skill-icon" alt="" />
+                                </div>
+                                <div class="col-10 ">
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                            role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
+                                            style="width: 75%"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row skill-bar react">
+                                <div class="col-2 item2-icon-container">
+                                    <img src="assets/images/icon-react.png" class="skill-icon" alt="" />
+                                </div>
+                                <div class="col-10 ">
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                            role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
+                                            style="width: 75%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row skill-bar node">
+                                <div class="col-2 item2-icon-container">
+                                    <img src="assets/images/icon-node.png" class="skill-icon" alt="" />
+                                </div>
+                                <div class="col-10 ">
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                            role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
+                                            style="width: 75%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row skill-bar python">
+                                <div class="col-2 item2-icon-container">
+                                    <img src="assets/images/icon-python.png" class="skill-icon" alt="" />
+                                </div>
+                                <div class="col-10 ">
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                            role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
+                                            style="width: 75%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row skill-bar perl">
+                                <div class="col-2 item2-icon-container">
+                                    <img src="assets/images/icon-perl.png" class="skill-icon" alt="" />
+                                </div>
+                                <div class="col-10 ">
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                            role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
+                                            style="width: 75%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="8000" id="caroussel-item-contactMe">
+                    <img src="" class="carousel-item-backgroud" alt="" />
+                    <div class="container carousel-item-content">
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <h1 class="item-header">
+                                    Contact Me
+                                </h1>
+                                <p class="item-text">
+                                    I am interested in growing
+                                    professionally for a software company.
+                                </p>
+                                <div class="row">
+                                    <div class="col-12 col-md-6">
+                                        <input type="text" placeholder="Name" class="user-input name" />
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <input type="email" nae="email" placeholder="Email" class="user-input email" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <input type="text" placeholder="Subject" class="user-input subject" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <textarea placeholder="Messaje" rows="5" class="user-input messagge"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 d-flex justify-content-end">
+                                        <button class="button-send">
+                                            Send messaje!
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 bg-danger location-container">
+                                Here wil be my location using a google Maps
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="8000" id="caroussel-item-myLocation">
+                    <img src="" class="carousel-item-backgroud" alt="" />
+                    <div class="container carousel-item-content">
+                        <div class="row">
+                            <div class="col-12">
+                                <h1 class="item-header">My location</h1>
+                            </div>
+                            <div class="col-12 col-md-6 bg-danger location-container">
+                                Here wil be my location using a google Maps
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev" id="carousel-control-prev-button">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next" id="carousel-control-next-button">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </main>
+</body>
+
+</html>
