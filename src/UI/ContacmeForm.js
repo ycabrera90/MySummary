@@ -20,8 +20,6 @@ export class ContacMeForm {
         this.modalFaultButton = document.getElementById('modal-fault-button');
         this.modalSendAnotherButton = document.querySelector('#modal-ready .btn-primary');
         this.modalTryAgainButton = document.querySelector('#modal-fault .btn-primary');
-        console.log(this.modalSendAnotherButton);
-        console.log(this.modalTryAgainButton);
 
 
         this.contacMe = document.getElementById('caroussel-item-contactMe');

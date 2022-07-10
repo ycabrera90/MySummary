@@ -90,7 +90,7 @@ export class Carousel {
         var reset = false;
         for (const showHideCarousselItem of this.showHideCarousselItems) {
             if (!showHideCarousselItem.classList.contains('carousel-item')) {
-                showHideCarousselItem.classList.remove('display-none');
+                showHideCarousselItem.classList.remove('hide');
                 showHideCarousselItem.classList.add('carousel-item');
                 reset = true;
             };
@@ -105,7 +105,7 @@ export class Carousel {
         var reset = false;
         for (const showHideCarousselItem of this.showHideCarousselItems) {
             if (showHideCarousselItem.classList.contains('carousel-item')) {
-                showHideCarousselItem.classList.add('display-none');
+                showHideCarousselItem.classList.add('hide');
                 showHideCarousselItem.classList.remove('carousel-item');
                 reset = true;
             };

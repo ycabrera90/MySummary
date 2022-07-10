@@ -1,9 +1,11 @@
-import { NavBar } from './UI/NavBar';
+// import { NavBar } from './UI/NavBar';
+import { MainHeader } from './UI/mainHeader';
 import { Carousel } from './UI/Carousel';
 
 class App {
     static init() {
-        const navBar = new NavBar();
+        const mainHeader = new MainHeader();
+
         const carousel = new Carousel();
 
         // I put a long time for the slide of the form when working on it.
@@ -14,23 +16,23 @@ class App {
         // I restar the time for the contact for when we are on others slides
         carousel.onHome = () => {
             carousel.setItemTime('caroussel-item-contactMe', 8000);
-            navBar.highlightButtonHome();
+            mainHeader.highlightItem('main-nav__item--home');
         }
         carousel.onAboutMe = () => {
             carousel.setItemTime('caroussel-item-contactMe', 8000);
-            navBar.highlightButtonAbout();
-
+            mainHeader.highlightItem('main-nav__item--about');
         }
         carousel.onMySkills = () => {
             carousel.setItemTime('caroussel-item-contactMe', 8000);
-            navBar.highlightButtonSkills();
+            mainHeader.highlightItem('main-nav__item--skills');
         }
         carousel.onContactMe = () => {
-            navBar.highlightButtonContact();
+            mainHeader.highlightItem('main-nav__item--contact');
+
         }
         carousel.onMyLocation = () => {
             carousel.setItemTime('caroussel-item-contactMe', 8000);
-            navBar.highlightButtonLocation();
+            mainHeader.highlightItem('main-nav__item--location');
         }
 
         // set my skills

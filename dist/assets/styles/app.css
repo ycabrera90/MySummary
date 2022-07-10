@@ -1,11 +1,8 @@
 /* Bootstrap icons */
 @import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css');
 
-/* Nav Bar */
-@import url('navBar.css');
-
 /* Header OKKKKKK*/
-@import url('header.css');
+@import url('main-header.css');
 
 /* Carousel-Item-Home */
 @import url('caroussel-item-home.css');
@@ -22,22 +19,17 @@
 /* Carousel-Item-myLocation */
 @import url('caroussel-item-myLocation.css');
 
-/* Vars */
-:root {
-    --placeholder-color: rgba(213, 213, 231, 0.849);
-    --carousel-item-content-text-shadow: 1px 2px 7px #6a0608;
-}
 
 /* GENERAL STYLES */
 ::placeholder {
-    color: var(--placeholder-color);
+    color:  rgba(213, 213, 231, 0.849);
 }
 
 .border-color-red {
     border-color: red;
 }
 
-.display-none {
+.hide {
     display: none;
 }
 
@@ -49,6 +41,7 @@ main {
 }
 
 .carousel-backgroud {
+    background: url('../images/img1.jpg') center/cover;
     position: absolute;
     width: 100vw;
     height: 100vh;
@@ -60,7 +53,7 @@ main {
     bottom: 0px;
     left: 0px;
     right: 0px;
-    text-shadow: var(--carousel-item-content-text-shadow);
+    text-shadow: 1px 2px 7px #6a0608;
     overflow: auto;
 }
 
@@ -82,7 +75,7 @@ main {
 #modal-ready-button,
 #modal-fault-button {
     display: none;
-}
+} 
 
 /* STYLES APPLIED ONLY TO SMALL SCREENS */
 @media (max-width: 768px) {
@@ -101,4 +94,4 @@ main {
         font-size: var(--item-2-header-font-size-lg);
         color: var(--item-2-header-color);
     }
-}
+} 

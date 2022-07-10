@@ -15,11 +15,12 @@
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"
         defer></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBT2B9SZCsfcnWxxpFHWxKeeNzeT0DfJU4" defer></script>
-    
+
 
     <!-- Source Scripts -->
-    <!-- <script src="assets/scripts/app.js" type="module" defer></script> -->
-    <script src="assets/scripts/app.5f0b1b233bd5dabdf1af.js" type="module" defer></script>
+    <script src="assets/scripts/app.js" type="module" defer></script>
+    <!-- <script src="assets/scripts/app.5f0b1b233bd5dabdf1af.js" type="module" defer></script> -->
+    <!-- <script src="/src/UI/mainHeader.js" defer></script> -->
 
     <!-- Source Styles -->
     <link rel="stylesheet" href="assets/styles/custom-bootstrap.css" />
@@ -73,57 +74,67 @@
         </div>
     </div>
 
-
-    <nav class="navbar navbar-expand-md container-fluid" id="nav-bar">
-        <div class="backdrop"></div>
-        <div class="container-fluid">
-            <a class="navbar-brand text-light" href="#">
-                <img src="assets/images/LogoEIP.png" alt="EIP" class="LogoEIP" />
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <i class="bi bi-menu-button-wide text-light button-open-navbar"></i>
-            </button>
-            <div class="collapse navbar-collapse navbar-content" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 container-fluid justify-content-end">
-                    <li class="nav-item d-flex align-items-center p-2 home-button">
-                        <i class="nav-icon bi bi bi-house-fill text-light"></i>
-                        <a class="nav-link active text-light" href="#">HOME</a>
-                    </li>
-                    <li class="nav-item d-flex align-items-center p-2 about-button">
-                        <i class="nav-icon bi bi-file-earmark-person text-light"></i>
-                        <a class="nav-link active text-light" aria-current="page" href="#">ABOUT</a>
-                    </li>
-                    <li class="nav-item d-flex align-items-center p-2 skills-button">
-                        <i class="nav-icon bi bi-handbag-fill text-light"></i>
-                        <a class="nav-link active text-light" aria-current="page" href="#">SKILLS</a>
-                    </li>
-                    <li class="nav-item d-flex align-items-center p-2 contact-button">
-                        <i class="bi bi-person-rolodex text-light"></i>
-                        <a class="nav-link active text-light" href="#">CONTACT</a>
-                    </li>
-                    <li class="nav-item d-flex align-items-center p-2 location-button">
-                        <i class="bi bi bi-geo-alt-fill text-light"></i>
-                        <a class="nav-link active text-light" href="#">LOCATION</a>
-                    </li>
-                    <li class="nav-item d-flex align-items-center p-2 github-button">
-                        <i class="bi bi-github text-light"></i>
-                        <a class="nav-link active text-light" href="#">GITHUB</a>
-                    </li>
-                    <li class="nav-item d-flex align-items-center p-2 linkedin-button">
-                        <i class="bi bi-linkedin text-light"></i>
-                        <a class="nav-link active text-light" href="#">LINKEDIN</a>
-                    </li>
-                </ul>
-            </div>
+    <header class="main-header">
+        <div class="toggle-button">
+            <i class="bi bi-menu-button-wide" id="toggleButton_expand"></i>
+            <i class="hide bi bi-menu-button-wide-fill" id="toggleButton_collapse"></i>
         </div>
-    </nav>
+        <a href="index.html" class="main-header__brand"></a>
+        <nav class="main-nav">
+            <div class="main-nav__backdrop hide" id="mainNav_backdrop"></div>
+            <ul class="main-nav__items hide" id="mainNav_items">
+                <li class="main-nav__item main-nav__item--home" id="item_home">
+                    <a class="item__container" href="#">
+                        <i class="item__icon bi bi bi-house-fill"></i>
+                        <p class="item__text">Home</p>
+                    </a>
+                </li>
+                <li class="main-nav__item main-nav__item--about" id="item_about">
+                    <a class="item__container" href="#">
+                        <i class="item__icon bi bi-file-earmark-person"></i>
+                        <p class="item__text">About</p>
+                    </a>
+                </li>
+                <li class="main-nav__item main-nav__item--skills" id="item_skills">
+                    <a class="item__container" href="#">
+                        <i class="item__icon bi bi-handbag-fill"></i>
+                        <p class="item__text">Skills</p>
+                    </a>
+                </li>
+                <li class="main-nav__item main-nav__item--contact" id="item_contact">
+                    <a class="item__container" href="#">
+                        <i class="item__icon bi bi-person-rolodex"></i>
+                        <p class="item__text">Contact</p>
+                    </a>
+                </li>
+                <li class="main-nav__item main-nav__item--location" id="item_location">
+                    <a class="item__container" href="#">
+                        <i class="item__icon bi bi bi-geo-alt-fill"></i>
+                        <p class="item__text">Location</p>
+                    </a>
+                </li>
+                <li class="main-nav__item main-nav__item--github" id="item_github">
+                    <a class="item__container" href="#">
+                        <i class="item__icon bi bi-github"></i>
+                        <p class="item__text">Github</p>
+                    </a>
+                </li>
+                <li class="main-nav__item main-nav__item--linkedin" id="item_linkedin">
+                    <a class="item__container" href="#">
+                        <i class="item__icon bi bi-linkedin"></i>
+                        <p class="item__text">Linkedin</p>
+                    </a>
+                </li>
+            </ul>
+            
+        </nav>
+    </header>
 
     <main class="container-fluid d-flex p-0 align-items-center justify-content-center text-light">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-
-            <img src="assets/images/img1.jpg" class="carousel-backgroud" alt="" />
+            
+            <div class="carousel-backgroud"></div>
+            <!-- <img src="assets/images/img1.jpg" class="carousel-backgroud" alt="" /> -->
 
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
