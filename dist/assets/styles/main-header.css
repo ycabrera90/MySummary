@@ -5,6 +5,8 @@
     position: fixed;
     top: 0;
     left: 0;
+    height: 3.5rem;
+
     width: 100vw;
 
     display: flex;
@@ -13,8 +15,8 @@
     z-index: 10;
 
     font-family: 'Roboto Flex', sans-serif;
-    background: #112a41c7;
-    color: #e3e3e3;
+    background: var(--color_4);
+    color: var(--color_1);
 }
 
 .toggle-button,
@@ -23,37 +25,33 @@
     justify-content: center;
     align-items: center;
     align-content: center;
-
-    width: 3rem;
     height: 3rem;
-    margin: 0px 0.5rem;
 }
 
 .toggle-button {
-    padding-top: 0.1rem;
+    padding: 0.5rem 0.5rem;
     font-size: 2rem;
     cursor: pointer;
 }
 
-
-
 .toggle-button:hover {
     font-size: 2.1rem;
-    color: white;
+    color: var(--color_2);
 }
 
 .toggle-button:active {
     font-size: 2.1rem;
-    color: rgb(0, 0, 0);
+    color: var(--color_3);
 }
 
 .main-header__brand {
-    background: url('../images/LogoEIP.png') center/4.7rem 2.6rem;
+    /* background: url('../images/LogoEIP.png') center/4.7rem 2.6rem; */
+    text-decoration: none;
 }
 
 .main-nav {
     position: absolute;
-    top: 3.05rem;
+    top: 3.55rem;
     left: 0.04rem;
 
     font-size: 1.2rem;
@@ -97,14 +95,14 @@
     color: inherit;
 }
 
-.item__container:hover{
+.item__container:hover {
     font-size: 1.3rem;
-    color: white;
+    color: var(--color_2);
 }
 
 .item__container:active {
     font-size: 1.3rem;
-    color: black;
+    color: var(--color_3);
 }
 
 .item__icon,
@@ -124,23 +122,20 @@
     .main-nav__items {
         display: flex !important;
         flex-direction: row;
-
         width: auto;
     }
 
     .main-nav__item {
         display: flex;
         flex-direction: row;
-
         width: 7rem;
         height: 2.5rem;
         margin: 0 0.2rem;
-
         list-style: none;
     }
 
-    .highlighted{
-        border-bottom: 0.2rem white solid;
+    .highlighted {
+        border-bottom: 0.2rem var(--color_2) solid;
     }
 
     .toggle-button,

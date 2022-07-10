@@ -4,6 +4,9 @@
 /* Header OKKKKKK*/
 @import url('main-header.css');
 
+/* Brand OKKKKKK*/
+@import url('eip-brand.css');
+
 /* Carousel-Item-Home */
 @import url('caroussel-item-home.css');
 
@@ -19,10 +22,16 @@
 /* Carousel-Item-myLocation */
 @import url('caroussel-item-myLocation.css');
 
+:root {
+    --color_1: #fefffb;
+    --color_2: #9b675c;
+    --color_3: #13a0ad;
+    --color_4: #09223691;
+}
 
 /* GENERAL STYLES */
 ::placeholder {
-    color:  rgba(213, 213, 231, 0.849);
+    color: rgba(213, 213, 231, 0.849);
 }
 
 .border-color-red {
@@ -38,6 +47,10 @@ main {
     top: 0px;
     height: 100vh;
     z-index: -1;
+}
+
+.carousel-inner {
+    color: var(--color_1);
 }
 
 .carousel-backgroud {
@@ -75,7 +88,7 @@ main {
 #modal-ready-button,
 #modal-fault-button {
     display: none;
-} 
+}
 
 /* STYLES APPLIED ONLY TO SMALL SCREENS */
 @media (max-width: 768px) {
@@ -94,4 +107,4 @@ main {
         font-size: var(--item-2-header-font-size-lg);
         color: var(--item-2-header-color);
     }
-} 
+}
