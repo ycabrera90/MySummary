@@ -8,7 +8,7 @@
 @import url('eip-brand.css');
 
 /* Carousel-Item-Home OKKK */
-@import url('item-home.css');
+@import url('carousel-item--home.css');
 
 
 /* @import url('caroussel-item-home.css'); */
@@ -41,6 +41,7 @@
 } */
 
 
+/* OK */
 ._hide {
     display: none;
 }
@@ -57,6 +58,7 @@ html {
 
 /* OK */
 body {
+    color: var(--color_1);
     display: grid;
     grid-template-rows: 3.5rem calc(100vh - 3.5rem);
     grid-template-areas:
@@ -68,7 +70,6 @@ body {
 /* ok */
 .main {
     grid-area: main;
-    border: red 0.5rem solid;
 }
 
 /* OK */
@@ -79,20 +80,24 @@ body {
     z-index: -1;
 }
 
+/* ok */
+._carousel{
+    height: 100%;
+}
+
+/* ok */
+._carousel__inner{
+    height: 100%;
+    
+}
 /* .carousel-inner {
     color: var(--color_1);
 } */
 
 
-/* .carousel-item-content { */
-    /* position: absolute; */
-    /* top: 68px; */
-    /* bottom: 0px; */
-    /* left: 0px; */
-    /* right: 0px; */
-    /* text-shadow: 1px 2px 7px #6a0608; */
-    /* overflow: auto; */
-/* } */
+._carousel-item__content {
+    overflow: auto;
+}
 
 /* .carousel-item-backgroud {
     width: 100vw;
