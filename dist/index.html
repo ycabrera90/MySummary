@@ -29,15 +29,15 @@
 
 <body>
     <!-- modals -->
-    <button type="button" id="modal-ready-button" class="btn btn-primary" data-bs-toggle="modal"
+    <button type="button" id="modal-ready-button" class="btn btn-primary _hide" data-bs-toggle="modal"
         data-bs-target="#modal-ready">
         Launch demo modal
     </button>
-    <button type="button" id="modal-fault-button" class="btn btn-primary" data-bs-toggle="modal"
+    <button type="button" id="modal-fault-button" class="btn btn-primary _hide" data-bs-toggle="modal"
         data-bs-target="#modal-fault">
         Launch demo modal
     </button>
-    <div class="modal fade" id="modal-ready" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade _hide" id="modal-ready" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
@@ -55,7 +55,7 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="modal-fault" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade _hide" id="modal-fault" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
@@ -74,74 +74,73 @@
         </div>
     </div>
 
-    <header class="main-header">
-        <div class="toggle-button">
-            <i class="bi bi-menu-button-wide" id="toggleButton_expand"></i>
-            <i class="hide bi bi-menu-button-wide-fill" id="toggleButton_collapse"></i>
+    <header class="_main-header"> 
+        <div class="_toggle-button">
+            <i class="bi bi-menu-button-wide" id="_toggleIconExpand"></i>
+            <i class="_hide bi bi-menu-button-wide-fill" id="_toggleButtonCollapse"></i>
         </div>
-        <a href="index.html" class="main-header__brand">
-            <section class="eip-brand">
+        <a href="index.html" class="_main-header__brand">
+            <section class="_eip-brand">
                 <h1>EIP</h1>
                 <p>Studios</p>
             </section>
         </a>
-        <nav class="main-nav">
-            <div class="main-nav__backdrop hide" id="mainNav_backdrop"></div>
-            <ul class="main-nav__items hide" id="mainNav_items">
-                <li class="main-nav__item main-nav__item--home" id="item_home">
-                    <a class="item__container" href="#">
-                        <i class="item__icon bi bi bi-house-fill"></i>
-                        <p class="item__text">Home</p>
+        <nav class="_main-nav">
+            <div class="_main-nav__backdrop _hide" id="_mainNavBackdrop"></div>
+            <ul class="_main-nav__items _hide" id="_mainNavItems">
+                <li class="_main-nav__item _main-nav__item--home" id="_itemHome">
+                    <a class="_item__container" href="#">
+                        <i class="_item__icon bi bi bi-house-fill"></i>
+                        <p class="_item__text">Home</p>
                     </a>
                 </li>
-                <li class="main-nav__item main-nav__item--about" id="item_about">
-                    <a class="item__container" href="#">
-                        <i class="item__icon bi bi-file-earmark-person"></i>
-                        <p class="item__text">About</p>
+                <li class="_main-nav__item _main-nav__item--about" id="_itemAbout">
+                    <a class="_item__container" href="#">
+                        <i class="_item__icon bi bi-file-earmark-person"></i>
+                        <p class="_item__text">About</p>
                     </a>
                 </li>
-                <li class="main-nav__item main-nav__item--skills" id="item_skills">
-                    <a class="item__container" href="#">
-                        <i class="item__icon bi bi-handbag-fill"></i>
-                        <p class="item__text">Skills</p>
+                <li class="_main-nav__item _main-nav__item--skills" id="_itemSkills">
+                    <a class="_item__container" href="#">
+                        <i class="_item__icon bi bi-handbag-fill"></i>
+                        <p class="_item__text">Skills</p>
                     </a>
                 </li>
-                <li class="main-nav__item main-nav__item--contact" id="item_contact">
-                    <a class="item__container" href="#">
-                        <i class="item__icon bi bi-person-rolodex"></i>
-                        <p class="item__text">Contact</p>
+                <li class="_main-nav__item _main-nav__item--contact" id="_itemContact">
+                    <a class="_item__container" href="#">
+                        <i class="_item__icon bi bi-person-rolodex"></i>
+                        <p class="_item__text">Contact</p>
                     </a>
                 </li>
-                <li class="main-nav__item main-nav__item--location" id="item_location">
-                    <a class="item__container" href="#">
-                        <i class="item__icon bi bi bi-geo-alt-fill"></i>
-                        <p class="item__text">Location</p>
+                <li class="_main-nav__item _main-nav__item--location" id="_itemLocation">
+                    <a class="_item__container" href="#">
+                        <i class="_item__icon bi bi bi-geo-alt-fill"></i>
+                        <p class="_item__text">Location</p>
                     </a>
                 </li>
-                <li class="main-nav__item main-nav__item--github" id="item_github">
-                    <a class="item__container" href="#">
-                        <i class="item__icon bi bi-github"></i>
-                        <p class="item__text">Github</p>
+                <li class="_main-nav__item _main-nav__item--github" id="_itemGithub">
+                    <a class="_item__container" href="#">
+                        <i class="_item__icon bi bi-github"></i>
+                        <p class="_item__text">Github</p>
                     </a>
                 </li>
-                <li class="main-nav__item main-nav__item--linkedin" id="item_linkedin">
-                    <a class="item__container" href="#">
-                        <i class="item__icon bi bi-linkedin"></i>
-                        <p class="item__text">Linkedin</p>
+                <li class="_main-nav__item _main-nav__item--linkedin" id="_item_linkedin">
+                    <a class="_item__container" href="#">
+                        <i class="_item__icon bi bi-linkedin"></i>
+                        <p class="_item__text">Linkedin</p>
                     </a>
                 </li>
             </ul>
-
         </nav>
     </header>
 
-    <main class="container-fluid d-flex p-0 align-items-center justify-content-center text-light">
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <main class="main">
 
-            <div class="carousel-backgroud"></div>
-            <!-- <img src="assets/images/img1.jpg" class="carousel-backgroud" alt="" /> -->
+        <div class="main__backgroud"></div>
 
-            <div class="carousel-indicators">
+        <!-- <div id="carouselExampleIndicators" class="carousel slide " data-bs-ride="carousel">
+
+            <div class="carousel-indicators _hide">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
                     class="first-indicator active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
@@ -155,7 +154,7 @@
             </div>
 
             <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="8000" id="caroussel-item-home">
+                <div class="carousel-item active item-home" data-bs-interval="8000">
                     <img src="" class="carousel-item-backgroud" alt="" />
                     <div class="container carousel-item-content">
                         <div class="row">
@@ -455,18 +454,18 @@
                 </div>
             </div>
 
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            <button class="carousel-control-prev _hide" type="button" data-bs-target="#carouselExampleIndicators"
                 data-bs-slide="prev" id="carousel-control-prev-button">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
 
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            <button class="carousel-control-next _hide" type="button" data-bs-target="#carouselExampleIndicators"
                 data-bs-slide="next" id="carousel-control-next-button">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
-        </div>
+        </div> -->
     </main>
 </body>
 

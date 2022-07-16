@@ -8,48 +8,48 @@ const LINKEDIN_URL = 'https://www.linkedin.com/in/ingenier%C3%ADacubana';
 export class MainHeader {
     constructor() {
 
-        this.toggleButton_expand = document.getElementById('toggleButton_expand');
-        this.toggleButton_collapse = document.getElementById('toggleButton_collapse');
-        this.mainNav_backdrop = document.getElementById('mainNav_backdrop');
+        this.toggleIconExpand = document.getElementById('_toggleIconExpand');
+        this.toggleButtonCollapse = document.getElementById('_toggleButtonCollapse');
+        this.mainNavBackdrop = document.getElementById('_mainNavBackdrop');
 
-        this.mainNav_items = document.getElementById('mainNav_items');
-        this.allMainNav_item = document.querySelectorAll('#mainNav_items li');
+        this.mainNavItems = document.getElementById('_mainNavItems');
+        // this.allMainNavItems = document.querySelectorAll('#_mainNavItems li');
 
-        this.toggleButton_expand.addEventListener('click', this.expandBar.bind(this));
-        this.toggleButton_collapse.addEventListener('click', this.collapseBar.bind(this));
-        this.mainNav_backdrop.addEventListener('click', this.collapseBar.bind(this));
+        this.toggleIconExpand.addEventListener('click', this.expandBar.bind(this));
+        this.toggleButtonCollapse.addEventListener('click', this.collapseBar.bind(this));
+        this.mainNavBackdrop.addEventListener('click', this.collapseBar.bind(this));
 
-        this.mainNav_items.addEventListener('click', () => {
-            this.goTo(window.event.path[2].id)
+        this.mainNavItems.addEventListener('click', () => {
+            this.goTo(window.event.path[2].id)      // call goTo with id element
         });
     }
 
-    highlightItem(navItem_className) {
-        for (const navItem of this.allMainNav_item) {
-            if (navItem.classList.contains(navItem_className)) {
-                if (!navItem.classList.contains('highlighted')) {
-                    navItem.classList.add('highlighted');
-                }
-            } else {
-                if (navItem.classList.contains('highlighted')) {
-                    navItem.classList.remove('highlighted');
-                }
-            }
-        }
-    }
+    // highlightItem(navItem_className) {
+    //     for (const navItem of this.allMainNav_item) {
+    //         if (navItem.classList.contains(navItem_className)) {
+    //             if (!navItem.classList.contains('_highlighted')) {
+    //                 navItem.classList.add('_highlighted');
+    //             }
+    //         } else {
+    //             if (navItem.classList.contains('_highlighted')) {
+    //                 navItem.classList.remove('_highlighted');
+    //             }
+    //         }
+    //     }
+    // }
 
     expandBar() {
-        this.mainNav_items.classList.remove('hide');
-        this.mainNav_backdrop.classList.remove('hide');
-        this.toggleButton_expand.classList.add('hide');
-        this.toggleButton_collapse.classList.remove('hide');
+        this.mainNavItems.classList.remove('_hide');
+        this.mainNavBackdrop.classList.remove('_hide');
+        this.toggleIconExpand.classList.add('_hide');
+        this.toggleButtonCollapse.classList.remove('_hide');
     }
 
     collapseBar() {
-        this.mainNav_items.classList.add('hide');
-        this.mainNav_backdrop.classList.add('hide');
-        this.toggleButton_expand.classList.remove('hide');
-        this.toggleButton_collapse.classList.add('hide');
+        this.mainNavItems.classList.add('_hide');
+        this.mainNavBackdrop.classList.add('_hide');
+        this.toggleIconExpand.classList.remove('_hide');
+        this.toggleButtonCollapse.classList.add('_hide');
     }
 
     goTo(items_Id) {
@@ -93,7 +93,6 @@ export class MainHeader {
 
         }
         this.collapseBar();
-
     }
 }
 
@@ -101,7 +100,7 @@ export class MainHeader {
 class App {
     static init() {
         const mainHeader = new MainHeader();
-        mainHeader.highlightItem('main-nav__item--home');
+        // mainHeader.highlightItem('main-nav__item--home');
     }
 }
 
