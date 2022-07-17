@@ -1,17 +1,13 @@
 /* Bootstrap icons */
 @import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css');
 
-/* Header OKKKKKK*/
+/* google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto+Flex:opsz,wght@8..144,300&display=swap');
+
 @import url('main-header.css');
-
-/* Brand OKKKKKK*/
 @import url('eip-brand.css');
-
-/* Carousel-Item-Home OKKK */
 @import url('carousel-item--home.css');
-
-
-/* @import url('caroussel-item-home.css'); */
+@import url('carousel-item--about-me.css');
 
 /* Carousel-Item-AboutMe */
 /* @import url('caroussel-item-aboutMe.css'); */
@@ -25,23 +21,17 @@
 /* Carousel-Item-myLocation */
 /* @import url('caroussel-item-myLocation.css'); */
 
-
-/* OKK */
 :root {
     --color_1: #fefffb;
     --color_2: #9b675c;
     --color_3: #13a0ad;
-    --color_4: #092236c9
-    
+    --color_4: #092236c9;
 }
-
 
 /* ::placeholder {
     color: rgba(213, 213, 231, 0.849);
 } */
 
-
-/* OK */
 ._hide {
     display: none;
 }
@@ -50,13 +40,10 @@
     border-color: red;
 } */
 
-
-/* OKK */
 html {
     height: 100%;
 }
 
-/* OK */
 body {
     color: var(--color_1);
     display: grid;
@@ -67,12 +54,14 @@ body {
     height: 100%;
 }
 
-/* ok */
+p {
+    margin: 0;
+}
+
 .main {
     grid-area: main;
 }
 
-/* OK */
 .main__backgroud {
     position: fixed;
     inset: 0;
@@ -80,20 +69,16 @@ body {
     z-index: -1;
 }
 
-/* ok */
-._carousel{
+._carousel {
     height: 100%;
 }
 
-/* ok */
-._carousel__inner{
+._carousel__inner {
     height: 100%;
-    
 }
 /* .carousel-inner {
     color: var(--color_1);
 } */
-
 
 ._carousel-item__content {
     overflow: auto;
@@ -119,11 +104,9 @@ body {
     display: none;
 } */
 
-
-
 /* STYLES APPLIED ONLY TO SMALL SCREENS */
 /* @media (max-width: 768px) { */
-    /* .item-header {
+/* .item-header {
         font-family: var(--item-2-header-font-family);
         font-size: var(--item-2-header-font-size-sm);
         color: var(--item-2-header-color);
@@ -133,7 +116,7 @@ body {
 
 /* STYLES APPLIED ONLY TO LARGE SCREENS */
 /* @media (min-width: 768px) { */
-    /* .item-header {
+/* .item-header {
         font-family: var(--item-2-header-font-family);
         font-size: var(--item-2-header-font-size-lg);
         color: var(--item-2-header-color);
