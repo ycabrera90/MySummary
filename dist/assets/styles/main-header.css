@@ -15,7 +15,7 @@
     color: var(--color_1);
 }
 
-._toggle-button,
+._main-header__toggle-button,
 ._main-header__brand {
     display: flex;
     justify-content: center;
@@ -24,18 +24,18 @@
     height: 3rem;
 }
 
-._toggle-button {
+._main-header__toggle-button {
     padding: 0.5rem 0.5rem;
     font-size: 2rem;
     cursor: pointer;
 }
 
-._toggle-button:hover {
+._main-header__toggle-button:hover {
     font-size: 2.1rem;
     color: var(--color_2);
 }
 
-._toggle-button:active {
+._main-header__toggle-button:active {
     font-size: 2.1rem;
     color: var(--color_3);
 }
@@ -44,7 +44,7 @@
     text-decoration: none;
 }
 
-._main-nav {
+._main-header__nav-bar {
     position: absolute;
     inset: 3.55rem auto auto 0.04rem;
     font-size: 1.2rem;
@@ -52,13 +52,13 @@
     border-radius: 0px 0px 10px 10px;
 }
 
-._main-nav__backdrop {
+._nav-bar__backdrop {
     position: fixed;
     inset: 0;
     z-index: -1;
 }
 
-._main-nav__items {
+._nav-bar__items {
     display: flex;
     flex-direction: column;
     width: 12rem;
@@ -66,7 +66,7 @@
     margin: 0px;
 }
 
-._main-nav__item {
+._nav-bar__item {
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -75,42 +75,42 @@
     margin: 0 0.2rem;
 }
 
-._item__container {
+._nav-bar__item a {
     display: flex;
     text-decoration: none;
     color: inherit;
 }
 
-._item__container:hover {
+._nav-bar__item a:hover {
     font-size: 1.3rem;
     color: var(--color_2);
 }
 
-._item__container:active {
+._nav-bar__item a:active {
     font-size: 1.3rem;
     color: var(--color_3);
 }
 
-._item__icon,
-._item__text {
+._nav-bar__item i,
+._nav-bar__item p {
     padding: 0.3rem 0.2rem;
     margin: 0px;
 }
 
 @media (min-width: 40rem) {
-    ._main-nav {
+    ._main-header__nav-bar {
         position: static;
         font-size: 1.2rem;
         background: none;
     }
 
-    ._main-nav ._main-nav__items {
+    ._main-header__nav-bar ._nav-bar__items {
         display: flex;
         flex-direction: row;
         width: auto;
     }
 
-    ._main-nav ._main-nav__item {
+    ._main-header__nav-bar ._nav-bar__item {
         display: flex;
         flex-direction: row;
         width: 6.4rem;
@@ -119,13 +119,13 @@
         list-style: none;
     }
 
-    ._main-nav ._highlighted {
+    ._main-header__nav-bar ._highlighted {
         border-bottom: 0.2rem var(--color_2) solid;
     }
 
-    ._main-header ._toggle-button,
-    ._main-nav ._main-nav__item--skills,
-    ._main-nav ._main-nav__item--location {
+    ._main-header ._main-header__toggle-button,
+    ._main-header__nav-bar ._nav-bar__item--skills,
+    ._main-header__nav-bar ._nav-bar__item--location {
         display: none;
     }
 }
