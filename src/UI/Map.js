@@ -7,7 +7,7 @@ export class Map {
             return;
         }
 
-        const listMapElement = document.querySelectorAll('.location-container');
+        const listMapElement = document.querySelectorAll('._content__my-location');
 
         const mapConfig = {
             center: { lat: coord.lat, lng: coord.lng },

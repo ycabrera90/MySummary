@@ -22,12 +22,12 @@ export class ContacMeForm {
         this.modalTryAgainButton = document.querySelector('#modal-fault .btn-primary');
 
 
-        this.contacMe = document.getElementById('caroussel-item-contactMe');
-        this.name = this.contacMe.querySelector('.user-input.name');
-        this.email = this.contacMe.querySelector('.user-input.email');
-        this.subject = this.contacMe.querySelector('.user-input.subject');
-        this.messagge = this.contacMe.querySelector('.user-input.messagge');
-        this.buttonSendMessage = this.contacMe.querySelector('.button-send');
+        this.contacMe = document.getElementById('_carouselItemContactMe');
+        this.name = this.contacMe.querySelector('#_userInputName');
+        this.email = this.contacMe.querySelector('#_userInputEmail');
+        this.subject = this.contacMe.querySelector('#_userInputSubject');
+        this.messagge = this.contacMe.querySelector('#_userInputMessagge');
+        this.buttonSendMessage = this.contacMe.querySelector('#_buttonSend');
 
         // condition to say that the client is filling th form
         this.name.addEventListener('click', this.fillingContactMeFormFunctionHandler.bind(this));
@@ -112,6 +112,4 @@ export class ContacMeForm {
     fillingContactMeFormFunctionHandler() {
         this.fillingContacteForm();
     }
-
-
 }

@@ -3,13 +3,9 @@ import { Map } from './Map';
 import { Skills } from './Skills';
 import { Touch } from "../Utility/Touch.js";
 
-
-
-
-
 export class Carousel {
     constructor() {
-        this.slice = 'caroussel-item-home';
+        this.slice = '_carouselItemHome';
         this.updateSlice();
 
         this.onHome = () => { };       // method that execute a callback function when the user is on Home slide
@@ -25,19 +21,13 @@ export class Carousel {
         this.skills = new Skills();
         this.touch = new Touch(this.caroussel);     // add touch event to carousel
 
-        this.allIndicators = this.caroussel.querySelectorAll('.carousel-indicators button');
-        this.mainIndicatior = this.caroussel.querySelector('.first-indicator');
+        this.allIndicators = this.caroussel.querySelectorAll('#_carouselIndicators button');
+        this.mainIndicatior = this.caroussel.querySelector('#_firstIndicator');
 
         this.allCarousselItems = this.caroussel.querySelectorAll('.carousel-item');
-        this.showHideCarousselItems = this.caroussel.querySelectorAll('#caroussel-item-mySkills, #caroussel-item-myLocation');
-        this.mainCarousselItem = this.caroussel.querySelector('#caroussel-item-home');
-
-        this.itemHome = this.mainCarousselItem;
-        this.itemAboutMe = this.caroussel.querySelector('#caroussel-item-aboutMe');
-        this.itemMySkills = this.caroussel.querySelector('#caroussel-item-mySkills');
-        this.itemContacMe = this.caroussel.querySelector('#caroussel-item-contactMe');
-        this.itemMyLocation = this.caroussel.querySelector('#caroussel-item-myLocation');
-
+        this.showHideCarousselItems = this.caroussel.querySelectorAll('#_carouselItemMySkills, #_carouselItemMyLocation');
+        this.mainCarousselItem = this.caroussel.querySelector('#_carouselItemHome');
+        
         // If when a user open this page the screen size y greater than 768 px, it deploy only the necesary caroussel slides
         if (window.innerWidth > 768) {
             this.renderLarge();
@@ -45,7 +35,7 @@ export class Carousel {
 
         // check is there were a windows size change
         window.addEventListener('resize', () => {
-            if (window.innerWidth <= 768) {
+            if (window.innerWidth <= 640) {
                 this.renderSmall();
             } else {
                 this.renderLarge();
@@ -62,6 +52,7 @@ export class Carousel {
             this.goToNextSlide();
         }
     }
+
     updateSlice() {
         setInterval(() => {
             // check which slide is active and save it id
@@ -72,15 +63,15 @@ export class Carousel {
             }
 
             // run the function handler in base to active slide
-            if (this.slice === 'caroussel-item-home') {
+            if (this.slice === '_carouselItemHome') {
                 this.onHomeFunctionHandler(this);
-            } else if (this.slice === 'caroussel-item-aboutMe') {
+            } else if (this.slice === '_carouselItemAboutMe') {
                 this.onAboutMeFunctionHandler(this);
-            } else if (this.slice === 'caroussel-item-mySkills') {
+            } else if (this.slice === '_carouselItemMySkills') {
                 this.onMySkillsFunctionHandler(this);
-            } else if (this.slice === 'caroussel-item-contactMe') {
+            } else if (this.slice === '_carouselItemContactMe') {
                 this.onContactMeFunctionHandler(this);
-            } else if (this.slice === 'caroussel-item-myLocation') {
+            } else if (this.slice === '_carouselItemMyLocation') {
                 this.onMyLocationFunctionHandler(this);
             }
         }, 500)
@@ -105,7 +96,7 @@ export class Carousel {
         var reset = false;
         for (const showHideCarousselItem of this.showHideCarousselItems) {
             if (showHideCarousselItem.classList.contains('carousel-item')) {
-                showHideCarousselItem.classList.add('hide');
+                showHideCarousselItem.classList.add('_hide');
                 showHideCarousselItem.classList.remove('carousel-item');
                 reset = true;
             };
@@ -124,6 +115,7 @@ export class Carousel {
                 carousselItem.classList.remove('active');
             }
         }
+
         // put class 'active' only the main item
         this.mainCarousselItem.classList.add('active');
 

@@ -86,8 +86,8 @@
             </section>
         </a>
         <nav class="_main-header__nav-bar">
-            <div class="_nav-bar__backdrop _hide" id="_mainNavBackdrop"></div>
-            <ul class="_nav-bar__items _hide" id="_mainNavItems">
+            <div class="_nav-bar__backdrop _hide" id="_navBarBackdrop"></div>
+            <ul class="_nav-bar__items _hide" id="_navBarItems">
                 <li class="_nav-bar__item _nav-bar__item--home" id="_itemHome">
                     <a href="#">
                         <i class=" bi bi bi-house-fill"></i>
@@ -140,21 +140,21 @@
 
         <div id="carouselExampleIndicators" class="carousel _carousel slide " data-bs-ride="carousel">
 
-            <div class="carousel-indicators _hide">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                    class="first-indicator active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                    aria-label="Slide 2" class="second-indicator"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                    aria-label="Slide 3" class="third-indicator"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
-                    aria-label="Slide 4" class="fourth-indicator showHide-indicator"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
-                    aria-label="Slide 5" class="fifth-indicator showHide-indicator"></button>
+            <div id="_carouselIndicators" class="carousel-indicators _hide">
+                <button id="_firstIndicator" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button id="_secondIndicator" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="1" aria-label="Slide 2" class="second-indicator"></button>
+                <button id="_thirdIndicator" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button id="_fourthIndicator" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="3" aria-label="Slide 4" class="showHide-indicator"></button>
+                <button id="_fifthIndicator" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="4" aria-label="Slide 5" class="showHide-indicator"></button>
             </div>
 
             <div class="carousel-inner _carousel__inner">
-                <div class="carousel-item active  _carousel-item--home" data-bs-interval="8000">
+                <div id="_carouselItemHome" class="carousel-item active _carousel-item _carousel-item--home" data-bs-interval="8000">
                     <img src="" class="_carousel-item__backgroud" alt="" />
                     <div class="_carousel-item__content">
                         <div class="_content__brand-complete">
@@ -179,7 +179,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item _carousel-item--about-me" data-bs-interval="8000">
+                <div id="_carouselItemAboutMe" class="carousel-item _carousel-item--about-me" data-bs-interval="8000">
                     <img src="" class="_carousel-item__backgroud" alt="" />
                     <div class="_carousel-item__content">
                         <h1 class="_content__header">About me</h1>
@@ -200,7 +200,7 @@
                             </h3>
                         </div>
                         <section class="_content__skill">
-                            <div class="_skill-container _skill-container _content__skill--html">
+                            <div class="_skill-container _content__skill--html">
                                 <img class="_skill-icon" src="assets/images/icon-html.png" alt="" />
                                 <div class="_skill-progress progress ">
                                     <div class="progress-bar progress-bar-striped progress-bar-animated"
@@ -259,7 +259,7 @@
                         </section>
                     </div>
                 </div>
-                <div class="carousel-item _carousel-item--my-skills" data-bs-interval="8000">
+                <div id="_carouselItemMySkills" class="carousel-item _carousel-item--my-skills" data-bs-interval="8000">
                     <img src="" class="_carousel-item__backgroud" alt="" />
                     <div class="_carousel-item__content">
                         <h1 class="_content__header">My Skills</h1>
@@ -323,7 +323,7 @@
                         </section>
                     </div>
                 </div>
-                <div class="carousel-item _carousel-item--contact-me" data-bs-interval="8000"
+                <div id="_carouselItemContactMe" class="carousel-item _carousel-item--contact-me" data-bs-interval="8000"
                     id="caroussel-item-contactMe">
                     <img src="" class="_carousel-item__backgroud" alt="" />
                     <div class="_carousel-item__content">
@@ -331,18 +331,18 @@
                         <h3 class="_content__info">I am interested in growing professionally for a software company.
                         </h3>
                         <form class="_content__contact-form" action="index.html">
-                            <input class="_contact-form__inputs" id="" placeholder="Name" type="text" required>
-                            <input class="_contact-form__inputs" id="" placeholder="Email" type="email" required>
-                            <input class="_contact-form__inputs" id="" placeholder="Subject" type="text" required>
-                            <textarea class="_contact-form__inputs" id="" placeholder="Messaje" rows="5"></textarea>
-                            <button class="_contact-form__send-button" id="" class="button-send">Send messaje!</button>
+                            <input class="_contact-form__inputs" id="_userInputName" placeholder="Name" type="text" required>
+                            <input class="_contact-form__inputs" id="_userInputEmail" placeholder="Email" type="email" required>
+                            <input class="_contact-form__inputs" id="_userInputSubject" placeholder="Subject" type="text" required>
+                            <textarea class="_contact-form__inputs" id="_userInputMessagge" placeholder="Messaje" rows="5"></textarea>
+                            <button class="_contact-form__send-button" id="_buttonSend" class="button-send">Send messaje!</button>
                         </form>
                         <div class="_content__my-location">
                             Here wil be my location using a google Maps
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item _carousel-item--my-location" data-bs-interval="8000"
+                <div id="_carouselItemMyLocation" class="carousel-item _carousel-item--my-location" data-bs-interval="8000"
                     id="caroussel-item-contactMe">
                     <img src="" class="_carousel-item__backgroud" alt="" />
                     <div class="_carousel-item__content">
