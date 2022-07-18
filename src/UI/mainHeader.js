@@ -53,55 +53,56 @@ export class MainHeader {
     }
 
     goTo(items_Id) {
-        if (items_Id === 'item_home') {
-            console.log('home');
+        if (items_Id === '_itemHome') {
             document.getElementById('carouselExampleIndicators').querySelector('.first-indicator').click();
 
         }
-        if (items_Id === 'item_about') {
-            console.log('about');
+        if (items_Id === '_itemAbout') {
             document.getElementById('carouselExampleIndicators').querySelector('.second-indicator').click();
 
         }
-        if (items_Id === 'item_skills') {
+        if (items_Id === '_itemskills') {
             console.log('skills');
             document.getElementById('carouselExampleIndicators').querySelector('.third-indicator').click();
 
         }
-        if (items_Id === 'item_contact') {
-            console.log('constact');
+
+        // hereeeeeee!!!
+        if (items_Id === '_itemContact') {
             if (window.innerWidth > 768) {
                 document.getElementById('carouselExampleIndicators').querySelector('.third-indicator').click();
             }
             else {
                 document.getElementById('carouselExampleIndicators').querySelector('.fourth-indicator').click();
             }
+            console.log("here");
         }
-        if (items_Id === 'item_location') {
+        if (items_Id === '_itemlocation') {
             console.log('location');
             document.getElementById('carouselExampleIndicators').querySelector('.fifth-indicator').click();
 
         }
-        if (items_Id === 'item_github') {
+        if (items_Id === '_itemGithub') {
             console.log('hit');
             window.location.href = GITHUB_URL;
 
         }
-        if (items_Id === 'item_linkedin') {
+        if (items_Id === '_itemLinkedin') {
             console.log('link');
             window.location.href = LINKEDIN_URL;
 
         }
         this.collapseBar();
+        console.log(items_Id);
     }
 }
 
 
-class App {
-    static init() {
-        const mainHeader = new MainHeader();
-        // mainHeader.highlightItem('main-nav__item--home');
-    }
-}
+// class App {
+//     static init() {
+//         const mainHeader = new MainHeader();
+//         // mainHeader.highlightItem('main-nav__item--home');
+//     }
+// }
 
-App.init();
+// App.init();

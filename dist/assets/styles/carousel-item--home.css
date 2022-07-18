@@ -1,103 +1,91 @@
-._carousel-item--home {
-    height: 100%;
-}
-
-/* It is specified ._carousel-item__backgroud in all cases for selectors to be more priority than Bootstrap selectors  */
-._carousel-item--home ._carousel-item__backgroud {
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-}
-
-._carousel-item--home p {
-   margin: 0;
-}
-
 ._carousel-item--home ._carousel-item__content {
-    height: 100%;
-    padding: 1rem;
-    display: grid;
-    grid-template-rows: minmax(auto, 6rem);
     grid-template-areas:
         'header'
         'photo'
         'info'
         'presentation';
-    justify-items: center;
-    align-items: center;
-    text-align: center;
 }
 
-._carousel-item--home ._content__header {
+._carousel-item--home ._content__brand-complete {
     grid-area: header;
-    font-size: 2.5rem;
-    font-family: 'Orbitron', sans-serif;
+    align-self: end;
+    font-family: var(--font_1);
 }
-._carousel-item--home ._content__header span {
-    grid-area: header;
+
+._carousel-item--home ._content__brand-complete h1 {
+    margin: 0;
+    font-size: 2.4rem;
+    color: var(--color_1);
+}
+
+._carousel-item--home ._content__brand-complete span {
+    font-weight: 900;
     color: var(--color_2);
-}
-
-._carousel-item--home ._content__photo {
-    grid-area: photo;
 }
 
 ._carousel-item--home ._content__photo img {
     grid-area: photo;
     border-radius: 500px;
-    width: 15rem;
+    width: 13rem;
     border: var(--color_1) 6px solid;
 }
 
 ._carousel-item--home ._content__info {
     grid-area: info;
-    font-size: 2rem;
+    font-family: 'Roboto Condensed', sans-serif;
 }
+
+._carousel-item--home ._content__info h1 {
+    font-size: 2.5rem;
+}
+
+._carousel-item--home ._content__info h3 {
+    font-size: 1.5rem;
+}
+
 ._carousel-item--home ._content__presentation {
     grid-area: presentation;
+    color: var(--color_2);
     font-size: 2.2rem;
+    font-weight: bold;
 }
 
 @media (min-width: 40rem) {
     ._carousel-item--home ._carousel-item__content {
-        margin: 0 auto;
-        max-width: 60rem;
         grid-template-areas:
             'header           header'
             'photo            info'
             'presentation     presentation';
-        grid-gap: 2rem;
     }
 
-    ._carousel-item--home ._content__header {
-        font-size: 3.5rem;
-        align-self: end;
+    ._carousel-item--home ._content__brand-complete h1 {
+        font-size: 3.4rem;
     }
-    
-    
 
     ._carousel-item--home ._content__photo {
-        grid-area: photo;
         justify-self: right;
     }
 
     ._carousel-item--home ._content__photo img {
-        grid-area: photo;
-        border-radius: 500px;
         width: 18rem;
-        border: var(--color_1) 8px solid;
     }
 
     ._carousel-item--home ._content__info {
-        grid-area: info;
-        font-size: 3rem;
+        align-self: center;
+        font-size: 3.5rem;
         text-align: left;
         justify-self: left;
     }
+
+    ._carousel-item--home ._content__info h1 {
+        font-size: 3.5rem;
+    }
+
+    ._carousel-item--home ._content__info h3 {
+        font-size: 2.5rem;
+    }
+
     ._carousel-item--home ._content__presentation {
-        grid-area: presentation;
         font-size: 3.2rem;
-        justify-self: center;
-        align-self: start;
     }
 }

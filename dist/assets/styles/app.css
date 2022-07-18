@@ -1,22 +1,13 @@
-/* Bootstrap icons */
 @import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css');
-
-/* google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto+Flex:opsz,wght@8..144,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;900&family=Permanent+Marker&family=Roboto+Condensed&family=Roboto+Flex:opsz,wght@8..144,300&display=swap');
 
 @import url('main-header.css');
 @import url('eip-brand.css');
 @import url('carousel-item--home.css');
 @import url('carousel-item--about-me.css');
-
-/* Carousel-Item-AboutMe */
-/* @import url('caroussel-item-aboutMe.css'); */
-
-/* Carousel-Item-AboutMe */
-/* @import url('caroussel-item-mySkills.css'); */
+@import url('carousel-item--contact-me.css');
 
 /* Carousel-Item-contacMe */
-/* @import url('caroussel-item-contactMe.css'); */
 
 /* Carousel-Item-myLocation */
 /* @import url('caroussel-item-myLocation.css'); */
@@ -26,6 +17,9 @@
     --color_2: #9b675c;
     --color_3: #13a0ad;
     --color_4: #092236c9;
+
+    --font_1: 'Orbitron', sans-serif;
+    --font_2: 'Roboto Flex', sans-serif;
 }
 
 /* ::placeholder {
@@ -51,7 +45,7 @@ body {
     grid-template-areas:
         'header'
         'main';
-    height: 100%;
+    height: inherit;
 }
 
 p {
@@ -60,6 +54,9 @@ p {
 
 .main {
     grid-area: main;
+    height: inherit;
+    font-family: var(--font_2);
+    text-shadow: 2px 2px 2px black;
 }
 
 .main__backgroud {
@@ -70,18 +67,42 @@ p {
 }
 
 ._carousel {
-    height: 100%;
+    height: inherit;
 }
 
 ._carousel__inner {
-    height: 100%;
+    height: inherit;
+    overflow: auto;
 }
-/* .carousel-inner {
-    color: var(--color_1);
-} */
+
+._carousel-item__backgroud {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+}
 
 ._carousel-item__content {
-    overflow: auto;
+    display: grid;
+    grid-template-rows: minmax(5rem, auto);
+    justify-items: center;
+    padding: 2rem;
+    text-align: center;
+    grid-gap: 1.5rem;
+}
+
+._content__header {
+    grid-area: header;
+    align-self: end;
+
+    font-family: 'Permanent Marker', cursive;
+    color: var(--color_2);
+    font-size: 3rem;
+}
+
+._content__header .h1 {
+    font-size: 3rem;
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
 }
 
 /* .carousel-item-backgroud {
@@ -122,3 +143,20 @@ p {
         color: var(--item-2-header-color);
     }
 } */
+
+@media (min-width: 40rem) {
+    ._carousel-item__content {
+        grid-gap: 2.5rem;
+
+        margin: 0 auto;
+        max-width: 60rem;
+    }
+
+    ._content__header {
+        justify-self: start;
+    }
+
+    ._content__header {
+        font-size: 4.5rem;
+    }
+}

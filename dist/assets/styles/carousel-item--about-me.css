@@ -1,44 +1,12 @@
-._carousel-item--about-me,
-._carousel-item--my-skills {
-    height: 100%;
-}
-
-._carousel-item--my-skills ._carousel-item__backgroud,
-._carousel-item--about-me ._carousel-item__backgroud {
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-}
-
-._carousel-item--my-skills ._carousel-item__content,
-._carousel-item--about-me ._carousel-item__content {
-    height: 100%;
-    padding: 1rem;
-    display: grid;
-    grid-template-rows: minmax(auto, 6rem);
-    justify-items: center;
-    align-items: center;
-    text-align: center;
-}
-
 ._carousel-item--about-me ._carousel-item__content {
     grid-template-areas:
         'header'
         'info';
 }
 
-._carousel-item--my-skills ._content__header,
-._carousel-item--about-me ._content__header {
-    grid-area: header;
-    align-self: end;
-    color: var(--color_2);
-    font-size: 2.5rem;
-    font-family: 'Orbitron', sans-serif;
-}
-
 ._carousel-item--about-me ._content__info {
     grid-area: info;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     align-self: start;
 }
 
@@ -55,7 +23,6 @@
 ._carousel-item--my-skills ._content__skill {
     width: 100%;
     grid-area: skills;
-    align-self: start;
 
     display: grid;
     grid-gap: 0.5rem;
@@ -75,38 +42,29 @@
     width: 100%;
 }
 
-
-
 @media (min-width: 40rem) {
     ._carousel-item--about-me ._carousel-item__content {
-        margin: 0 auto;
-        max-width: 60rem;
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
             'header     header'
             'info       skills';
-        grid-gap: 2rem;
-    }
-
-    ._carousel-item--about-me ._content__header {
-        font-size: 3.5rem;
-        justify-self: start;
-        align-self: end;
     }
 
     ._carousel-item--about-me ._content__info {
-        grid-area: info;
         padding-top: 0.5rem;
-        font-size: 1.5rem;
         text-align: left;
         justify-self: left;
     }
 
+    ._carousel-item--about-me ._content__info h3 {
+        font-size: 1.5rem;
+    }
+   
     ._carousel-item--about-me ._content__skill {
         width: 100%;
         grid-area: skills;
         align-self: start;
-
+        height: 100%;
         display: grid;
         grid-gap: 0.5rem;
     }
@@ -117,7 +75,7 @@
     }
 
     ._carousel-item--about-me ._content__skill ._skill-icon {
-        width: 3.5rem;
+        width: 3.2rem;
     }
 
     ._carousel-item--about-me ._content__skill ._skill-progress {
