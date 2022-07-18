@@ -1,6 +1,3 @@
-// import { Button } from "bootstrap";
-
-// import { ContextExclusionPlugin } from "webpack";
 
 const GITHUB_URL = 'https://github.com/ycabrera90';
 const LINKEDIN_URL = 'https://www.linkedin.com/in/ingenier%C3%ADacubana';
@@ -65,7 +62,6 @@ export class MainHeader {
             document.getElementById('carouselExampleIndicators').querySelector('#_thirdIndicator').click();
 
         }
-
         if (items_Id === '_itemContact') {
             if (window.innerWidth > 640) {
                 document.getElementById('carouselExampleIndicators').querySelector('#_thirdIndicator').click();
