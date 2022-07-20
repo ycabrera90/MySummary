@@ -68,7 +68,7 @@ p {
 
 ._carousel__inner {
     height: inherit;
-    overflow: auto;
+    /* overflow: auto; */
 }
 
 ._carousel-item__backgroud {
