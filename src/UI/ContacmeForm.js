@@ -29,13 +29,18 @@ export class ContacMeForm {
         this.messagge = this.contacMe.querySelector('#_userInputMessagge');
         this.buttonSendMessage = this.contacMe.querySelector('#_buttonSend');
 
+
         // condition to say that the client is filling th form
         this.name.addEventListener('click', this.fillingContactMeFormFunctionHandler.bind(this));
         this.email.addEventListener('click', this.fillingContactMeFormFunctionHandler.bind(this));
         this.subject.addEventListener('click', this.fillingContactMeFormFunctionHandler.bind(this));
         this.messagge.addEventListener('click', this.fillingContactMeFormFunctionHandler.bind(this));
 
-        this.buttonSendMessage.addEventListener('click', this.sendMessagge.bind(this));
+        this.buttonSendMessage.addEventListener('click', (event) => {
+            event.preventDefault();
+            this.sendMessagge();
+        })
+
 
         // working whit modals
         this.modalSendAnotherButton.addEventListener('click', () => {
@@ -58,39 +63,39 @@ export class ContacMeForm {
 
         if (!userContact.name) {
             // alert('please insert a name');
-            this.name.classList.add('border-color-red');
+            this.name.classList.add('_field-error');
             return;
         }
         else {
-            this.name.classList.remove('border-color-red');
+            this.name.classList.remove('_field-error');
         }
 
         if (!validateEmail(userContact.email)) {
             // alert('please insert a valid mail');
-            this.email.classList.add('border-color-red');
+            this.email.classList.add('_field-error');
             return;
         }
 
         else {
-            this.email.classList.remove('border-color-red');
+            this.email.classList.remove('_field-error');
         }
 
         if (!userContact.subject) {
             // alert('please insert a subject');
-            this.subject.classList.add('border-color-red');
+            this.subject.classList.add('_field-error');
             return;
         }
         else {
-            this.subject.classList.remove('border-color-red');
+            this.subject.classList.remove('_field-error');
         }
 
         if (!userContact.messagge) {
             // alert('please insert a messagge');
-            this.messagge.classList.add('border-color-red');
+            this.messagge.classList.add('_field-error');
             return;
         }
         else {
-            this.messagge.classList.remove('border-color-red');
+            this.messagge.classList.remove('_field-error');
         }
 
         const server = new HttpReq(PROTOCOL, SERVER_URL, PORT);

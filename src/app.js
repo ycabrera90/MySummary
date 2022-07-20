@@ -29,7 +29,6 @@ class App {
         }
 
         carousel.onContactMe = () => {
-            console.log('on ContactMe');
             mainHeader.highlightItem('_nav-bar__item--contact');
         }
 

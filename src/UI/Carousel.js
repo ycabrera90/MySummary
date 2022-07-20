@@ -27,11 +27,15 @@ export class Carousel {
         this.allCarousselItems = this.caroussel.querySelectorAll('.carousel-item');
         this.showHideCarousselItems = this.caroussel.querySelectorAll('#_carouselItemMySkills, #_carouselItemMyLocation');
         this.mainCarousselItem = this.caroussel.querySelector('#_carouselItemHome');
-        
+
         // If when a user open this page the screen size y greater than 768 px, it deploy only the necesary caroussel slides
-        if (window.innerWidth > 768) {
+        if (window.innerWidth > 640) {
             this.renderLarge();
         }
+        else {
+            this.renderSmall();
+        }
+
 
         // check is there were a windows size change
         window.addEventListener('resize', () => {
