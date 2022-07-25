@@ -1,17 +1,11 @@
 @import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;900&family=Permanent+Marker&family=Roboto+Condensed&family=Roboto+Flex:opsz,wght@8..144,300&display=swap');
 
-@import 'custom-bootstrap.scss';
 @import 'main-header.scss';
 @import 'eip-brand.scss';
 @import 'carousel/item--home.scss';
 @import 'carousel/item--about-me.scss';
 @import 'carousel/item--contact-me.scss';
-
-/* Carousel-Item-contacMe */
-
-/* Carousel-Item-myLocation */
-/* @import url('caroussel-item-myLocation.css'); */
 
 :root {
     --color_1: #fefffb;

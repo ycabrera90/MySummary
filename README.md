@@ -16,3 +16,7 @@ This web application aims to show My Skills
 ###### $ npn run build      // Just to compile. If you want to run the app you have to go to dist folder and write 'serve'
 ###### $ npn run build:dev  // run the app with live dev server
 ###### $ npm run build:pro  // run the app for production servers
+
+## OTHERS
+##### - Compile CSS
+###### $ sass --watch src/scss/main.scss:dist/assets/styles/main.css
