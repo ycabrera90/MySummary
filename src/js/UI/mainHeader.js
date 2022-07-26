@@ -4,6 +4,7 @@ const LINKEDIN_URL = 'https://www.linkedin.com/in/ingenier%C3%ADacubana';
 
 export class MainHeader {
     constructor() {
+        this.mainHeader_NavBar = document.getElementById('_mainHeader_NavBar');
 
         this.toggleIconExpand = document.getElementById('_toggleIconExpand');
         this.toggleButtonCollapse = document.getElementById('_toggleButtonCollapse');
@@ -36,15 +37,13 @@ export class MainHeader {
     }
 
     expandBar() {
-        this.navBarItems.classList.remove('_hide');
-        this.mainNavBackdrop.classList.remove('_hide');
+        this.mainHeader_NavBar.classList.remove('_hide');
         this.toggleIconExpand.classList.add('_hide');
         this.toggleButtonCollapse.classList.remove('_hide');
     }
 
     collapseBar() {
-        this.navBarItems.classList.add('_hide');
-        this.mainNavBackdrop.classList.add('_hide');
+        this.mainHeader_NavBar.classList.add('_hide');
         this.toggleIconExpand.classList.remove('_hide');
         this.toggleButtonCollapse.classList.add('_hide');
     }

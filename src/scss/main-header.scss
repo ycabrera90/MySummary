@@ -53,6 +53,9 @@
         font-size: 1.2rem;
         background: inherit;
         border-radius: 0px 0px 10px 10px;
+        height: 22rem;
+        overflow: hidden;
+        transition: height 500ms 0s cubic-bezier(0.16, 1, 0.3, 1);
 
         @media (min-width: 40rem) {
             position: static;
@@ -126,9 +129,9 @@
             }
         }
 
-        ._hide {
-            display: none;
-        }
+        // ._hide {
+        //     display: none;
+        // }
 
         ._nav-bar__items {
             @media (min-width: 40rem) {
@@ -142,6 +145,15 @@
             @media (min-width: 40rem) {
                 border-bottom: 0.2rem var(--color_2) solid;
             }
+        }
+    }
+
+    ._main-header__nav-bar._hide {
+        display: block;
+        height: 0px;
+
+        @media (min-width: 40rem) {
+            height: auto;
         }
     }
 }

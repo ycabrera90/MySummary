@@ -51,6 +51,9 @@
   font-size: 1.2rem;
   background: inherit;
   border-radius: 0px 0px 10px 10px;
+  height: 22rem;
+  overflow: hidden;
+  transition: height 500ms 0s cubic-bezier(0.16, 1, 0.3, 1);
 }
 @media (min-width: 40rem) {
   ._main-header ._main-header__nav-bar {
@@ -117,9 +120,6 @@
     display: none;
   }
 }
-._main-header ._main-header__nav-bar ._hide {
-  display: none;
-}
 @media (min-width: 40rem) {
   ._main-header ._main-header__nav-bar ._nav-bar__items {
     display: flex;
@@ -130,6 +130,15 @@
 @media (min-width: 40rem) {
   ._main-header ._main-header__nav-bar ._highlighted {
     border-bottom: 0.2rem var(--color_2) solid;
+  }
+}
+._main-header ._main-header__nav-bar._hide {
+  display: block;
+  height: 0px;
+}
+@media (min-width: 40rem) {
+  ._main-header ._main-header__nav-bar._hide {
+    height: auto;
   }
 }
 
