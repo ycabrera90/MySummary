@@ -38,12 +38,14 @@ export class MainHeader {
 
     expandBar() {
         this.mainHeader_NavBar.classList.remove('_hide');
+        this.mainNavBackdrop.classList.remove('_hide');
         this.toggleIconExpand.classList.add('_hide');
         this.toggleButtonCollapse.classList.remove('_hide');
     }
 
     collapseBar() {
         this.mainHeader_NavBar.classList.add('_hide');
+        this.mainNavBackdrop.classList.add('_hide');
         this.toggleIconExpand.classList.remove('_hide');
         this.toggleButtonCollapse.classList.add('_hide');
     }
