@@ -176,6 +176,8 @@
   grid-area: header;
   align-self: end;
   font-family: var(--font_1);
+  position: relative;
+  animation: brandCompleteAnimation 500ms 1s ease-out 1 both;
 }
 
 ._carousel-item--home ._content__brand-complete h1 {
@@ -194,6 +196,7 @@
   border-radius: 500px;
   width: 13rem;
   border: var(--color_1) 6px solid;
+  animation: userPhotoAnimation 500ms 1500ms ease-out 1 both;
 }
 
 ._carousel-item--home ._content__info {
@@ -201,12 +204,18 @@
   font-family: "Roboto Condensed", sans-serif;
 }
 
-._carousel-item--home ._content__info h1 {
+._carousel-item--home ._content__info ._hello-text {
   font-size: 2.5rem;
+  animation: helloTextAnimation 500ms 2s ease-out 1 both;
 }
 
-._carousel-item--home ._content__info h3 {
+._carousel-item--home ._content__info ._name-text {
+  animation: nameTextAnimation 500ms 2.5s ease-out 1 both;
+}
+
+._carousel-item--home ._content__info ._category-text {
   font-size: 1.5rem;
+  animation: categoryTextAnimation 500ms 3s ease-out 1 both;
 }
 
 ._carousel-item--home ._content__presentation {
@@ -214,6 +223,7 @@
   color: var(--color_2);
   font-size: 2.2rem;
   font-weight: bold;
+  animation: presentationTextAnimation 2s 3.5s ease-out 1 both;
 }
 
 @media (min-width: 40rem) {
@@ -243,6 +253,81 @@
   }
   ._carousel-item--home ._content__presentation {
     font-size: 3.2rem;
+  }
+}
+@keyframes brandCompleteAnimation {
+  0% {
+    top: -8rem;
+  }
+  60% {
+    top: 1rem;
+  }
+  100% {
+    top: 0rem;
+  }
+}
+@keyframes userPhotoAnimation {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes helloTextAnimation {
+  0% {
+    transform: translateX(-50rem);
+  }
+  60% {
+    transform: translateX(1rem);
+  }
+  100% {
+    transform: translateX(0rem);
+  }
+}
+@keyframes nameTextAnimation {
+  0% {
+    transform: translateX(50rem);
+  }
+  60% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    transform: translateX(0rem);
+  }
+}
+@keyframes categoryTextAnimation {
+  0% {
+    transform: translateX(-50rem);
+  }
+  60% {
+    transform: translateX(1rem);
+  }
+  100% {
+    transform: translateX(0rem);
+  }
+}
+@keyframes presentationTextAnimation {
+  0% {
+    transform: perspective(1rem) translateZ(50px);
+  }
+  17% {
+    transform: perspective(1rem) translateZ(-5px);
+  }
+  34% {
+    transform: perspective(1rem) translateZ(4px);
+  }
+  51% {
+    transform: perspective(1rem) translateZ(-3px);
+  }
+  68% {
+    transform: perspective(1rem) translateZ(2px);
+  }
+  86% {
+    transform: perspective(1rem) translateZ(-1px);
+  }
+  100% {
+    transform: perspective(1rem) translateZ(0px);
   }
 }
 ._carousel-item--about-me ._carousel-item__content {
