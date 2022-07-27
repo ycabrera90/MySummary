@@ -1,4 +1,4 @@
-import { MainHeader } from './js/UI/mainHeader';
+import { MainHeader } from './UI/mainHeader';
 import { Carousel } from './UI/Carousel';
 
 class App {
