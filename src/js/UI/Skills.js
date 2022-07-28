@@ -25,14 +25,32 @@ export class Skills {
     }
 
     showSkillInfo() {
-        console.dir(this.contentSkillHtml.getBoundingClientRect() );
-        // console.dir(window.innerHeight);
-        console.dir(window.innerWidth);
-        const translateX = window.innerWidth/2-(this.contentSkillHtml.getBoundingClientRect().left+this.contentSkillHtml.getBoundingClientRect().width);
-        console.log('traslateX',translateX)
+        const vpWidth = window.innerWidth;
+        console.log('vpWidth', vpWidth);
+        const vpHeight = window.innerHeight;
+        console.log('vpHeight', vpHeight);
 
-        // this.contentSkillHtml.style = "z-index: 1; animation: skillAnimationExpand 500ms 0s ease-out 1 both; cursor: auto";
-        this.contentSkillHtml.style = "z-index: 1; transform: translate(-228px, -43px); cursor: auto";
+        const contentSkillHtmlTop = this.contentSkillHtml.getBoundingClientRect().top;
+        console.log('contentSkillHtml.top', contentSkillHtmlTop);
+        const contentSkillHtmlLeft = this.contentSkillHtml.getBoundingClientRect().left;
+        console.log('contentSkillHtml.left', contentSkillHtmlLeft);
+        const contentSkillHtmlWidth = this.contentSkillHtml.getBoundingClientRect().width;
+        console.log('contentSkillHtml.widht', contentSkillHtmlWidth);
+
+        const translateX = (vpWidth / 2) - (contentSkillHtmlLeft + contentSkillHtmlWidth / 2);
+        console.log('translateX', translateX);
+
+        const translateY = (vpHeight / 4.25) - contentSkillHtmlTop;
+        console.log('translateY', translateY);
+
+
+
+
+
+
+
+        // // this.contentSkillHtml.style = "z-index: 1; animation: skillAnimationExpand 500ms 0s ease-out 1 both; cursor: auto";
+        this.contentSkillHtml.style = `z-index: 1; transform: translate(${translateX}px, ${translateY}px); cursor: auto`;
         this.skillInfo.style = "animation: skillInfoAnimationExpand  500ms 0.5s ease-out 1 both; cursor: auto";
         this.skillBackdrop.style = "display: block";
     }
