@@ -1,35 +1,59 @@
 ._carousel-item--about-me ._carousel-item__content {
-    grid-template-areas:
-        'header'
-        'info';
-}
+    ._carousel-item__content {
+        grid-template-areas:
+            'header'
+            'info';
+    }
 
-._carousel-item--about-me ._content__info {
-    grid-area: info;
-    font-size: 1.1rem;
-    align-self: start;
-}
+    ._content__header {
+        // z-index: -1;
+    }
 
-._carousel-item--about-me ._content__skill {
-    display: none;
+    ._content__info {
+        grid-area: info;
+        font-size: 1.1rem;
+        align-self: start;
+        // z-index: -1;
+    }
 
-    ._skill-container {
-        &._content__skill--html {
-            animation: skillAnimation 500ms 1s ease-out 1 both;
+    ._content__skill {
+        display: none;
+        z-index: 1;
+
+        @media (min-width: 40rem) {
+            width: 100%;
+            grid-area: skills;
+            align-self: start;
+            height: 100%;
+            display: grid;
+            grid-gap: 0.5rem;
         }
 
-        ._skill-info {
-            position: absolute;
-            background-color: var(--color_4);
-            top: 4rem;
-            height: 0;
-            overflow: hidden;
-            border-radius: 1rem;
-            text-align: left;
-            padding: 1rem;
-            opacity: 0;
+        ._content-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: none;
+        }
 
-            animation: skillInfoAnimation 500ms 1.5s ease-out 1 both;
+        ._skill-container {
+            cursor: pointer;
+
+            ._skill-info {
+                position: absolute;
+                background-color: var(--color_5);
+                top: 4rem;
+                height: 0;
+                width: 100%;
+                overflow: hidden;
+                border-radius: 1rem;
+                text-align: left;
+                padding: 1rem;
+                opacity: 0;
+
+            }
         }
     }
 }
@@ -63,6 +87,7 @@
 }
 
 @media (min-width: 40rem) {
+   
     ._carousel-item--about-me ._carousel-item__content {
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
@@ -78,15 +103,6 @@
 
     ._carousel-item--about-me ._content__info h3 {
         font-size: 1.5rem;
-    }
-
-    ._carousel-item--about-me ._content__skill {
-        width: 100%;
-        grid-area: skills;
-        align-self: start;
-        height: 100%;
-        display: grid;
-        grid-gap: 0.5rem;
     }
 
     ._carousel-item--about-me ._content__skill ._skill-container {
@@ -109,7 +125,7 @@
     }
 }
 
-@keyframes skillAnimation {
+@keyframes skillAnimationExpand {
     0% {
         transform: translate(0px, 0px);
     }
@@ -118,7 +134,7 @@
     }
 }
 
-@keyframes skillInfoAnimation {
+@keyframes skillInfoAnimationExpand {
     0% {
         height: 0;
         opacity: 0;
@@ -126,5 +142,24 @@
     100% {
         height: 16rem;
         opacity: 1;
+    }
+}
+@keyframes skillAnimationCollapse {
+    0% {
+        transform: translate(-228px, -43px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes skillInfoAnimationCollapse {
+    0% {
+        height: 16rem;
+        opacity: 1;
+    }
+    100% {
+        height: 0;
+        opacity: 0;
     }
 }
