@@ -5,14 +5,35 @@ export class Skills {
         this.contentSkillHtml = document.getElementById('_contentSkillHtml');
         this.skillInfo = document.getElementById('_skillInfo');
         this.skillBackdrop = document.getElementById('_skillBackdrop');
+        // this.skillBackdrop.classList.contains()
 
-        // this.setProgres('_content__skill--html', 10);
-        // console.log('dfadf');
+        this.allSkillContainer = document.querySelectorAll('._skill-container');
+        for (const skillContainer of this.allSkillContainer) {
+            skillContainer.addEventListener('click', (event) => {
+
+                for (const dom of event.path) {
+                    if (dom !== undefined) {
+                        console.dir(dom);
+
+                    }
+
+                    // if (dom.classList.length != 0) {
+                    // console.log(dom.classList);
+
+                    // }
+
+                    // if (dom.classList.contains('_skill-container')){
+                    //     console.log(dom.classList);
+                    // }
+                }
+            });
+        }
 
 
         this.contentSkillHtml.addEventListener('click', this.showSkillInfo.bind(this));
         this.skillBackdrop.addEventListener('click', this.hideSkillInfo.bind(this));
 
+        console.log(this.allSkillContainer)
 
 
     }
@@ -25,40 +46,36 @@ export class Skills {
     }
 
     showSkillInfo() {
-        const vpWidth = window.innerWidth;
-        console.log('vpWidth', vpWidth);
-        const vpHeight = window.innerHeight;
-        console.log('vpHeight', vpHeight);
+        // Calculate the best position of the element in the screen after translate
+        const translateX = (innerWidth / 2) - (this.contentSkillHtml.getBoundingClientRect().left + this.contentSkillHtml.clientWidth / 2);
+        const translateY = (innerHeight / 4.25) - this.contentSkillHtml.getBoundingClientRect().top;
 
-        const contentSkillHtmlTop = this.contentSkillHtml.getBoundingClientRect().top;
-        console.log('contentSkillHtml.top', contentSkillHtmlTop);
-        const contentSkillHtmlLeft = this.contentSkillHtml.getBoundingClientRect().left;
-        console.log('contentSkillHtml.left', contentSkillHtmlLeft);
-        const contentSkillHtmlWidth = this.contentSkillHtml.getBoundingClientRect().width;
-        console.log('contentSkillHtml.widht', contentSkillHtmlWidth);
+        this.contentSkillHtml.style = ` transition: transform 500ms 0s ease-out;
+                                        transform: translate(${translateX}px, ${translateY}px);
+                                        z-index: 1;
+                                        cursor: auto`;
 
-        const translateX = (vpWidth / 2) - (contentSkillHtmlLeft + contentSkillHtmlWidth / 2);
-        console.log('translateX', translateX);
+        this.skillInfo.style = `transition: height 500ms 0.5s ease-out, opacity 500ms 0.5s ease-out;
+                                height: 12.5rem; 
+                                opacity: 1; 
+                                cursor: auto`;
 
-        const translateY = (vpHeight / 4.25) - contentSkillHtmlTop;
-        console.log('translateY', translateY);
-
-
-
-
-
-
-
-        // // this.contentSkillHtml.style = "z-index: 1; animation: skillAnimationExpand 500ms 0s ease-out 1 both; cursor: auto";
-        this.contentSkillHtml.style = `z-index: 1; transform: translate(${translateX}px, ${translateY}px); cursor: auto`;
-        this.skillInfo.style = "animation: skillInfoAnimationExpand  500ms 0.5s ease-out 1 both; cursor: auto";
-        this.skillBackdrop.style = "display: block";
+        this.skillBackdrop.style = `display: block`;
     }
 
     hideSkillInfo() {
-        this.skillInfo.style = "animation: skillInfoAnimationCollapse  500ms 0s ease-out 1 both;";
-        this.contentSkillHtml.style = "z-index: 1; animation: skillAnimationCollapse 500ms 0.5s ease-out 1 both";
-        this.skillBackdrop.style = "display: none";
+        this.skillBackdrop.style = `display: none`;
+
+        this.skillInfo.style = `transition: height 500ms 0s ease-out, opacity 500ms 0s ease-out;
+                                height: 0rem; 
+                                opacity: 0; 
+                                cursor: pointer`;
+
+        this.contentSkillHtml.style = ` transition: transform 500ms 0.5s ease-out;
+                                        transform: translate(0rem, 0rem);
+                                        z-index: 0;
+                                        cursor: pointer`;
+
     }
 
 }
