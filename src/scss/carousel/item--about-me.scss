@@ -1,11 +1,8 @@
-._carousel-item--about-me ._carousel-item__content {
+._carousel-item--about-me {
     ._carousel-item__content {
         grid-template-areas:
             'header'
             'info';
-    }
-
-    ._content__header {
     }
 
     ._content__info {
@@ -57,33 +54,63 @@
     }
 }
 
-._carousel-item--my-skills ._carousel-item__content {
-    grid-template-areas:
-        'header'
-        'skills';
+._carousel-item--my-skills {
+    ._carousel-item__content {
+        grid-template-areas:
+            'header'
+            'skills';
+    }
+
+    ._content__skill {
+        width: 100%;
+        grid-area: skills;
+        display: grid;
+        grid-gap: 0.5rem;
+
+        ._content-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: none;
+        }
+
+        ._skill-container {
+            display: flex;
+            align-items: center;
+
+            ._skill-icon {
+                width: 3.5rem;
+            }
+    
+            ._skill-progress {
+                margin-left: 1rem;
+                width: 100%;
+            }
+            
+            ._skill-info {
+                position: absolute;
+                background-color: var(--color_5);
+                top: 4rem;
+                padding: 1rem;
+                width: 100%;
+                overflow: hidden;
+                border-radius: 1rem;
+                text-align: left;
+                cursor: auto;
+                height: 0;
+                opacity: 0;
+                display: none;
+            }
+        }
+
+    }
+
+
 }
 
-._carousel-item--my-skills ._content__skill {
-    width: 100%;
-    grid-area: skills;
 
-    display: grid;
-    grid-gap: 0.5rem;
-}
-
-._carousel-item--my-skills ._content__skill ._skill-container {
-    display: flex;
-    align-items: center;
-}
-
-._carousel-item--my-skills ._content__skill ._skill-icon {
-    width: 3.5rem;
-}
-
-._carousel-item--my-skills ._content__skill ._skill-progress {
-    margin-left: 1rem;
-    width: 100%;
-}
 
 @media (min-width: 40rem) {
     ._carousel-item--about-me ._carousel-item__content {
@@ -122,4 +149,3 @@
         display: none;
     }
 }
-

@@ -1,35 +1,23 @@
 export class Skills {
     constructor() {
-
         this.oppenedSkillInfo = null;
-
         this.caroussel = document.getElementById('carouselExampleIndicators');
-        this.contentSkillHtml = document.getElementById('_contentSkillHtml');
-        this.skillInfo = document.getElementById('_skillInfo');
 
+        this.contentSkills = document.querySelectorAll('._content__skill');
+        // this.skillBackdrops = document.querySelectorAll('._content-backdrop'); //
 
-
-        this.contentSkill = document.querySelector('._content__skill');
-        this.skillBackdrop = document.getElementById('_skillBackdrop');
-
-        this.contentSkill.addEventListener('click', event => {
-            // detect if was clicked the backdrop or a skill element
-            if (event.target.classList.contains('_content-backdrop')) {
-                console.log('here');
-                this.hideSkillInfo(this.oppenedSkillInfo);
-            }
-            else {
-                this.showSkillInfo(event.target.closest('._skill-container'));
-            }
-        })
-
-        // this.skillBackdrop.addEventListener('click', this.hideSkillInfo.bind(this, this.oppenedSkillInfo))
-
-        // this.skillBackdrop.click = this.hideSkillInfo.bind(this, this.oppenedSkillInfo);
-        // this.skillBackdrop.addEventListener('click', this.hideSkillInfo.bind(this));
-
-
-
+        this.contentSkills.forEach(contentSkill => {
+            contentSkill.addEventListener('click', event => {
+                // detect if was clicked the backdrop or a skill element
+                if (event.target.classList.contains('_content-backdrop')) {
+                    console.log('here');
+                    this.hideSkillInfo(this.oppenedSkillInfo);
+                }
+                else {
+                    this.showSkillInfo(event.target.closest('._skill-container'));
+                }
+            })
+        });
     }
 
     setProgres(skillClass, progress) {
@@ -42,6 +30,8 @@ export class Skills {
     showSkillInfo(DomSkill) {
         if (!this.oppenedSkillInfo) {
             const skillInfo = DomSkill.querySelector('._skill-info');
+            const skillBackdrop = DomSkill.parentElement.querySelector('._content-backdrop');
+
 
             // Calculate the best position of the element in the screen after translate
             const translateX = (innerWidth / 2) - (DomSkill.getBoundingClientRect().left + DomSkill.clientWidth / 2);
@@ -61,7 +51,7 @@ export class Skills {
                                     display: block`;
             }, 1);
 
-            this.skillBackdrop.style = `display: block;
+            skillBackdrop.style = `display: block;
                                         z-index: 1`;
 
             this.oppenedSkillInfo = DomSkill;           // enable a flag for say which skill is oppened
@@ -71,8 +61,9 @@ export class Skills {
     hideSkillInfo(DomSkill) {
         if (this.oppenedSkillInfo) {
             const skillInfo = DomSkill.querySelector('._skill-info');
+            const skillBackdrop = DomSkill.parentElement.querySelector('._content-backdrop');
 
-            this.skillBackdrop.style = `display: none`;
+            skillBackdrop.style = `display: none`;
 
             skillInfo.style = ` transition: height 500ms 0s ease-out, opacity 500ms 0s ease-out;
                                 height: 0rem; 

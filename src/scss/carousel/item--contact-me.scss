@@ -1,8 +1,10 @@
-._carousel-item--contact-me ._carousel-item__content {
-    grid-template-areas:
-        'header'
-        'info'
-        'form';
+._carousel-item--contact-me {
+    ._carousel-item__content {
+        grid-template-areas:
+            'header'
+            'info'
+            'form';
+    }
 }
 
 ._carousel-item--contact-me ._content__info {
