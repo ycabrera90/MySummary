@@ -43,13 +43,15 @@
                 position: absolute;
                 background-color: var(--color_5);
                 top: 4rem;
-                height: 0;
                 padding: 1rem;
                 width: 100%;
                 overflow: hidden;
                 border-radius: 1rem;
                 text-align: left;
+                cursor: auto;
+                height: 0;
                 opacity: 0;
+                display: none;
             }
         }
     }

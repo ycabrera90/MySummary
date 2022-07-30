@@ -1,39 +1,33 @@
 export class Skills {
     constructor() {
 
+        this.oppenedSkillInfo = null;
+
         this.caroussel = document.getElementById('carouselExampleIndicators');
         this.contentSkillHtml = document.getElementById('_contentSkillHtml');
         this.skillInfo = document.getElementById('_skillInfo');
+
+
+
+        this.contentSkill = document.querySelector('._content__skill');
         this.skillBackdrop = document.getElementById('_skillBackdrop');
-        // this.skillBackdrop.classList.contains()
 
-        this.allSkillContainer = document.querySelectorAll('._skill-container');
-        for (const skillContainer of this.allSkillContainer) {
-            skillContainer.addEventListener('click', (event) => {
+        this.contentSkill.addEventListener('click', event => {
+            // detect if was clicked the backdrop or a skill element
+            if (event.target.classList.contains('_content-backdrop')) {
+                console.log('here');
+                this.hideSkillInfo(this.oppenedSkillInfo);
+            }
+            else {
+                this.showSkillInfo(event.target.closest('._skill-container'));
+            }
+        })
 
-                for (const dom of event.path) {
-                    if (dom !== undefined) {
-                        console.dir(dom);
+        // this.skillBackdrop.addEventListener('click', this.hideSkillInfo.bind(this, this.oppenedSkillInfo))
 
-                    }
+        // this.skillBackdrop.click = this.hideSkillInfo.bind(this, this.oppenedSkillInfo);
+        // this.skillBackdrop.addEventListener('click', this.hideSkillInfo.bind(this));
 
-                    // if (dom.classList.length != 0) {
-                    // console.log(dom.classList);
-
-                    // }
-
-                    // if (dom.classList.contains('_skill-container')){
-                    //     console.log(dom.classList);
-                    // }
-                }
-            });
-        }
-
-
-        this.contentSkillHtml.addEventListener('click', this.showSkillInfo.bind(this));
-        this.skillBackdrop.addEventListener('click', this.hideSkillInfo.bind(this));
-
-        console.log(this.allSkillContainer)
 
 
     }
@@ -45,37 +39,61 @@ export class Skills {
         }
     }
 
-    showSkillInfo() {
-        // Calculate the best position of the element in the screen after translate
-        const translateX = (innerWidth / 2) - (this.contentSkillHtml.getBoundingClientRect().left + this.contentSkillHtml.clientWidth / 2);
-        const translateY = (innerHeight / 4.25) - this.contentSkillHtml.getBoundingClientRect().top;
+    showSkillInfo(DomSkill) {
+        if (!this.oppenedSkillInfo) {
+            const skillInfo = DomSkill.querySelector('._skill-info');
 
-        this.contentSkillHtml.style = ` transition: transform 500ms 0s ease-out;
-                                        transform: translate(${translateX}px, ${translateY}px);
-                                        z-index: 1;
-                                        cursor: auto`;
+            // Calculate the best position of the element in the screen after translate
+            const translateX = (innerWidth / 2) - (DomSkill.getBoundingClientRect().left + DomSkill.clientWidth / 2);
+            const translateY = (innerHeight / 4.25) - DomSkill.getBoundingClientRect().top;
 
-        this.skillInfo.style = `transition: height 500ms 0.5s ease-out, opacity 500ms 0.5s ease-out;
-                                height: 12.5rem; 
-                                opacity: 1; 
-                                cursor: auto`;
+            DomSkill.style = `  transition: transform 500ms 0s ease-out;
+                                transform: translate(${translateX}px, ${translateY}px);
+                                cursor: auto;
+                                z-index: 2`;
 
-        this.skillBackdrop.style = `display: block`;
+            skillInfo.style = ` display: block`;
+            setTimeout(() => {
+                skillInfo.style = ` transition: height 500ms 0.5s ease-out, opacity 500ms 0.5s ease-out;
+                                    height: 12.5rem; 
+                                    opacity: 1;
+                                    z-index: 2;
+                                    display: block`;
+            }, 1);
+
+            this.skillBackdrop.style = `display: block;
+                                        z-index: 1`;
+
+            this.oppenedSkillInfo = DomSkill;           // enable a flag for say which skill is oppened
+        }
     }
 
-    hideSkillInfo() {
-        this.skillBackdrop.style = `display: none`;
+    hideSkillInfo(DomSkill) {
+        if (this.oppenedSkillInfo) {
+            const skillInfo = DomSkill.querySelector('._skill-info');
 
-        this.skillInfo.style = `transition: height 500ms 0s ease-out, opacity 500ms 0s ease-out;
+            this.skillBackdrop.style = `display: none`;
+
+            skillInfo.style = ` transition: height 500ms 0s ease-out, opacity 500ms 0s ease-out;
                                 height: 0rem; 
-                                opacity: 0; 
+                                opacity: 0;
+                                z-index: 0;
+                                display: block`;
+            setTimeout(() => {
+                skillInfo.style = ` display: none`;
+            }, 500);
+
+            DomSkill.style = `  transition: transform 500ms 0.5s ease-out;
+                                transform: translate(0px, 0px);
                                 cursor: pointer`;
 
-        this.contentSkillHtml.style = ` transition: transform 500ms 0.5s ease-out;
-                                        transform: translate(0rem, 0rem);
-                                        z-index: 0;
-                                        cursor: pointer`;
+            this.oppenedSkillInfo = null;           // enable a flag for say which skill is oppened
+        }
+
+
+
+
+
 
     }
-
 }
