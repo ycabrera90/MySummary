@@ -49,6 +49,26 @@
                 height: 0;
                 opacity: 0;
                 display: none;
+
+                h1 {
+                    font-size: 2rem;
+                    color: var(--color_2);
+                }
+
+                h2 {
+                    font-size: 1.2rem;
+                    color: var(--color_3);
+                }
+
+                span {
+                    text-decoration: underline;
+                    color: var(--color_3);
+                }
+
+                p {
+                    font-size: 1rem;
+                    margin: 0.4rem 0;
+                }
             }
         }
     }
@@ -74,6 +94,7 @@
             width: 100vw;
             height: 100vh;
             display: none;
+
         }
 
         ._skill-container {
@@ -83,12 +104,12 @@
             ._skill-icon {
                 width: 3.5rem;
             }
-    
+
             ._skill-progress {
                 margin-left: 1rem;
                 width: 100%;
             }
-            
+
             ._skill-info {
                 position: absolute;
                 background-color: var(--color_5);
@@ -102,15 +123,30 @@
                 height: 0;
                 opacity: 0;
                 display: none;
+
+                h1 {
+                    font-size: 2rem;
+                    color: var(--color_2);
+                }
+
+                h2 {
+                    font-size: 1.2rem;
+                    color: var(--color_3);
+                }
+
+                span {
+                    text-decoration: underline;
+                    color: var(--color_3);
+                }
+
+                p {
+                    font-size: 1rem;
+                    margin: 0.4rem 0;
+                }
             }
         }
-
     }
-
-
 }
-
-
 
 @media (min-width: 40rem) {
     ._carousel-item--about-me ._carousel-item__content {

@@ -377,6 +377,22 @@
   opacity: 0;
   display: none;
 }
+._carousel-item--about-me ._content__skill ._skill-container ._skill-info h1 {
+  font-size: 2rem;
+  color: var(--color_2);
+}
+._carousel-item--about-me ._content__skill ._skill-container ._skill-info h2 {
+  font-size: 1.2rem;
+  color: var(--color_3);
+}
+._carousel-item--about-me ._content__skill ._skill-container ._skill-info span {
+  text-decoration: underline;
+  color: var(--color_3);
+}
+._carousel-item--about-me ._content__skill ._skill-container ._skill-info p {
+  font-size: 1rem;
+  margin: 0.4rem 0;
+}
 
 ._carousel-item--my-skills ._carousel-item__content {
   grid-template-areas: "header" "skills";
@@ -419,6 +435,22 @@
   height: 0;
   opacity: 0;
   display: none;
+}
+._carousel-item--my-skills ._content__skill ._skill-container ._skill-info h1 {
+  font-size: 2rem;
+  color: var(--color_2);
+}
+._carousel-item--my-skills ._content__skill ._skill-container ._skill-info h2 {
+  font-size: 1.2rem;
+  color: var(--color_3);
+}
+._carousel-item--my-skills ._content__skill ._skill-container ._skill-info span {
+  text-decoration: underline;
+  color: var(--color_3);
+}
+._carousel-item--my-skills ._content__skill ._skill-container ._skill-info p {
+  font-size: 1rem;
+  margin: 0.4rem 0;
 }
 
 @media (min-width: 40rem) {

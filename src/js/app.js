@@ -38,7 +38,7 @@ class App {
         }
 
         // set my skills
-        carousel.skills.setProgres('_content__skill--html',30);
+        carousel.skills.setProgres('_content__skill--html',60);
         carousel.skills.setProgres('_content__skill--css',90);
         carousel.skills.setProgres('_content__skill--js',95);
         carousel.skills.setProgres('_content__skill--react',15);

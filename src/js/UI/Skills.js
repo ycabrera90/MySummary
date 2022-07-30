@@ -45,7 +45,7 @@ export class Skills {
             skillInfo.style = ` display: block`;
             setTimeout(() => {
                 skillInfo.style = ` transition: height 500ms 0.5s ease-out, opacity 500ms 0.5s ease-out;
-                                    height: 12.5rem; 
+                                    height: auto; 
                                     opacity: 1;
                                     z-index: 2;
                                     display: block`;
