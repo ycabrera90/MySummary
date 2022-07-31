@@ -87,12 +87,15 @@
         text-align: left;
         justify-self: left;
     }
-
-    ._carousel-item--home ._content__info h1 {
-        font-size: 4rem;
+   
+    ._carousel-item--home ._content__info ._hello-text {
+        font-size: 3.5rem;
     }
 
     ._carousel-item--home ._content__info h3 {
+        font-size: 2.5rem;
+    }
+    ._carousel-item--home ._content__info ._category-text {
         font-size: 2.5rem;
     }
 
@@ -125,7 +128,7 @@
 
 @keyframes helloTextAnimation {
     0% {
-        transform: translateX(-50rem);
+        transform: translateX(-100rem);
     }
     60% {
         transform: translateX(1rem);
@@ -137,7 +140,7 @@
 
 @keyframes nameTextAnimation {
     0% {
-        transform: translateX(50rem);
+        transform: translateX(100rem);
     }
     60% {
         transform: translateX(-1rem);
@@ -149,7 +152,7 @@
 
 @keyframes categoryTextAnimation {
     0% {
-        transform: translateX(-50rem);
+        transform: translateX(-100rem);
     }
     60% {
         transform: translateX(1rem);

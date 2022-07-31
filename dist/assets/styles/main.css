@@ -245,10 +245,13 @@
     text-align: left;
     justify-self: left;
   }
-  ._carousel-item--home ._content__info h1 {
-    font-size: 4rem;
+  ._carousel-item--home ._content__info ._hello-text {
+    font-size: 3.5rem;
   }
   ._carousel-item--home ._content__info h3 {
+    font-size: 2.5rem;
+  }
+  ._carousel-item--home ._content__info ._category-text {
     font-size: 2.5rem;
   }
   ._carousel-item--home ._content__presentation {
@@ -276,7 +279,7 @@
 }
 @keyframes helloTextAnimation {
   0% {
-    transform: translateX(-50rem);
+    transform: translateX(-100rem);
   }
   60% {
     transform: translateX(1rem);
@@ -287,7 +290,7 @@
 }
 @keyframes nameTextAnimation {
   0% {
-    transform: translateX(50rem);
+    transform: translateX(100rem);
   }
   60% {
     transform: translateX(-1rem);
@@ -298,7 +301,7 @@
 }
 @keyframes categoryTextAnimation {
   0% {
-    transform: translateX(-50rem);
+    transform: translateX(-100rem);
   }
   60% {
     transform: translateX(1rem);
@@ -359,6 +362,9 @@
   width: 100vw;
   height: 100vh;
   display: none;
+  background-color: black;
+  opacity: 0;
+  z-index: 1;
 }
 ._carousel-item--about-me ._content__skill ._skill-container {
   cursor: pointer;
@@ -410,6 +416,9 @@
   width: 100vw;
   height: 100vh;
   display: none;
+  background-color: black;
+  opacity: 0;
+  z-index: 1;
 }
 ._carousel-item--my-skills ._content__skill ._skill-container {
   display: flex;
